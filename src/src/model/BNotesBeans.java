@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class BNotesBeans  {
+public class BNotesBeans implements Serializable  {
+    private static final long serialVersionUID = 1L;
 	//	メンバ変数
 	private int uId;
 	private String name;
