@@ -1,5 +1,10 @@
 package action;
 
-public class MessageAction {
+import javax.servlet.http.HttpServletRequest;
 
+public class MessageAction {
+	HttpServletRequest request=null;
+
+	public MessageAction(HttpServletRequest request) {
+	}
 }
