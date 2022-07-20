@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td><a href="/Miemo/bControllerServlet/"><input type="button" value="戻る"></a></td>
-			<td><input type="submit" name="regist" value="保存"></td>
+			<td><input type="submit" name="bt_name" value="保存"></td>
 		</tr>
 	</table>
 </form>
