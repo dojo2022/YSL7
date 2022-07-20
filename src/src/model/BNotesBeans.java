@@ -1,13 +1,49 @@
 package model;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+import java.io.Serializable;
+import java.sql.Date;
 
-/**
- * Servlet implementation class BNotesBeans
- */
-@WebServlet("/BNotesBeans")
-public class BNotesBeans extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class BNotesBeans implements Serializable  {
+    private static final long serialVersionUID = 1L;
+	//	メンバ変数
+	private int uId;
+	private String name;
+	private String title;
+	private String content;
+	private Date date;
+
+
+	//	ゲッタとセッタ
+	public int getuId() {
+		return uId;
+	}
+	public void setuId(int uId) {
+		this.uId = uId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 
 }
