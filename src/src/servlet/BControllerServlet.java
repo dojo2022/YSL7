@@ -137,6 +137,10 @@ public class BControllerServlet extends HttpServlet {
 			url = nAction.nDelete();
 		}
 
+		//JSPさんへ処理を依頼する
+		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+		dispatcher.forward(request, response);
+
 
 
 	}
