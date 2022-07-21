@@ -24,6 +24,7 @@ public class BNotesService  {
 			ans=udao.insertNotes(uId,empId, title, content);
 
 		}
+
 		catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			return ans;
