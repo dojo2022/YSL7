@@ -105,7 +105,7 @@ public class FrontControllerServlet extends HttpServlet {
 			path = "/WEB-INF/jsp/edit_feeling.jsp";
 		}
 		//きもち編集のdoPost
-		if(pageId.equals("FF03") && button.equals("編集")) {
+		if(pageId.equals("FF03") && button.equals("更新")) {
 			EditFeelingAction action = new EditFeelingAction(request);
 			path = action.editFeeling();
 		}
