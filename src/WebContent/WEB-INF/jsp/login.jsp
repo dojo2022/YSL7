@@ -14,7 +14,7 @@
 <form method = "POST" action = "/miemo/FrontControllerServlet">
 <input type="hidden" name="page_id" value="FL01">
  <input type = "text" name = "number" value = "${param.number}">
- <input type = "password" name = "pw" value = "">
+ <input type = "password" name = "password" value = "">
  <input type = "submit" name = "bt_name" value = "ログイン">
 
 </form>
