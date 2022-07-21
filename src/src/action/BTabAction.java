@@ -23,7 +23,7 @@ public class BTabAction {
 
 		//selectNotes(メモです)
 		//サービスのselectNotesメソッドを実行する（引数empId）
-		ArrayList<BNotesBeans> notesList=tabService.selectNotes();
+		ArrayList<BNotesBeans> notesList=tabService.selectNotes(empId);
 		//戻ってきた値がnullだったら
 		if(notesList.size() == 0) {
 			request.setAttribute("errMsg", "リストが正常に表示されませんでした。。");
