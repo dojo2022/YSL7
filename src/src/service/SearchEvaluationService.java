@@ -22,7 +22,6 @@ public class SearchEvaluationService {
 			UsersDao dao = new UsersDao(con);
 			//daoのメソッド呼び出すよ。※まだエラーだよ
 			userList = dao.showEmp();
-
 		}catch(SQLException e){
 			e.printStackTrace();
 			System.out.println(e.getMessage());
