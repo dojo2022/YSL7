@@ -23,12 +23,12 @@ public class UsersDao {
 				Class.forName("org.h2.Driver");
 
 				// SQL文を準備する
-				String sql = "SELECT u_id, name, number FROM Users WHERE number = '?' AND password = '?'";
+				String sql = "SELECT u_id, name, number FROM Users WHERE number = ? AND password = ?";
 				PreparedStatement pStmt = con.prepareStatement(sql);
 
 				// SQL文を完成させる
-				pStmt.setString(1,number);
-				pStmt.setString(2,password);
+				pStmt.setString(1, number);
+				pStmt.setString(2, password);
 
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
