@@ -40,7 +40,7 @@ public class BTabAction {
 
 	//selectMessages(メッセージです)
 		//サービスのselectMessagesメソッドを実行する（引数empId）
-		ArrayList<BMessagesBeans> messageList=tabService.selectMessages(empId);
+		ArrayList<BMessagesBeans> messageList = tabService.selectMessages(empId);
 		//戻ってきた値がnullだったら
 		if(messageList.size() == 0) {
 			request.setAttribute("errMsg", "メッセージが正常に表示されませんでした。。");
@@ -53,7 +53,7 @@ public class BTabAction {
 			return "/WEB-INF/backjsp/bMainPage.jsp";
 			}
 
-	//selectEvaluations(評価です)
+	//selectEvaluation(評価です)
 		//サービスのselectMessagesメソッドを実行する（引数empId）
 		ArrayList<BEvaluationsBeans> evaluationList=tabService.selectEvaluation(empId);
 		//戻ってきた値がnullだったら
