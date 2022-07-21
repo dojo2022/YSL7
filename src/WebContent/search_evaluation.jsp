@@ -21,7 +21,7 @@
     });
    </script>
    <meta charset="UTF-8">
-<title>評価相手検索画面/title>
+<title>評価相手検索画面</title>
 </head>
 <body>
 	<!-- サーブレットへ遷移させる -->
