@@ -14,6 +14,30 @@ public class BUserDAO {
 	public BUserDAO(Connection con) {
 		this.con=con;
 	}
+
+	//registUser
+	public int registUser(String number, String name,String year, int gender) throws ClassNotFoundException, SQLException{
+		int result = 0;
+
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "INSERT INTO Users (number, name, year, gender) VALUES (?, ?, ?, ?);";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setString(1,number);
+		pStmt.setString(2,name);
+		pStmt.setString(3,year);
+		pStmt.setInt(4,gender);
+
+		// SQL文を実行し、結果表を取得する
+		result = pStmt.executeUpdate();
+
+		return result;
+	}
+
 	//deleteUser
 	public int deleteUser(int empId) throws ClassNotFoundException, SQLException{
 
@@ -36,6 +60,8 @@ public class BUserDAO {
 		// 結果を返す
 		return ans;
 	}
+
+
 	//selectAllList
 	public ArrayList<BProfileAllBeans> selectAllList() throws SQLException, ClassNotFoundException {
 
