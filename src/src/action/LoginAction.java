@@ -34,7 +34,7 @@ public class LoginAction {
 			return "WEB-INF/jsp/login.jsp";
 		}else {
 			HttpSession session = request.getSession();
-			session.setAttribute("Users", user);
+			session.setAttribute("users", user);
 			//5. home.jspにフォワードするpassをサーブレットに返す。
 			return "/WEB-INF/jsp/home.jsp";
 		}
