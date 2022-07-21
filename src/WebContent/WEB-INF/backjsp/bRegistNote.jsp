@@ -15,12 +15,14 @@
 		</tr>
 		<tr>
 			<td><input type="text" name="title"></td>
+			<td><input type="hidden" name="emp_id" value="${emp.uId}"></td>
 		</tr>
 		<tr>
 			<th>内容</th>
 		</tr>
 		<tr>
 			<td><textarea name="content"></textarea></td>
+			<td><input type="hidden" name="page_id" value="BN01"></td>
 		</tr>
 		<tr>
 			<td><a href="/Miemo/bControllerServlet/"><input type="button" value="戻る"></a></td>
