@@ -31,7 +31,7 @@ public class BNotesAction {
 			BNotesService noteService = new BNotesService();
 			ans = noteService.nRegist(uId, empId,title,content);
 
-			//戻ってきた値がnullだったら
+			//戻ってきた値が0だったら
 			if(ans == 0) {
 				request.setAttribute("errMsg", "登録できませんでした。");
 				return "/WEB-INF/backjsp/bRegistNote.jsp";
@@ -44,7 +44,7 @@ public class BNotesAction {
 			public String nDelete() throws UnsupportedEncodingException  {
 				request.setCharacterEncoding("UTF-8");
 
-				int noteId = Integer.parseInt(request.getParameter("uId"));
+				int noteId = Integer.parseInt(request.getParameter("noteId"));
 				int ans = 0;
 				//入力値に問題が無ければ指定のserviceを呼び出す
 				BNotesService noteService = new BNotesService();
