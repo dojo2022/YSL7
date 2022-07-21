@@ -70,14 +70,14 @@ public class BEvaluationsDAO {
 
 		//結果をArrayListに入れる
 		while (rs.next()) {
-			BEvaluationsBeans evaluation = new BEvaluationsBeans();
-			evaluation.setEmpId(rs.getInt(empId));
-			evaluation.setEva1(rs.getInt("evaluation1"));
-			evaluation.setEva2(rs.getInt("evaluation2"));
-			evaluation.setEva3(rs.getInt("evaluation3"));
-			evaluation.setEva4(rs.getInt("evaluation4"));
-			evaluation.setEva5(rs.getInt("evaluation5"));
-			otherEvaluationList.add(evaluation);
+			BEvaluationsBeans evaluations = new BEvaluationsBeans();
+			evaluations.setEmpId(rs.getInt(empId));
+			evaluations.setEva1(rs.getInt("evaluation1"));
+			evaluations.setEva2(rs.getInt("evaluation2"));
+			evaluations.setEva3(rs.getInt("evaluation3"));
+			evaluations.setEva4(rs.getInt("evaluation4"));
+			evaluations.setEva5(rs.getInt("evaluation5"));
+			otherEvaluationList.add(evaluations);
 		}
 		return otherEvaluationList;
 	}
