@@ -22,7 +22,7 @@ public class SearchEvaluationService {
 			con = DriverManager.getConnection("jdbc:h2:file:C:/YSL7Data/miemo","sa","");
 			UsersDao udao = new UsersDao(con);
 			//daoのメソッド呼び出すよ。※まだエラーだよ。
-			userList = udao.search();
+			userList = udao.showEmp();
 
 		}catch(SQLException e){
 			e.printStackTrace();
