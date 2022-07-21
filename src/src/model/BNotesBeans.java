@@ -6,20 +6,13 @@ import java.sql.Date;
 public class BNotesBeans implements Serializable  {
     private static final long serialVersionUID = 1L;
 	//	メンバ変数
-	private int uId;
 	private String name;
 	private String title;
 	private String content;
 	private Date date;
 
 
-	//	ゲッタとセッタ
-	public int getuId() {
-		return uId;
-	}
-	public void setuId(int uId) {
-		this.uId = uId;
-	}
+
 	public String getName() {
 		return name;
 	}
