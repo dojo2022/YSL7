@@ -16,11 +16,11 @@ public class BNotesService  {
 		int ans=0;
 		try {
 			Class.forName("org.h2.Driver");
-			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/ysl7data", "sa", "");
-			//★UserDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
+			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+			//BNotesDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
 			BNotesDAO udao=new BNotesDAO(con);
 
-			//★daoのsearchメソッドを呼び出す（引数に上記でもらったnameを渡す）
+			//daoのinsertNotesメソッドを呼び出す（引数に上記でもらったuId,empId,title,contentを渡す）
 			ans=udao.insertNotes(uId,empId, title, content);
 
 		}
@@ -46,11 +46,11 @@ public class BNotesService  {
 		int ans=0;
 		try {
 			Class.forName("org.h2.Driver");
-			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/ysl7data", "sa", "");
-			//★UserDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
+			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+			//BNotesDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
 			BNotesDAO ndao=new BNotesDAO(con);
 
-			//★daoのsearchメソッドを呼び出す（引数に上記でもらったnameを渡す）
+			//daoのdeleteメソッドを呼び出す（引数に上記でもらったnoteIdを渡す）
 			ans=ndao.deleteNotes(noteId);
 
 		}
