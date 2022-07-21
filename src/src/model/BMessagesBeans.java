@@ -1,13 +1,24 @@
 package model;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+import java.io.Serializable;
+import java.sql.Date;
 
-/**
- * Servlet implementation class BMessagesBeans
- */
-@WebServlet("/BMessagesBeans")
-public class BMessagesBeans extends HttpServlet {
+public class BMessagesBeans implements  Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private Date date;
+	private String content;
+
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 }
