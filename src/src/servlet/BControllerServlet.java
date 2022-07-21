@@ -46,6 +46,15 @@ public class BControllerServlet extends HttpServlet {
 					url = tAction.showMainPage();
 				}
 
+		//個人ページの先月・次月ボタンを押したとき
+				if(pageId.equals("BP01") && button.equals("last_month") || button.equals("next_month")) {
+					//★アクションをインスタンス化
+					BTabAction tAction = new BTabAction(request);
+					//★アクションのsearchメソッドを呼び出す
+					url = tAction.showMainPage();
+				}
+
+
 		//個人ページから一覧にもどる
 				if(pageId.equals("BP01") && button.equals("back_list")) {
 					url = "WebContent/WEB-INF/backjsp/listjsp";
@@ -58,7 +67,8 @@ public class BControllerServlet extends HttpServlet {
 
 		// 新規社員登録画面に移動する
 				if(pageId.equals("BL01") && button.equals("to_regist_user")) {
-					url = "WebContent/WEB-INF/backjsp/uRegist.jsp";
+					BUserAction uAction = new BUserAction(request);
+					url = uAction.getSecId();
 				}
 
 
