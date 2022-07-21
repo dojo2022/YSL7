@@ -14,6 +14,7 @@ public class Users implements Serializable{
 	private String division;
 	private String section;
 	private String post;
+	private String year;
 
 
 	public int getUserId() {
@@ -75,6 +76,12 @@ public class Users implements Serializable{
 	}
 	public void setPost(String post) {
 		this.post = post;
+	}
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
