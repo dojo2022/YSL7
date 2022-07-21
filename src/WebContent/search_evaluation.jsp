@@ -21,7 +21,7 @@
     });
    </script>
    <meta charset="UTF-8">
-<title>評価相手検索画面/title>
+<title>評価相手検索画面</title>
 </head>
 <body>
 	<!-- サーブレットへ遷移させる -->
@@ -42,7 +42,7 @@
 		<tbody>
 			<c:forEach var="e" items="${list}" varStatus="status">
 				<tr>
-					<td>${e.u_id}</td>
+					<td>${e.userid}</td>
 					<td>${e.name}</td>
 					<td>${e.department}</td>
 					<td>${e.post}</td>

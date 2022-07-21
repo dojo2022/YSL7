@@ -20,8 +20,10 @@
 		</tr>
 		<c:forEach var="list" items="${listAll}">
 		<tr>
-			<td><input type="submit" value="${list.number} ${list.name}${list.department}${list.division}${list.section}${list.post}${list.year}"
-				name="${list.empId}"></td>
+			<td>
+			<input type="hidden" name="empId" value="${list.empId}">
+			<input type="submit" value="${list.number} ${list.name}${list.department}${list.division}${list.section}${list.post}${list.year}"
+				name="empData"></td>
 		</tr>
 		</c:forEach>
 	</table>

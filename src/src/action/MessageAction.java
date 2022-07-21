@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import model.Users;
 import service.MessageService;
 
 public class MessageAction {
@@ -18,7 +19,9 @@ public class MessageAction {
 	public String sendMessage() throws UnsupportedEncodingException {
 		request.setCharacterEncoding("UTF-8");
 
-		int userId = Integer.parseInt(request.getParameter("userId"));
+		HttpSession session = request.getSession();
+		Users user = (Users)session.getAttribute("users");
+		int userId = user.getUserId();
 		String message = request.getParameter("message");
 
 		MessageService service = new MessageService();
@@ -27,10 +30,10 @@ public class MessageAction {
 
 		if(result==false) {
 			request.setAttribute("errMsg", "メッセージを送信することができませんでした");
-			return "/WEB-INF/jsp/Message.jsp";
+			return "/WEB-INF/jsp/message.jsp";
 		}else {
-			HttpSession session = request.getSession();
-			session.setAttribute("result", result);
+			HttpSession session1 = request.getSession();
+			session1.setAttribute("result", result);
 			return "/WEB-INF/jsp/home.jsp";
 		}
 

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.Users;
 
@@ -120,6 +121,44 @@ public class UsersDao {
 		// 結果を返す
 		return result;
 	}
+
+	//評価の表示
+	public ArrayList<Users> showEmp() throws ClassNotFoundException, SQLException {
+		//return用の変数。
+		ArrayList<Users> userList = new ArrayList<Users>();
+
+		//ドライバの読み込み。
+		Class.forName("org.h2.Driver");
+
+		//SQL文コーナー。
+		String sql = "SELECT Users.name, Departments.department, Divisions.division, Sections.section, Posts.post\r\n"
+				+ " FROM US\r\n"
+				+ " LEFT JOIN Users ON US.u_id = Users.u_id\r\n"
+				+ " LEFT JOIN Sections ON US.sec_id = Sections.sec_id\r\n"
+				+ " LEFT JOIN Divisions ON Sections.div_id = Divisions.div_id\r\n"
+				+ " LEFT JOIN Departments ON Divisions.dep_id = Departments.dep_id\r\n"
+				+ " LEFT JOIN UP ON US.u_id = UP.u_id\r\n"
+				+ " LEFT JOIN Posts ON UP.post_id = Posts.post_id;	";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		//SQL文を実行し、結果を取得する。
+		ResultSet rs = pStmt.executeQuery();
+
+		//while回してrsに入れる。
+		while(rs.next()) {
+			Users users = new Users();
+			users.setName(rs.getString("name"));
+			users.setDepartment(rs.getString("department"));
+			users.setDivision(rs.getString("division"));
+			users.setSection(rs.getString("section"));
+			users.setPost(rs.getString("post"));
+			userList.add(users);
+		}
+		return userList;
+	}
+
+
+
 
 }
 

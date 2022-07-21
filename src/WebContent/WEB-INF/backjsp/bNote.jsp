@@ -33,7 +33,7 @@
 		<th>内容</th>
 	</tr>
 	<tr>
-		<c:forEach var="e" items="${noteList}">
+		<c:forEach var="e" items="${notesList}">
 		<td>${e.date}</td>
 		<td>${e.from_name}</td>
 		<td>${e.title}</td>
