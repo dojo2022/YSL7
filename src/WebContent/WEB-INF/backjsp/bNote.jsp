@@ -38,6 +38,7 @@
 		<td>${e.from_name}</td>
 		<td>${e.title}</td>
 		<td>${e.content}</td>
+		<td><input type="hidden" name="noteId" value="${e.noteId}">
 		<input type="submit" name="nDelete" value="削除">
 		</c:forEach>
 	</tr>
