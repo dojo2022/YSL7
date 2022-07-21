@@ -32,7 +32,7 @@ public class MessagesDao {
 			result= true;
 		}
 		// 結果を返す
-				return result;
+		return result;
 	}
 
 
