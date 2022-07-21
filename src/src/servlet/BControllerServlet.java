@@ -57,12 +57,12 @@ public class BControllerServlet extends HttpServlet {
 
 		//個人ページから一覧にもどる
 				if(pageId.equals("BP01") && button.equals("back_list")) {
-					url = "WebContent/WEB-INF/backjsp/listjsp";
+					url = "/WEB-INF/backjsp/listjsp";
 				}
 
 		//メモの新規作成画面
 				if(pageId.equals("BN01") && button.equals("to_regist_note")) {
-					url = "WebContent/WEB-INF/backjsp/registNote.jsp";
+					url = "/WEB-INF/backjsp/registNote.jsp";
 				}
 
 		// 新規社員登録画面に移動する
@@ -113,13 +113,13 @@ public class BControllerServlet extends HttpServlet {
 			//★アクションをインスタンス化
 			BUserAction uAction = new BUserAction(request);
 			//★アクションのsearchメソッドを呼び出す
-			url = Action.udelete();
+			url = uAction.udelete();
 		}
 
 
 		//個人ページから個人情報編集画面
 		if(pageId.equals("BP01") && button.equals("編集")) {
-			url = "WebContent/WEB-INF/backjsp/uRegist.jsp";
+			url = "/WEB-INF/backjsp/uRegist.jsp";
 		}
 
 
@@ -128,7 +128,7 @@ public class BControllerServlet extends HttpServlet {
 			//★アクションをインスタンス化
 			BUserAction uAction = new BUserAction(request);
 			//★アクションのsearchメソッドを呼び出す
-			url = Action.uUpdate();
+			url = uAction.uUpdate();
 		}
 
 		//メモの保存ボタン

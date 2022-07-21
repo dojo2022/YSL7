@@ -18,6 +18,7 @@ public class BUserDAO {
 	//registUser
 	public int registUser(String number, String name,String year, int gender) throws ClassNotFoundException, SQLException{
 		int result = 0;
+		int autoIncrementKey = 0;
 
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
@@ -35,8 +36,18 @@ public class BUserDAO {
 		// SQL文を実行し、結果表を取得する
 		result = pStmt.executeUpdate();
 
+		//もしinsertできていたら、一番大きいu_idを取ってくる
+		if(result == 1) {
+			ResultSet res = pStmt.getGeneratedKeys();
+			if(res.next()){
+	             autoIncrementKey = res.getInt(1);
+	         }
+			result = autoIncrementKey;
+		}
+
 		return result;
 	}
+
 
 	//deleteUser
 	public int deleteUser(int empId) throws ClassNotFoundException, SQLException{
