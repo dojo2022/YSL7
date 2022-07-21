@@ -17,11 +17,11 @@
 	<table border="1">
 		<tr>
 		<!-- 見出し -->
-			<th><img alt="stamp1" src=""></th>
-			<th><img alt="stamp2" src=""></th>
-			<th><img alt="stamp3" src=""></th>
-			<th><img alt="stamp4" src=""></th>
-			<th><img alt="stamp5" src=""></th>
+			<th><img alt="とても不満" src=""></th>
+			<th><img alt="不満" src=""></th>
+			<th><img alt="普通" src=""></th>
+			<th><img alt="満足" src=""></th>
+			<th><img alt="とても満足" src=""></th>
 		</tr>
 		<tr>
 			<td>${countAllStamps.countS1}</td>
@@ -50,7 +50,7 @@
 				//グラフのラベルを設定
 				labels: ["にっこり", "ちょっとにっこり", "普通", "ちょっと不満", "不満"],
 				datasets: [{
-					data: [inputData[0], inputData[1],inputData[2],inputData[3],inputData[4],],
+					data: [inputData[4], inputData[3],inputData[2],inputData[1],inputData[0],],
 					backgroundColor: ['#7fffd4', '#87cefa', '#f5deb3','#ff69b4','#dc143c'],
 				}]
 			},
