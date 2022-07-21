@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class MessagesDao {
 	Connection con=null;
@@ -10,7 +11,7 @@ public class MessagesDao {
 		this.con=con;
 	}
 	//登録するだけの処理でtrycatchとかエラー返すのはServiceでは？
-	public boolean sendMessage(int userId, String message) {
+	public boolean sendMessage(int userId, String message) throws ClassNotFoundException, SQLException {
 		boolean result = false;
 
 		// JDBCドライバを読み込む
