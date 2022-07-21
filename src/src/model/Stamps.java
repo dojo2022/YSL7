@@ -15,7 +15,7 @@ public class Stamps implements Serializable {
 	private int stamp4;
 	private int stamp5;
 	private String category;
-	private String commnet;
+	private String comment;
 	private int sumStamp1;
 	private int sumStamp2;
 	private int sumStamp3;
@@ -82,11 +82,11 @@ public class Stamps implements Serializable {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getCommnet() {
-		return commnet;
+	public String getComment() {
+		return comment;
 	}
-	public void setCommnet(String commnet) {
-		this.commnet = commnet;
+	public void setCommnet(String comment) {
+		this.comment = comment;
 	}
 	public int getSumStamp1() {
 		return sumStamp1;

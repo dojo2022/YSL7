@@ -37,7 +37,7 @@ public class BNotesAction {
 				return "/WEB-INF/backjsp/bRegistNote.jsp";
 			//ちゃんと入っていたら
 			}else {
-				//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
+				//servletに次のＪＳＰのパスを送る
 				return "/WEB-INF/backjsp/bMainPage.jsp";
 				}
 		}
@@ -56,7 +56,7 @@ public class BNotesAction {
 					return "/WEB-INF/backjsp/bRegistNote.jsp";
 				//ちゃんと入っていたら
 				}else {
-					//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
+					//servletに次のＪＳＰのパスを送る
 					return "/WEB-INF/backjsp/bMainPage.jsp";
 				}
 		}

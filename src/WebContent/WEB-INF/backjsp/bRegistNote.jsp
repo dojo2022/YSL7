@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>${emp.name}さんの新規メモ</h2>
-<form method=POST name=registNote>
+<form method=POST action="/Miemo/bControllerServlet/">
 	<table class="registNote">
 		<tr>
 			<th>タイトル</th>
@@ -25,7 +25,8 @@
 			<td><input type="hidden" name="page_id" value="BN01"></td>
 		</tr>
 		<tr>
-			<td><a href="/Miemo/bControllerServlet/"><input type="button" value="戻る"></a></td>
+		<!-- 戻るボタンはjsのhistorybackを使います -->
+			<td><input type="button" value="戻る" id="noteReturn"></td>
 			<td><input type="submit" name="bt_name" value="保存"></td>
 		</tr>
 	</table>
