@@ -15,7 +15,7 @@ public class MessageService {
 
 		try {
 			Class.forName("org.h2.Driver");
-			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/sample", "sa", "");
+			con = DriverManager.getConnection("jdbc:h2:file:C:/YSL7Data/miemo", "sa", "");
 			//★UserDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
 			MessagesDao dao = new MessagesDao(con);
 
