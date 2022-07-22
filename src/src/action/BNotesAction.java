@@ -25,40 +25,28 @@ public class BNotesAction {
 			//入力値のチェック（空文字チェック）
 			if(title.strip().length()==0||content.strip().length()==0) {
 				request.setAttribute("errMsg", "必須項目を記入してください。");
-				return "/WEB-INF/jsp/login.jsp";
+				return "/WEB-INF/backjsp/bRegistNote.jsp";
 			}
 			//入力値に問題が無ければ指定のserviceを呼び出す
 			BNotesService noteService = new BNotesService();
 			ans = noteService.nRegist(uId, empId,title,content);
 
-			//戻ってきた値が0だったら
-			if(ans == 0) {
-				request.setAttribute("errMsg", "登録できませんでした。");
-				return "/WEB-INF/backjsp/bRegistNote.jsp";
-			//ちゃんと入っていたら
-			}else {
-				//servletに次のＪＳＰのパスを送る
-				return "/WEB-INF/backjsp/bMainPage.jsp";
-				}
+			String sAns=Integer.toString(ans);
+			//ansをServletにかえします
+			return sAns;
 		}
-			public String nDelete() throws UnsupportedEncodingException  {
-				request.setCharacterEncoding("UTF-8");
+		public int nDelete() throws UnsupportedEncodingException  {
+			request.setCharacterEncoding("UTF-8");
 
-				int noteId = Integer.parseInt(request.getParameter("noteId"));
-				int ans = 0;
-				//入力値に問題が無ければ指定のserviceを呼び出す
-				BNotesService noteService = new BNotesService();
-				ans = noteService.nDelete(noteId);
+			int noteId = Integer.parseInt(request.getParameter("noteId"));
+			int ans = 0;
+			//入力値に問題が無ければ指定のserviceを呼び出す
+			BNotesService noteService = new BNotesService();
+			ans = noteService.nDelete(noteId);
 
-				//戻ってきた値が0だったら
-				if(ans == 0) {
-					request.setAttribute("errMsg", "登録できませんでした");
-					return "/WEB-INF/backjsp/bRegistNote.jsp";
-				//ちゃんと入っていたら
-				}else {
-					//servletに次のＪＳＰのパスを送る
-					return "/WEB-INF/backjsp/bMainPage.jsp";
-				}
+			//ansをServletにかえします
+			return ans;
+
 		}
 
 

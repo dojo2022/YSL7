@@ -134,17 +134,35 @@ public class BControllerServlet extends HttpServlet {
 		//メモの保存ボタン
 		if(pageId.equals("BN01") && button.equals("保存")) {
 			//★アクションをインスタンス化
-			BNotesAction bAction = new BNoteTAction(request);
-			//★アクションのsearchメソッドを呼び出す
-			url = bAction.nRegist();
+			BNotesAction nAction = new BNotesAction(request);
+			BTabAction tAction = new BTabAction(request);
+			//★アクションのメソッドから成功したかどうかを受け取る
+			String sAns =nAction.nRegist();
+			//TacActionのshowMainPageを呼び出す（引数どしよ）
+			if(sAns=="1") {
+				url = tAction.showMainPage();
+			}
+			else {
+				//エラーメッセージ格納してjspに戻す
+				request.setAttribute("errMsg", "登録できませんでした。");
+				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+			}
 		}
 
 		//メモの削除ボタン
 		if(pageId.equals("BP01") && button.equals("削除")) {
 			//★アクションをインスタンス化
 			BNotesAction nAction = new BNotesAction(request);
-			//★アクションのsearchメソッドを呼び出す
-			url = nAction.nDelete();
+			BTabAction tAction = new BTabAction(request);
+			//★アクションのメソッドから成功したかどうかを受け取る
+			int ans = nAction.nDelete();
+			if(ans==1) {
+				url = tAction.showMainPage();
+			}else {
+				//エラーメッセージ格納してjspに戻す
+				request.setAttribute("errMsg", "登録できませんでした。");
+				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+			}
 		}
 
 		//JSPさんへ処理を依頼する
