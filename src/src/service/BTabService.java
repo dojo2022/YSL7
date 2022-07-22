@@ -76,10 +76,10 @@ public class BTabService {
 		}
 		return messageList;
 	}
-//	selectEvaluationメソッドです（評価系）
-	public ArrayList<BEvaluationsBeans> selectEvaluation(int empId){
+//	selectMyEvaluationメソッドです（評価系）
+	public ArrayList<BEvaluationsBeans> selectMyEvaluation(int empId){
 		Connection con = null;
-		ArrayList<BEvaluationsBeans> evaluationList= new ArrayList<BEvaluationsBeans>();
+		ArrayList<BEvaluationsBeans> myEvaluationList= new ArrayList<BEvaluationsBeans>();
 		try {
 			Class.forName("org.h2.Driver");
 			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
@@ -87,10 +87,10 @@ public class BTabService {
 			BEvaluationsDAO beDao=new BEvaluationsDAO(con);
 
 			//BUserDAOのselectAllListメソッドを呼び出す（引数なし）
-			evaluationList=beDao.selectEvaluation(empId);
+			myEvaluationList=beDao.selectMyEvaluation(empId);
 		}catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
-			return evaluationList;
+			return myEvaluationList;
 		}
 		// データベースを切断
 		if (con != null) {
@@ -103,7 +103,36 @@ public class BTabService {
 				return null;
 			}
 		}
-		return evaluationList;
+		return myEvaluationList;
+	}
+//	selectOtherEvaluationメソッドです（評価系）
+	public ArrayList<BEvaluationsBeans> selectOtherEvaluation(int empId){
+		Connection con = null;
+		ArrayList<BEvaluationsBeans> otherEvaluationList= new ArrayList<BEvaluationsBeans>();
+		try {
+			Class.forName("org.h2.Driver");
+			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+			//BUserDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
+			BEvaluationsDAO beDao=new BEvaluationsDAO(con);
+
+			//BUserDAOのselectAllListメソッドを呼び出す（引数なし）
+			otherEvaluationList=beDao.selectOtherEvaluation(empId);
+		}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			return otherEvaluationList;
+		}
+		// データベースを切断
+		if (con != null) {
+			try {
+				con.close();
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				//Exceptionが出ているのでnullで返す
+				return null;
+			}
+		}
+		return otherEvaluationList;
 	}
 }
 
