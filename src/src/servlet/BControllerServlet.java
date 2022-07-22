@@ -72,7 +72,15 @@ public class BControllerServlet extends HttpServlet {
 				}
 
 
-		//新規社員登録画面から一覧に戻るのはヒストリーバック
+		//新規社員登録画面から一覧に戻るのは
+				pageId=request.getParameter("page_id");
+				button=request.getParameter("bt_name");
+				if(pageId.equals("BL01") && button.equals("戻る")) {
+					//★アクションをインスタンス化
+					BTabAction tAction = new BTabAction(request);
+					//タブアクションのメソッドを実行
+					url = tAction.showMainPage();;
+					}
 		//新規メモ作成画面から個人ページに戻るのもヒストリーバック
 
 		//社員用画面に戻る
@@ -134,17 +142,35 @@ public class BControllerServlet extends HttpServlet {
 		//メモの保存ボタン
 		if(pageId.equals("BN01") && button.equals("保存")) {
 			//★アクションをインスタンス化
-			BNotesAction bAction = new BNoteTAction(request);
-			//★アクションのsearchメソッドを呼び出す
-			url = bAction.nRegist();
+			BNotesAction nAction = new BNotesAction(request);
+			BTabAction tAction = new BTabAction(request);
+			//★アクションのメソッドから成功したかどうかを受け取る
+			String sAns =nAction.nRegist();
+			//TacActionのshowMainPageを呼び出す（引数どしよ）
+			if(sAns=="1") {
+				url = tAction.showMainPage();
+			}
+			else {
+				//エラーメッセージ格納してjspに戻す
+				request.setAttribute("errMsg", "登録できませんでした。");
+				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+			}
 		}
 
 		//メモの削除ボタン
 		if(pageId.equals("BP01") && button.equals("削除")) {
 			//★アクションをインスタンス化
 			BNotesAction nAction = new BNotesAction(request);
-			//★アクションのsearchメソッドを呼び出す
-			url = nAction.nDelete();
+			BTabAction tAction = new BTabAction(request);
+			//★アクションのメソッドから成功したかどうかを受け取る
+			int ans = nAction.nDelete();
+			if(ans==1) {
+				url = tAction.showMainPage();
+			}else {
+				//エラーメッセージ格納してjspに戻す
+				request.setAttribute("errMsg", "登録できませんでした。");
+				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+			}
 		}
 
 		//JSPさんへ処理を依頼する

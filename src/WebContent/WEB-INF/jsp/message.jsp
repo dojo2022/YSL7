@@ -12,7 +12,10 @@
 	<!-- Servletへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FM01">
-		メッセージ：<input type="text" name="message" value="${param.message}">
+		<h1>Message</h1>
+		<p>メッセージは人事部にのみ送られます</p>
+		<input type="text" name="message" value="${param.message}">
+
 			  <input type="submit" name="bt_name" value="送信">
 	</form>
 	<!-- エラーメッセージの表示欄 -->

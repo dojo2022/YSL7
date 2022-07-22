@@ -19,9 +19,58 @@ public class BUserAction {
 
 	//uRegist
 	public String uRegist() throws UnsupportedEncodingException{
+			int ans = 0;
+
+			request.setCharacterEncoding("UTF-8");
+			String number = request.getParameter("number");
+			String name = request.getParameter("name");
+			String gender = request.getParameter("gender");
+			String depId = request.getParameter("dep_id");
+			String divId = request.getParameter("div_id");
+			String secId = request.getParameter("sec_id");
+			String post1 = request.getParameter("post1");
+			String post2 = request.getParameter("post2");
+			String post3 = request.getParameter("post3");
+			String year = request.getParameter("year");
+
+//			if(number.strip().length()==0|| name.strip().length()==0 || gender.strip().length()==0
+//					|| secId.strip().length()==0 || post1.strip().length()==0 || year.strip().length()==0) {
+//				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+//				request.setAttribute("errMsg", "※エラーメッセージを入れる");
+//				return "/WEB-INF/jsp/login.jsp";
+//			}
+
+			int intSecId = 0;
+			if (divId.equals("金融・保険サービス1部") && secId.equals("1課")) {
+				intSecId = 1;
+			}
+			if (divId.equals("金融・保険サービス1部") && secId.equals("2課")) {
+				intSecId = 2;
+			}
+			if (divId.equals("金融・保険サービス2部") && secId.equals("1課")) {
+				intSecId = 3;
+			}
+			if (divId.equals("金融・保険サービス2部") && secId.equals("2課")) {
+				intSecId = 4;
+			}
 
 
-		return "/WEB-INF/backjsp/bURegist.jsp";
+
+
+
+			BUserService uService = new BUserService();
+			ans = uService.uRegist(number, name, year, gender, intSecId, post1, post2, post3);
+
+			//戻ってきた値がnullだったら
+			if(ans == 0) {
+				request.setAttribute("errMsg", "※登録できませんでした");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+			//ちゃんと入っていたら
+			}else {
+				//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
+				request.setAttribute("errMsg", "※登録できました");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+			}
 	}
 
 
