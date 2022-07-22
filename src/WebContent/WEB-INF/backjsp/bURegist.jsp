@@ -147,6 +147,7 @@
 
 		<input type="submit" name="button_id" value="登録">
 	</form>
+		<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る">戻る</a>
 </body>
 
 <script>

@@ -72,7 +72,15 @@ public class BControllerServlet extends HttpServlet {
 				}
 
 
-		//新規社員登録画面から一覧に戻るのはヒストリーバック
+		//新規社員登録画面から一覧に戻るのは
+				pageId=request.getParameter("page_id");
+				button=request.getParameter("bt_name");
+				if(pageId.equals("BL01") && button.equals("戻る")) {
+					//★アクションをインスタンス化
+					BTabAction tAction = new BTabAction(request);
+					//タブアクションのメソッドを実行
+					url = tAction.showMainPage();;
+					}
 		//新規メモ作成画面から個人ページに戻るのもヒストリーバック
 
 		//社員用画面に戻る
