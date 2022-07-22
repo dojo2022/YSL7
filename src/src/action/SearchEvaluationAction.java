@@ -19,7 +19,7 @@ public class SearchEvaluationAction {
 
 	//表示するメソッド
 	public String showEmp() throws UnsupportedEncodingException {
-		request.setCharacterEncoding("UTF-8");//日本語だよ
+		request.setCharacterEncoding("UTF-8");
 
 		//何も入力されていなかったら全件検索にするので入力チェックは行わず、
 		//serviceをインスタンス化するよ。
