@@ -115,7 +115,7 @@ public class BUserService {
 			}
 
 	//uRegist
-	public int uUpdate(int empId, String number, String name,String year, String gender, int intSecId, String post1, String post2, String post3) {
+	public int uUpdate(String empId, String number, String name,String year, String gender, int intSecId, String post1, String post2, String post3) {
 		Connection con = null;
 		int num1 = 0;
 		int num2 = 0;
@@ -135,11 +135,12 @@ public class BUserService {
 			//----Userに関するinsert-------------------
 			//daoのdeleteUserメソッドを呼び出す（引数に上記でもらったempIdを渡す）
 			int intgender = Integer.parseInt(gender);
+			int intEmpId = Integer.parseInt(empId);
 			System.out.println(number);
 			System.out.println(name);
 			System.out.println(year);
 			System.out.println(intgender);
-			int ans = buDao.updateUser(empId, number,name,year,intgender);
+			int ans = buDao.updateUser(intEmpId, number,name,year,intgender);
 			 //ansが0だった場合、insertできていない
 			if(ans == 0) {
 				num1 = 1;
@@ -159,9 +160,9 @@ public class BUserService {
 			//post2が空白じゃなかったら、registPost2
 			//上記の二つ以外なら、registPost1
 			if(post3.strip().length() != 0 ) {
-				int ans1 = bupusDao.updatePost1(empId, intPost1);
-				int ans2 = bupusDao.updatePost2(empId, intPost2);
-				int ans3 = bupusDao.updatePost3(empId, intPost3);
+				int ans1 = bupusDao.updatePost1(intEmpId, intPost1);
+				int ans2 = bupusDao.updatePost2(intEmpId, intPost2);
+				int ans3 = bupusDao.updatePost3(intEmpId, intPost3);
 				int sum = ans1 + ans2 + ans3;
 				if(sum == 3) {
 					num2 =1;
@@ -169,8 +170,8 @@ public class BUserService {
 					num2 =0;
 				}
 			} else if(post2.strip().length() != 0 ) {
-				int ans1 = bupusDao.updatePost1(empId, intPost1);
-				int ans2 = bupusDao.updatePost2(empId, intPost2);
+				int ans1 = bupusDao.updatePost1(intEmpId, intPost1);
+				int ans2 = bupusDao.updatePost2(intEmpId, intPost2);
 				int sum = ans1 + ans2;
 				if(sum == 2) {
 				 num2 =1;
@@ -178,7 +179,7 @@ public class BUserService {
 					num2 =0;
 				}
 			} else {
-				int ans1 = bupusDao.updatePost1(empId, intPost1);
+				int ans1 = bupusDao.updatePost1(intEmpId, intPost1);
 				if(ans1 == 1) {
 					num2 =1;
 				} else {
@@ -187,8 +188,11 @@ public class BUserService {
 			}
 
 			//----Sectionのinsert-------------------
-			num3 = bupusDao.insertSection(empId, intSecId);
+			num3 = bupusDao.insertSection(intEmpId, intSecId);
 
+			System.out.println("num1" + num1);
+			System.out.println("num2" + num2);
+			System.out.println("num3" + num3);
 			int sum = num1 + num2 + num3;
 			if(sum != 3) {
 				throw new SQLException();

@@ -71,7 +71,7 @@ public class BUserDAO {
 	}
 
 	//updateUser
-	public int updateUser(int empId, String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
+	public int updateUser(int intempId, String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
 		int result = 0;
 
 		// JDBCドライバを読み込む
@@ -86,7 +86,7 @@ public class BUserDAO {
 		pStmt.setString(2,name);
 		pStmt.setString(3,year);
 		pStmt.setInt(4,intgender);
-		pStmt.setInt(5,empId);
+		pStmt.setInt(5,intempId);
 
 		// SQL文を実行し、結果表を取得する
 		result = pStmt.executeUpdate();
