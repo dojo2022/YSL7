@@ -13,14 +13,15 @@
 
 <!-- サーブレットへ遷移させる -->
 
+
+<form method = "POST" action = "/miemo/FrontControllerServlet">
 	<table>
-	<form method = "POST" action = "/miemo/FrontControllerServlet">
 	<input type="hidden" name="page_id" value="FL01">
 
 	<tr>
 		<td>社員番号</td>
 		<td>
-			<input class= "number" type = "text" name = "number" value = "${param.number}">
+			<input class= "member_number" type = "text" name = "number" value = "${param.number}">
 		</td>
 	</tr>
 
@@ -28,7 +29,7 @@
 	<tr>
 		<td>パスワード</td>
 		<td>
-			<input type="checkbox" id="checkPassword" class="ch">
+			<input type="checkbox" id="checkPassword">
 			<div class="togglePassword">
 				<input type="password" class="hideText" value="">
 				<input type="text" class="showText" value="">
@@ -38,12 +39,13 @@
 		</td>
 	</tr>
 
-	</form>
-	</table>
-
-<input type = "submit" name = "bt_name" value = "ログイン">
-
-
+		<tr>
+			<td>
+			<input type = "submit" name = "bt_name" value = "ログイン">
+			</td>
+		</tr>
+    </table>
+</form>
 
 
 

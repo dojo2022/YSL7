@@ -25,8 +25,8 @@
 </head>
 <body>
 	<!-- サーブレットへ遷移させる -->
-	<form method="POST" action="/miemo/servlet/FrontControllerServlet">
-		<input type="hidden" name="page_id" value="FE01">
+
+
 
 <h1>評価シート</h1>
 	<table border="1" id="foo-table" class="table table-bordered">
@@ -42,18 +42,19 @@
 		<tbody>
 			<c:forEach var="e" items="${list}" varStatus="status">
 				<tr>
-					<td>${e.userId}</td>
-					<td>${e.name}</td>
-					<td>${e.department}</td>
-					<td>${e.post}</td>
-					<td><input type="radio" name="select_about"></td>
+					<form method="POST" action="/miemo/FrontControllerServlet">
+						<input type="hidden" name="page_id" value="FE01">
+						<td>${e.userId}<input type="hidden" name="user_id" value="${e.userId}"></td>
+						<td>${e.name}<input type="hidden" name="evaluate_name" value="${e.name}"></td>
+						<td>${e.department}</td>
+						<td>${e.post}</td>
+						<td><input type="submit" name="bt_name" value="評価する"></td>
+					</form>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-		<!-- 評価するボタン -->
-		<input type="submit" name="bt_name" value="評価する"
-			onclick="location.href='/miemo/FrontControllerServlet'">
-	</form>
+
+
 </body>
 </html>

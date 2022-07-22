@@ -57,9 +57,7 @@ public class StampsDao {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "SELECT Stamps.stamp_id, Stamps.stamp1, Stamps.stamp2, Stamps.stamp3, Stamps.stamp4, Stamps.stamp5, Stamps.category_id, Categories.category, Stamps.date FROM Stamps"
-				+ "LEFT JOIN Categories ON Stamps.category_id = Categories.category_id"
-				+ "WHERE Stamps.u_id = ?;";
+		String sql = "SELECT Stamps.stamp_id, Stamps.stamp1, Stamps.stamp2, Stamps.stamp3, Stamps.stamp4, Stamps.stamp5, Stamps.category_id, Categories.category, Stamps.date, Stamps.comment FROM Stamps LEFT JOIN Categories ON Stamps.category_id = Categories.category_id  WHERE Stamps.u_id = ?;";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる(ワイルドカード検索）
@@ -80,6 +78,7 @@ public class StampsDao {
 			stamp.setStamp5(Integer.parseInt(rs.getString("stamp5")));
 			stamp.setCategoryId(Integer.parseInt(rs.getString("category_id")));
 			stamp.setCategory(rs.getString("category"));
+			stamp.setDate(rs.getDate("date"));
 			stamp.setComment(rs.getString("comment"));
 			historyList.add(stamp);
 		}
