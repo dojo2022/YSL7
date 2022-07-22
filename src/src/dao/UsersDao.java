@@ -18,7 +18,7 @@ public class UsersDao {
 	//ログイン
 	public Users login(String number, String password) throws ClassNotFoundException, SQLException {
 
-		Users user = new Users();
+		Users user = null;
 
 		// JDBCドライバを読み込む
 				Class.forName("org.h2.Driver");
@@ -36,6 +36,7 @@ public class UsersDao {
 
 				// 結果表をコレクションにコピーする
 				if(rs.next()) {
+					 user = new Users();
 					 user.setUserId(Integer.parseInt(rs.getString("u_id")));
 				     user.setNumber(rs.getString("number"));
 				     user.setName(rs.getString("name"));
