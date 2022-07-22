@@ -35,7 +35,7 @@ public class BGraphCalc {
 
 	//stamp1の各カテゴリの割合を求めるメソッド
 	public ArrayList<Integer> s1Calc(ArrayList<BStampsBeans> stamp1){
-		ArrayList s1Percent = new ArrayList<>();
+		ArrayList<Integer> s1Percent = new ArrayList<>();
 		//stamp1の行数で押された回数を調べる
 		int s1Count = stamp1.size();
 		int[] s1Category = new int[10];
@@ -57,7 +57,7 @@ public class BGraphCalc {
 	}
 	//stamp2の各カテゴリの割合を求めるメソッド
 	public ArrayList<Integer> s2Calc(ArrayList<BStampsBeans> stamp2){
-		ArrayList s2Percent = new ArrayList<>();
+		ArrayList<Integer> s2Percent = new ArrayList<>();
 		//stamp2の行数で押された回数を調べる
 		int s2Count = stamp2.size();
 		int[] s2Category = new int[10];
@@ -80,7 +80,7 @@ public class BGraphCalc {
 	}
 	//stamp3の各カテゴリの割合を求めるメソッド
 	public ArrayList<Integer> s3Calc(ArrayList<BStampsBeans> stamp3){
-		ArrayList s3Percent = new ArrayList<>();
+		ArrayList<Integer> s3Percent = new ArrayList<>();
 		//stamp3の行数で押された回数を調べる
 		int s3Count = stamp3.size();
 		int[] s3Category = new int[10];
@@ -102,7 +102,7 @@ public class BGraphCalc {
 
 	}
 	public ArrayList<Integer> s4Calc(ArrayList<BStampsBeans> stamp4){
-		ArrayList s4Percent = new ArrayList<>();
+		ArrayList<Integer> s4Percent = new ArrayList<>();
 		//stamp4の行数で押された回数を調べる
 		int s4Count = stamp4.size();
 		int[] s4Category = new int[10];
@@ -124,7 +124,7 @@ public class BGraphCalc {
 
 	}
 	public ArrayList<Integer> s5Calc(ArrayList<BStampsBeans> stamp5){
-		ArrayList s5Percent = new ArrayList<>();
+		ArrayList<Integer> s5Percent = new ArrayList<>();
 		//stamp5の行数で押された回数を調べる
 		int s5Count = stamp5.size();
 		int[] s5Category = new int[10];
