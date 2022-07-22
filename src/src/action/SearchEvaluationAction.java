@@ -37,7 +37,7 @@ public class SearchEvaluationAction {
 			return "/WEB-INF/jsp/search_evaluation.jsp";
 		//ちゃんと入っていたらservletにsearch_evaluation.jspのパスを送るよ。
 		}else{
-			HttpSession seission = request.getSession();
+			HttpSession session = request.getSession();
 			request.setAttribute("list", userList);
 			return "/WEB-INF/jsp/search_evaluation.jsp";
 		}
