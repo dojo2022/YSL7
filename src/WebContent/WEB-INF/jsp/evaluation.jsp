@@ -35,7 +35,7 @@
 			</table>
 		</span>
 	</div>
-
+	<br>
 	<!-- 登録ボタン -->
 	<div>
 		<input type="button" id="bt_name" value="登録" onclick="location.href='/miemo/FrontControllerServlet'">

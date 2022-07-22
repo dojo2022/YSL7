@@ -16,11 +16,10 @@ public class EvaluationService {
 		try {
 			Class.forName("org.h2.Driver");
 			con = DriverManager.getConnection("jdbc:h2:file:C:/YSL7Data/miemo", "sa", "");
-			//EvaluationDaoをインスタンス化する。Daoがいないからエラー？
+			//EvaluationDaoをインスタンス化する。
 			EvaluationsDao eDao = new EvaluationsDao(con);
 
 			//Daoのメソッドを呼び出す
-			//Dao作ってないから現時点ではエラーだよ。
 			result = eDao.registEval(toUserId, fromUserId, evaluation1,
 					evaluation2, evaluation3, evaluation4, evaluation5);
 		} catch (SQLException e) {
