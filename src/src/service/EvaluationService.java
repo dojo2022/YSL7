@@ -11,7 +11,7 @@ public class EvaluationService {
 	public boolean registEval(int toUserId, int fromUserId,
 			int evaluation1, int evaluation2, int evaluation3, int evaluation4, int evaluation5) {
 		Connection con = null;
-		boolean bool;
+		boolean result = false;
 
 		try {
 			Class.forName("org.h2.Driver");
@@ -21,7 +21,7 @@ public class EvaluationService {
 
 			//Daoのメソッドを呼び出す
 			//Dao作ってないから現時点ではエラーだよ。
-			bool = eDao.registEval(toUserId, fromUserId, evaluation1,
+			result = eDao.registEval(toUserId, fromUserId, evaluation1,
 					evaluation2, evaluation3, evaluation4, evaluation5);
 		} catch (SQLException e) {
 			e.printStackTrace();
