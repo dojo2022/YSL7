@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
- <% session.setAttribute("notesList", "notesList"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +25,7 @@
 <meta charset="UTF-8">
 </head>
 <body>
+ <% session.setAttribute("notesList", "notesList"); %>
 <form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
 <table border="1" id="foo-table" class="table table-bordered">
 	<tr>
