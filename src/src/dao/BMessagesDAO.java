@@ -24,7 +24,7 @@ public class BMessagesDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "SELECT date, content FROM Messages WHERE from_u_id=? AND ORDER BY date DESC";
+		String sql = "SELECT date, message FROM Messages WHERE from_u_id=? ORDER BY date DESC";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる
@@ -37,7 +37,7 @@ public class BMessagesDAO {
 		while (rs.next()) {
 			BMessagesBeans messages = new BMessagesBeans();
 			 messages.setDate(rs.getDate("date"));
-			 messages.setContent(rs.getString("content"));
+			 messages.setContent(rs.getString("message"));
 			 messageList.add(messages);
 
 
