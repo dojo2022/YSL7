@@ -24,7 +24,7 @@
 			<tr>
 				<td>性別</td>
 				<td>
-					<select name="post1">
+					<select name="gender">
 						<option value="">性別を選択</option>
 					    <option value="0">男性</option>
 					    <option value="1">女性</option>
@@ -107,7 +107,7 @@
 			<tr>
 				<td>入社年度</td>
 				<td>
-					<select name="post2">
+					<select name="year">
 						<option value="">入社年度を選択</option>
 					    <option value="1991">1991</option>
 					    <option value="1992">1992</option>
