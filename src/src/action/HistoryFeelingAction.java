@@ -35,7 +35,7 @@ public class HistoryFeelingAction {
 		request.setAttribute("historyList", historyList );
 
 		//5．パスを作成して、サーブレットに返す。（WEB-INF/jsp/history_feeling.jsp）
-		if(historyList.size() == 0 ) {
+		if(historyList==null ) {
 			return "WEB-INF/jsp/home.jsp";
 		} else {
 			return "WEB-INF/jsp/history_feeling.jsp";
