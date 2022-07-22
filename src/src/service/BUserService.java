@@ -43,18 +43,23 @@ public class BUserService {
 
 			//----Postのinsert-------------------
 			int intPost1 = Integer.parseInt(post1);
-			int intPost2 = Integer.parseInt(post2);
-			int intPost3 = Integer.parseInt(post3);
-
+			int intPost2 = 0;
+			int intPost3 = 0;
+			if(!post2.equals("")) {
+				intPost2 = Integer.parseInt(post2);
+			}
+			if(!post3.equals("")) {
+				intPost3 = Integer.parseInt(post3);
+	 		}
 			//post3が空白じゃなかったら、registPost3
 			//post2が空白じゃなかったら、registPost2
 			//上記の二つ以外なら、registPost1
-			if(post3.length() != 0 ) {
+			if(post3.strip().length() != 0 ) {
 				bupusDao.insertPost1(empId, intPost1);
 				bupusDao.insertPost1(empId, intPost2);
 				bupusDao.insertPost1(empId, intPost3);
 				num2 =1;
-			} else if(post2.length() != 0 ) {
+			} else if(post2.strip().length() != 0 ) {
 				bupusDao.insertPost1(empId, intPost1);
 				bupusDao.insertPost2(empId, intPost2);
 				num2 =1;

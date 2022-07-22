@@ -133,7 +133,8 @@ public class BUserAction {
 				request.setAttribute("two", two);
 				request.setAttribute("three", three);
 				request.setAttribute("three2", three2);
-		return "WebContent/WEB-INF/backjsp/uRegist.jsp";
+
+		return "/WEB-INF/backjsp/bURegist.jsp";
 	}
 
 

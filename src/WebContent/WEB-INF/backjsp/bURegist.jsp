@@ -10,7 +10,8 @@
 <body>
 	<h1>新規社員登録</h1>
 
-	<form method="POST" action="/miemo/servlet/BControllerServlet">
+	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
+	<form method="POST" action="/miemo/TestServlet">
 	<input type="hidden" name="page_id" value="BR01">
 		<table>
 			<tr>
@@ -153,6 +154,7 @@
 
 		<input type="submit" name="button_id" value="登録">
 	</form>
+	<p>${errMsg}</p>
 		<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る">戻る</a>
 </body>
 
