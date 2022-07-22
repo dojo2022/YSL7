@@ -65,8 +65,8 @@ public class BStampsDAO {
 
 		while(rs.next()) {
 			BStampsBeans s1 = new BStampsBeans();
-			s1.setCategoryId(rs.getInt("stamps.category_id"));
-			s1.setCategory(rs.getString("categories.category"));
+			s1.setCategoryId(rs.getInt("category_id"));
+			s1.setCategory(rs.getString("category"));
 			stamp1.add(s1);
 		}
 		return stamp1;
@@ -92,8 +92,8 @@ public class BStampsDAO {
 
 		while(rs.next()) {
 			BStampsBeans s2 = new BStampsBeans();
-			s2.setCategoryId(rs.getInt("stamps.category_id"));
-			s2.setCategory(rs.getString("categories.category"));
+			s2.setCategoryId(rs.getInt("category_id"));
+			s2.setCategory(rs.getString("category"));
 			stamp2.add(s2);
 		}
 		return stamp2;
@@ -119,8 +119,8 @@ public class BStampsDAO {
 
 		while(rs.next()) {
 			BStampsBeans s3 = new BStampsBeans();
-			s3.setCategoryId(rs.getInt("stamps.category_id"));
-			s3.setCategory(rs.getString("categories.category"));
+			s3.setCategoryId(rs.getInt("category_id"));
+			s3.setCategory(rs.getString("category"));
 			stamp3.add(s3);
 		}
 		return stamp3;
@@ -146,8 +146,8 @@ public class BStampsDAO {
 
 		while(rs.next()) {
 			BStampsBeans s4 = new BStampsBeans();
-			s4.setCategoryId(rs.getInt("stamps.category_id"));
-			s4.setCategory(rs.getString("categories.category"));
+			s4.setCategoryId(rs.getInt("category_id"));
+			s4.setCategory(rs.getString("category"));
 			stamp4.add(s4);
 		}
 		return stamp4;
@@ -173,8 +173,8 @@ public class BStampsDAO {
 
 		while(rs.next()) {
 			BStampsBeans s5 = new BStampsBeans();
-			s5.setCategoryId(rs.getInt("stamps.category_id"));
-			s5.setCategory(rs.getString("categories.category"));
+			s5.setCategoryId(rs.getInt("category_id"));
+			s5.setCategory(rs.getString("category"));
 			stamp5.add(s5);
 		}
 		return stamp5;
@@ -207,7 +207,7 @@ public class BStampsDAO {
 			sAll.setStamp3(rs.getInt("stamp3"));
 			sAll.setStamp4(rs.getInt("stamp4"));
 			sAll.setStamp5(rs.getInt("stamp5"));
-			sAll.setCategory(rs.getString("categories.category"));
+			sAll.setCategory(rs.getString("category"));
 
 
 			allStamps.add(sAll);
