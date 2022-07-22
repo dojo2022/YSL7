@@ -2,7 +2,7 @@
 
 /* ログイン画面：入力したパスワードの表示 */
 
-.ch{
+#checkPassword{
   display: none;
 }
 .hideText, .showText {
@@ -10,7 +10,7 @@
   outline: none;
 }
 
-.number {
+.member_number {
   border: 1px solid;
   border-radius: 2px;
   width: 205px;
