@@ -142,5 +142,33 @@ public class BUserDAO {
 
 	}
 
+	public BProfileAllBeans selectProfile(int empId) throws  SQLException, ClassNotFoundException {
+		//戻り値を入れるためのBeans
+		BProfileAllBeans profile = new BProfileAllBeans();
 
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		//SQL文を準備する
+		String sql = "SELECT US.u_id,Users.name, Users.number, Users.gender, Users.year, Departments.department, Divisions.division, Sections.section, Posts.post FROM US LEFT JOIN Users ON US.u_id = Users.u_id LEFT JOIN Sections ON US.sec_id = Sections.sec_id LEFT JOIN Divisions ON Sections.div_id = Divisions.div_id LEFT JOIN Departments ON Divisions.dep_id = Departments.dep_id  LEFT JOIN UP ON US.u_id = UP.u_id  LEFT JOIN Posts ON UP.post_id = Posts.post_id where us.u_id = ?";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		pStmt.setInt(1, empId);
+
+		// SQL文を実行し、結果表を取得する
+		ResultSet rs = pStmt.executeQuery();
+
+		while(rs.next()) {
+			profile.setEmpId(rs.getInt("US.u_id"));
+			profile.setName(rs.getString("Users.name"));
+			profile.setNumber(rs.getString("Users.number"));
+			profile.setGender(rs.getInt("Users.gender"));
+			profile.setYear(rs.getString("Users.year"));
+			profile.setDepartment(rs.getString("Departments.department"));
+			profile.setSection(rs.getString("Sections.section"));
+			profile.setPost(rs.getString("Posts.post"));
+		}
+
+		return profile;
+	}
 }
