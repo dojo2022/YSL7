@@ -15,15 +15,18 @@ public class BUserService {
 	//uRegist
 	public int uRegist(String number, String name,String year, String gender, String secId, String post1, String post2, String post3) {
 		Connection con = null;
-		int num1;
-		int num2;
-		int num3;
-		int empId;
-		int result=0;
+		int num1 = 0;
+		int num2 = 0;
+		int num3 = 0;
+		int empId = 0;
+		int result = 0;
 
 		try {
 			Class.forName("org.h2.Driver");
 			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+
+			//自動的にinsertを実行してくれるのを切る
+			con.setAutoCommit(false);
 			//BNotesDAOをインスタンス化する、その際に引数に接続を司る上の値を渡してあげる
 			BUserDAO buDao=new BUserDAO(con);
 			BUPUSDAO bupusDao = new BUPUSDAO(con);
@@ -31,8 +34,7 @@ public class BUserService {
 			//----Userに関するinsert-------------------
 			//daoのdeleteUserメソッドを呼び出す（引数に上記でもらったempIdを渡す）
 			int intgender = Integer.parseInt(gender);
-			int ans = buDao.registUser(String number, String name,String year, int intgender);
-
+			int ans = buDao.registUser(number,name,year, intgender);
 			 //ansが0だった場合、insertできていない
 			if(ans != 0) {
 				empId = ans;
@@ -47,12 +49,18 @@ public class BUserService {
 			//post3が空白じゃなかったら、registPost3
 			//post2が空白じゃなかったら、registPost2
 			//上記の二つ以外なら、registPost1
-			if(post3.length != 0 ) {
-				num2 = bupusDao.insertPost3(intPost1, intPost2, intPost3);
-			} else if(post2.length != 0 ) {
-				num2 = bupusDao.insertPost2(intPost1, intPost2);
+			if(post3.length() != 0 ) {
+				bupusDao.insertPost1(empId, intPost1);
+				bupusDao.insertPost1(empId, intPost2);
+				bupusDao.insertPost1(empId, intPost3);
+				num2 =1;
+			} else if(post2.length() != 0 ) {
+				bupusDao.insertPost1(empId, intPost1);
+				bupusDao.insertPost2(empId, intPost2);
+				num2 =1;
 			} else {
-				num2 = bupusDao.insertPost1(intPost1);
+				bupusDao.insertPost1(empId, intPost1);
+				num2 =1;
 			}
 
 			//----Sectionのinsert-------------------
@@ -62,15 +70,25 @@ public class BUserService {
 			int sum = num1 + num2 + num3;
 			if(sum != 3) {
 				throw new SQLException();
+			} else {
+				result = 1;
 			}
 
+			con.commit();
 
 
 		}
 
 		catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
-			return ans;
+				try {
+					con.rollback();
+				} catch (SQLException e1) {
+					// TODO 自動生成された catch ブロック
+					e1.printStackTrace();
+				}
+			result = 0;
+			return result;
 		}
 		// データベースを切断
 				if (con != null) {
@@ -80,10 +98,11 @@ public class BUserService {
 					catch (SQLException e) {
 						e.printStackTrace();
 						//Exceptionが出ているのでansを0のまま返す
-						return ans;
+						result = 0;
+						return result;
 					}
 				}
-				return ans;
+				return result;
 			}
 
 	//uDelete
