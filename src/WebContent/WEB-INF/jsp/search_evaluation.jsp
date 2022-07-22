@@ -1,106 +1,59 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>テーブルソート</title>
-<!-- ファイル読み込み--------------------------- -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.widgets.min.js"></script>
-
-<!-- スタイルの適用--------------------------- -->
-<style type="text/css">
-#myTable .tablesorter-header {
-	cursor: pointer;
-	outline: none;
-}
-#myTable .tablesorter-header-inner::after {
-	content: '▼';
-	font-size: 12px;
-	margin-left: 5px;
-}
-</style>
-
-<!-- javascript--------------------------- -->
-<script>
-//ページを読み込み後に、ソートを開始
-$(document).ready(function(){
-	        $("#myTable").tablesorter();
-});
-</script>
-<body>
+ <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
+ <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+ <script>
+    jQuery(function($){
+    	 // デフォルトの設定を変更（日本語化）--------------------
+        $.extend( $.fn.dataTable.defaults, {
+            language: {
+                url: "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+            }
+        });
+    	 //------------------------------------------------
+    	//データテーブルを使用
+        $("#foo-table").DataTable();
+    });
+   </script>
+   <meta charset="UTF-8">
+<title>評価相手検索画面</title>
 </head>
-<!-- テーブル本体------------------------------------------------------ -->
-<!-- テーブルにidとclassをしっかりと書く -->
-<table id="myTable" class="tablesorter">
-    <!-- theadとtbodyは必ず必要 -->
-	<thead>
-		<tr>
-			<th>番号</th>
-			<th>ID</th>
-			<th>名前</th>
-			<th>名前（かな）</th>
-			<th>誕生日</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>2</td>
-			<td>bbb</td>
-			<td>田中</td>
-			<td>たなか</td>
-			<td>3/24</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>dud</td>
-			<td>青木</td>
-			<td>あおき</td>
-			<td>5/9</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>ake</td>
-			<td>佐藤</td>
-			<td>さとう</td>
-			<td>1/21</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>clw</td>
-			<td>山田</td>
-			<td>やまだ</td>
-			<td>2/4</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>eru</td>
-			<td>森</td>
-			<td>もり</td>
-			<td>4/16</td>
-		</tr>
-	</tbody>
-</table>
+<body>
+	<!-- サーブレットへ遷移させる -->
+	<form method="POST" action="/miemo/servlet/FrontControllerServlet">
+		<input type="hidden" name="page_id" value="FE01">
 
-<div class=box>
-<h1>評価する相手を検索してください。</h1>
-
-
-
-<!-- サーブレットへ遷移させる -->
-<form method="POST" action="/miemo/action/SearchEvaluationAction">
-	<input type ="hidden" name="page_id" value="FE01">
-
-	<!-- 検索のテキストボックス -->
-	検索<input type="text" name="" value="${param.name}">
-
-	<!-- 評価するボタン -->>
-	<input type ="submit" name ="bt_name" value="評価する">
-
-</form>
-</div>
+<h1>評価シート</h1>
+	<table border="1" id="foo-table" class="table table-bordered">
+		<thead>
+			<tr>
+				<th>社員番号</th>
+				<th>名前</th>
+				<th>部署</th>
+				<th>役職</th>
+				<th>チェック</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="e" items="${list}" varStatus="status">
+				<tr>
+					<td>${e.userId}</td>
+					<td>${e.name}</td>
+					<td>${e.department}</td>
+					<td>${e.post}</td>
+					<td><input type="radio" name="select_about"></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+		<!-- 評価するボタン -->
+		<input type="submit" name="bt_name" value="評価する"
+			onclick="location.href='/miemo/FrontControllerServlet'">
+	</form>
 </body>
 </html>

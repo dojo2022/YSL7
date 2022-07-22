@@ -42,11 +42,11 @@
 		<tbody>
 			<c:forEach var="e" items="${list}" varStatus="status">
 				<tr>
-					<td>${e.userid}</td>
+					<td>${e.userId}</td>
 					<td>${e.name}</td>
 					<td>${e.department}</td>
 					<td>${e.post}</td>
-					<td><input type="radio" name="select_about">aaaa</td>
+					<td><input type="radio" name="select_about"></td>
 				</tr>
 			</c:forEach>
 		</tbody>
