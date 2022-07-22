@@ -90,17 +90,71 @@ public class BUPUSDAO {
 
 
 	//updatePoet1
-	public int updatePost1(int empId, int intPost1){
+	public int updatePost1(int empId, int intPost1)throws ClassNotFoundException, SQLException{
+		int result = 0;
+		System.out.println(empId);
+		System.out.println(intPost1);
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "UPDATE UP SET post_id = ? WHERE u_id = ?;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setInt(1,intPost1);
+		pStmt.setInt(2,empId);
+
+		//実行！！
+		result = pStmt.executeUpdate();
+
+		return result;
 
 	}
 
 	//updatePoet2
-	public int upPost2(int empId,int intPost2){
+	public int updatePost2(int empId,int intPost2)throws ClassNotFoundException, SQLException{
+		int result = 0;
+		System.out.println(empId);
+		System.out.println(intPost2);
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
 
+		// SQL文を準備する
+		String sql = "UPDATE UP SET post_id = ? WHERE u_id = ?;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setInt(1,intPost2);
+		pStmt.setInt(2,empId);
+
+		//実行！！
+		result = pStmt.executeUpdate();
+
+		return result;
 	}
 
 	//updatePoet3
-	public int updatetPost3(int empId, int intPost1, int intPost2, int intPost3){
+	public int updatePost3(int empId,int intPost3)throws ClassNotFoundException, SQLException{
+		int result = 0;
+		System.out.println(empId);
+		System.out.println(intPost3);
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "UPDATE UP SET post_id = ? WHERE u_id = ?;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setInt(1,intPost3);
+		pStmt.setInt(2,empId);
+
+		//実行！！
+		result = pStmt.executeUpdate();
+
+		return result;
+
 
 	}
 

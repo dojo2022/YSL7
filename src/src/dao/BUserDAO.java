@@ -18,7 +18,7 @@ public class BUserDAO {
 	//registUser
 	public int registUser(String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
 		int result = 0;
-		int autoIncrementKey = 0;
+//		int autoIncrementKey = 0;
 
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
@@ -35,21 +35,43 @@ public class BUserDAO {
 
 		// SQL文を実行し、結果表を取得する
 		result = pStmt.executeUpdate();
+		System.out.println("result" + result);
+
 
 		//もしinsertできていたら、一番大きいu_idを取ってくる
-		if(result == 1) {
-			ResultSet res = pStmt.getGeneratedKeys();
-			if(res.next()){
-	             autoIncrementKey = res.getInt(1);
-	         }
-			result = autoIncrementKey;
-		}
+//		if(result == 1) {
+//			ResultSet res = pStmt.getGeneratedKeys();
+//			if(res.next()){
+//	             autoIncrementKey = res.getInt(1);
+//	             System.out.println("res" + res);
+//	         }
+//			result = autoIncrementKey;
+//		}
 
 		return result;
 	}
 
+	//selectEmpId
+	public int selectEmpId() throws ClassNotFoundException, SQLException {
+		int empId = 0;
+
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "SELECT MAX(u_id) FROM Users;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+		ResultSet rs = pStmt.executeQuery();
+
+		while (rs.next()) {
+			empId = rs.getInt("u_id");
+		}
+
+		return empId;
+	}
+
 	//updateUser
-	public int updateUser(int empId, String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
+	public int updateUser(int intempId, String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
 		int result = 0;
 
 		// JDBCドライバを読み込む
@@ -64,7 +86,7 @@ public class BUserDAO {
 		pStmt.setString(2,name);
 		pStmt.setString(3,year);
 		pStmt.setInt(4,intgender);
-		pStmt.setInt(5,empId);
+		pStmt.setInt(5,intempId);
 
 		// SQL文を実行し、結果表を取得する
 		result = pStmt.executeUpdate();
@@ -159,14 +181,14 @@ public class BUserDAO {
 		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
-			profile.setEmpId(rs.getInt("US.u_id"));
-			profile.setName(rs.getString("Users.name"));
-			profile.setNumber(rs.getString("Users.number"));
-			profile.setGender(rs.getInt("Users.gender"));
-			profile.setYear(rs.getString("Users.year"));
-			profile.setDepartment(rs.getString("Departments.department"));
-			profile.setSection(rs.getString("Sections.section"));
-			profile.setPost(rs.getString("Posts.post"));
+			profile.setEmpId(rs.getInt("u_id"));
+			profile.setName(rs.getString("name"));
+			profile.setNumber(rs.getString("number"));
+			profile.setGender(rs.getInt("gender"));
+			profile.setYear(rs.getString("year"));
+			profile.setDepartment(rs.getString("department"));
+			profile.setSection(rs.getString("section"));
+			profile.setPost(rs.getString("post"));
 		}
 
 		return profile;
