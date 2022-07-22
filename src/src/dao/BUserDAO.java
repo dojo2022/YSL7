@@ -16,7 +16,7 @@ public class BUserDAO {
 	}
 
 	//registUser
-	public int registUser(String number, String name,String year, int gender) throws ClassNotFoundException, SQLException{
+	public int registUser(String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
 		int result = 0;
 		int autoIncrementKey = 0;
 
@@ -31,7 +31,7 @@ public class BUserDAO {
 		pStmt.setString(1,number);
 		pStmt.setString(2,name);
 		pStmt.setString(3,year);
-		pStmt.setInt(4,gender);
+		pStmt.setInt(4,intgender);
 
 		// SQL文を実行し、結果表を取得する
 		result = pStmt.executeUpdate();

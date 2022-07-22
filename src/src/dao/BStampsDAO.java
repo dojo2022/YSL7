@@ -29,7 +29,7 @@ public class BStampsDAO {
 		pStmt.setInt(1, empId);
 
 		//SQL文を実行し、結果を取得する
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		//取ってきたデータをbeansにしまう
 		while(rs.next()) {
@@ -61,7 +61,7 @@ public class BStampsDAO {
 
 
 		//SQL文を完成させる
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
 			BStampsBeans s1 = new BStampsBeans();
@@ -88,7 +88,7 @@ public class BStampsDAO {
 
 
 		//SQL文を完成させる
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
 			BStampsBeans s2 = new BStampsBeans();
@@ -115,7 +115,7 @@ public class BStampsDAO {
 
 
 		//SQL文を完成させる
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
 			BStampsBeans s3 = new BStampsBeans();
@@ -142,7 +142,7 @@ public class BStampsDAO {
 
 
 		//SQL文を完成させる
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
 			BStampsBeans s4 = new BStampsBeans();
@@ -169,7 +169,7 @@ public class BStampsDAO {
 
 
 		//SQL文を完成させる
-		ResultSet rs = pStmt.executeQuery(sql);
+		ResultSet rs = pStmt.executeQuery();
 
 		while(rs.next()) {
 			BStampsBeans s5 = new BStampsBeans();
@@ -208,6 +208,7 @@ public class BStampsDAO {
 			sAll.setStamp4(rs.getInt("stamp4"));
 			sAll.setStamp5(rs.getInt("stamp5"));
 			sAll.setCategory(rs.getString("categories.category"));
+
 
 			allStamps.add(sAll);
 		}

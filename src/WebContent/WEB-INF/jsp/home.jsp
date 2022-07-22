@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	${errMsg }<br>
 	<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=regist_feeling">きもち記録</a>
 	<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=history_feeling">きもち履歴</a>
 	<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=graph_feeling">きもちグラフ</a>

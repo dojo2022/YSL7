@@ -27,38 +27,18 @@ public class BTabAction {
 		//サービスのselectNotesメソッドを実行する（引数empId）
 		ArrayList<BNotesBeans> notesList=tabService.selectNotes(empId);
 		//戻ってきた値がnullだったら
-		if(notesList.size() == 0) {
-			request.setAttribute("errMsg", "リストが正常に表示されませんでした。。");
-			return "/WEB-INF/backjsp/bMainPage.jsp";
-		//ちゃんと入っていたら
-		}else {
-			//戻ってきたnotesList型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
-			HttpSession session = request.getSession();
-			session.setAttribute("notesList", notesList);
-			return "/WEB-INF/backjsp/bMainPage.jsp";
-			}
+
 
 	//selectMessages(メッセージです)
 		//サービスのselectMessagesメソッドを実行する（引数empId）
-		ArrayList<BMessagesBeans> messageList=tabService.selectMessages(empId);
-		//戻ってきた値がnullだったら
-		if(messageList.size() == 0) {
-			request.setAttribute("errMsg", "メッセージが正常に表示されませんでした。。");
-			return "/WEB-INF/backjsp/bMainPage.jsp";
-		//ちゃんと入っていたら
-		}else {
-			//戻ってきたmessageList型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
-			HttpSession session = request.getSession();
-			session.setAttribute("messageList", messageList);
-			return "/WEB-INF/backjsp/bMainPage.jsp";
-			}
+		ArrayList<BMessagesBeans> messageList = tabService.selectMessages(empId);
 
-	//selectEvaluations(評価です)
+	//selectEvaluation(評価です)
 		//サービスのselectMessagesメソッドを実行する（引数empId）
 		ArrayList<BEvaluationsBeans> evaluationList=tabService.selectEvaluation(empId);
-		//戻ってきた値がnullだったら
-		if(evaluationList.size() == 0) {
-			request.setAttribute("errMsg", "メッセージが正常に表示されませんでした。。");
+		//戻ってきた値がnullだったら(ここにこれまで全部のArrayListを入れる)
+		if(notesList.size() == 0&& messageList.size() == 0&&evaluationList.size() == 0) {
+			request.setAttribute("errMsg", "正常に表示されませんでした。");
 			return "/WEB-INF/backjsp/bMainPage.jsp";
 		//ちゃんと入っていたら
 		}else {

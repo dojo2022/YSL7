@@ -19,21 +19,22 @@ public class MessageAction {
 	public String sendMessage() throws UnsupportedEncodingException {
 		request.setCharacterEncoding("UTF-8");
 
+
 		HttpSession session = request.getSession();
-		Users user = (Users)session.getAttribute("users");
+		Users user = (Users)session.getAttribute("user");
 		int userId = user.getUserId();
+
 		String message = request.getParameter("message");
 
 		MessageService service = new MessageService();
 
-		boolean result = service.sendMessage(userId,message);
+		boolean result = service.sendMessage(userId, message);
 
 		if(result==false) {
 			request.setAttribute("errMsg", "メッセージを送信することができませんでした");
 			return "/WEB-INF/jsp/message.jsp";
 		}else {
-			HttpSession session1 = request.getSession();
-			session1.setAttribute("result", result);
+			request.setAttribute("errMsg", "メッセージを送信しました");
 			return "/WEB-INF/jsp/home.jsp";
 		}
 
