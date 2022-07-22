@@ -14,9 +14,9 @@
 		<input type="hidden" name="page_id" value="FM01">
 		<h1>Message</h1>
 		<p>メッセージは人事部にのみ送られます</p>
-		<input type="text" name="message" value="${param.message}">
-
-			  <input type="submit" name="bt_name" value="送信">
+		<!--  <input type="text" name="message" value="${param.message}"><br>-->
+		<textarea rows="10" name="message" cols="60"></textarea>
+			<input type="submit" name="bt_name" value="送信"  class="button">
 	</form>
 	<!-- エラーメッセージの表示欄 -->
 	<div id="errMsg">${errMsg}</div>
