@@ -32,7 +32,7 @@ public class HistoryFeelingAction {
 		ArrayList<Stamps> historyList = service.showHistory(userId);
 
 		//4 ．返ってきたデータをリクエストスコープに格納する 記録したきもち・カテゴリー・メッセージを格納
-		request.setAttribute("historyList",historyList );
+		request.setAttribute("historyList", historyList );
 
 		//5．パスを作成して、サーブレットに返す。（WEB-INF/jsp/history_feeling.jsp）
 		if(historyList.size() == 0 ) {
