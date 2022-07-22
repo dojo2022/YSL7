@@ -57,7 +57,7 @@ public class StampsDao {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "SELECT Stamps.stamp_id, Stamps.stamp1, Stamps.stamp2, Stamps.stamp3, Stamps.stamp4, Stamps.stamp5, Categories.category, Stamps.date FROM Stamps"
+		String sql = "SELECT Stamps.stamp_id, Stamps.stamp1, Stamps.stamp2, Stamps.stamp3, Stamps.stamp4, Stamps.stamp5, Stamps.category_id, Categories.category, Stamps.date FROM Stamps"
 				+ "LEFT JOIN Categories ON Stamps.category_id = Categories.category_id"
 				+ "WHERE Stamps.u_id = ?;";
 		PreparedStatement pStmt = con.prepareStatement(sql);
@@ -78,6 +78,7 @@ public class StampsDao {
 			stamp.setStamp3(Integer.parseInt(rs.getString("stamp3")));
 			stamp.setStamp4(Integer.parseInt(rs.getString("stamp4")));
 			stamp.setStamp5(Integer.parseInt(rs.getString("stamp5")));
+			stamp.setCategoryId(Integer.parseInt(rs.getString("category_id")));
 			stamp.setCategory(rs.getString("category"));
 			stamp.setComment(rs.getString("comment"));
 			historyList.add(stamp);
@@ -90,7 +91,7 @@ public class StampsDao {
 	}
 
 
-	public boolean editFeeling(int userId, int categoryId, int stamp1, int stamp2, int stamp3,
+	public boolean editFeeling(int stampId, int categoryId, int stamp1, int stamp2, int stamp3,
 			int stamp4, int stamp5, String comment) throws ClassNotFoundException, SQLException {
 		boolean result = false;
 
@@ -109,7 +110,7 @@ public class StampsDao {
 		pStmt.setInt(5, stamp4);
 		pStmt.setInt(6, stamp5);
 		pStmt.setString(7, comment);
-		pStmt.setInt(8, userId);
+		pStmt.setInt(8, stampId);
 
 		int ans = pStmt.executeUpdate();
 

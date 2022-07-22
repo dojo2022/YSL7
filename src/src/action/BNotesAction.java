@@ -23,8 +23,11 @@ public class BNotesAction {
 			String content=request.getParameter("content");
 			int ans = 0;
 			//入力値のチェック（空文字チェック）
-			if(title.strip().length()==0||content.strip().length()==0) {
-				request.setAttribute("errMsg", "必須項目を記入してください。");
+			if(title.strip().length()==0) {
+				request.setAttribute("errMsgTitle", "タイトルを入力してください。");
+				return "/WEB-INF/backjsp/bRegistNote.jsp";
+			}else if(content.strip().length()==0) {
+				request.setAttribute("errMsgContent", "内容を記入してください。");
 				return "/WEB-INF/backjsp/bRegistNote.jsp";
 			}
 			//入力値に問題が無ければ指定のserviceを呼び出す

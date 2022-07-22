@@ -15,20 +15,22 @@
 		<table>
 			<tr>
 				<td>社員番号</td>
-				<td><input type="text" name="number"></td>
+				<td><input type="text" name="number"><br> <span id="error_number"></span></td>
+
 			</tr>
 			<tr>
 				<td>氏名</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name"><br> <span id="error_name"></span></td>
 			</tr>
 			<tr>
 				<td>性別</td>
 				<td>
-					<select name="post1">
+					<select name="gender">
 						<option value="">性別を選択</option>
 					    <option value="0">男性</option>
 					    <option value="1">女性</option>
-					</select>
+					</select><br>
+					<span id="error_gender"></span>
 				</td>
 			</tr>
 			<tr>
@@ -44,11 +46,11 @@
 			</tr>
 			<tr>
 				<td>部</td>
-				<td><select name="div_id">  	</select></td>
+				<td><select name="div_id">  	</select><br><span id="error_div_id"></span></td>
 			</tr>
 			<tr>
 				<td>課</td>
-				<td><select name="sec_id">  	</select></td>
+				<td><select name="sec_id">  	</select><br><span id="error_sec_id"></span></td>
 			</tr>
 			<tr>
 				<td>役職1</td>
@@ -65,7 +67,8 @@
 					    <option value="9">顧問・嘱託</option>
 					    <option value="10">執行役員</option>
 					    <option value="11">取締役</option>
-					  </select>
+					  </select><br>
+					  <span id="error_post1"></span>
 				<td><!-- プルダウン -->
 			</tr>
 			<tr>
@@ -83,7 +86,8 @@
 					    <option value="9">顧問・嘱託</option>
 					    <option value="10">執行役員</option>
 					    <option value="11">取締役</option>
-					  </select>
+					  </select><br>
+					  <span id="error_post2"></span>
 				<td><!-- プルダウン -->
 			</tr>
 			<tr>
@@ -101,13 +105,14 @@
 					    <option value="9">顧問・嘱託</option>
 					    <option value="10">執行役員</option>
 					    <option value="11">取締役</option>
-					  </select>
+					  </select><br>
+					  <span id="error_post3"></span>
 				<td>
 			</tr>
 			<tr>
 				<td>入社年度</td>
 				<td>
-					<select name="post2">
+					<select name="year">
 						<option value="">入社年度を選択</option>
 					    <option value="1991">1991</option>
 					    <option value="1992">1992</option>
@@ -140,13 +145,15 @@
 					    <option value="2020">2020</option>
 					    <option value="2021">2021</option>
 					    <option value="2022">2022</option>
-					</select>
+					</select><br>
+					<span id="error_year"></span>
 				<td><!-- プルダウン -->
 			</tr>
 		</table>
 
 		<input type="submit" name="button_id" value="登録">
 	</form>
+		<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る">戻る</a>
 </body>
 
 <script>
