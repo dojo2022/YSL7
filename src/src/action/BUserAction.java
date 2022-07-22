@@ -40,8 +40,26 @@ public class BUserAction {
 //				return "/WEB-INF/jsp/login.jsp";
 //			}
 
+			int intSecId = 0;
+			if (divId.equals("金融・保険サービス1部") && secId.equals("1課")) {
+				intSecId = 1;
+			}
+			if (divId.equals("金融・保険サービス1部") && secId.equals("2課")) {
+				intSecId = 2;
+			}
+			if (divId.equals("金融・保険サービス2部") && secId.equals("1課")) {
+				intSecId = 3;
+			}
+			if (divId.equals("金融・保険サービス2部") && secId.equals("2課")) {
+				intSecId = 4;
+			}
+
+
+
+
+
 			BUserService uService = new BUserService();
-			ans = uService.uRegist(number, name, year, gender, secId, post1, post2, post3);
+			ans = uService.uRegist(number, name, year, gender, intSecId, post1, post2, post3);
 
 			//戻ってきた値がnullだったら
 			if(ans == 0) {

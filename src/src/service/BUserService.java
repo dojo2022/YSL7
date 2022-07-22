@@ -13,7 +13,7 @@ public class BUserService {
 	///intで引数として渡すものは、integer.paeseIntする！！
 
 	//uRegist
-	public int uRegist(String number, String name,String year, String gender, String secId, String post1, String post2, String post3) {
+	public int uRegist(String number, String name,String year, String gender, int intSecId, String post1, String post2, String post3) {
 		Connection con = null;
 		int num1 = 0;
 		int num2 = 0;
@@ -64,7 +64,6 @@ public class BUserService {
 			}
 
 			//----Sectionのinsert-------------------
-			int intSecId = Integer.parseInt(secId);
 			num3 = bupusDao.insertSection(empId, intSecId);
 
 			int sum = num1 + num2 + num3;

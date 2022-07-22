@@ -48,6 +48,31 @@ public class BUserDAO {
 		return result;
 	}
 
+	//updateUser
+	public int updateUser(int empId, String number, String name,String year, int intgender) throws ClassNotFoundException, SQLException{
+		int result = 0;
+
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "UPDATE Users SET number = ?, name = ?, year = ?, gender = ? where u_id = ?;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setString(1,number);
+		pStmt.setString(2,name);
+		pStmt.setString(3,year);
+		pStmt.setInt(4,intgender);
+		pStmt.setInt(5,empId);
+
+		// SQL文を実行し、結果表を取得する
+		result = pStmt.executeUpdate();
+
+		return result;
+	}
+
+
 
 	//deleteUser
 	public int deleteUser(int empId) throws ClassNotFoundException, SQLException{
