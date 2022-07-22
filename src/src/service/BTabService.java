@@ -9,15 +9,46 @@ import dao.BEvaluationsDAO;
 import dao.BMessagesDAO;
 import dao.BNotesDAO;
 import dao.BStampsDAO;
+import dao.BUserDAO;
 import model.BEvaluationsBeans;
 import model.BMessagesBeans;
 import model.BNotesBeans;
+import model.BProfileAllBeans;
 import model.BStampsBeans;
 
 public class BTabService {
 
+//プロフィール情報を取ってくる
+	public BProfileAllBeans searchProfile(int empId) {
+		Connection con = null;
+		BProfileAllBeans profile = new BProfileAllBeans();
+		try {
+			Class.forName("org.h2.Driver");
+			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+			//BUserDAOを実体化する
+			BUserDAO buDao = new BUserDAO(con);
+			//BUserDAOのselectProfileメソッドを呼び出す
+			profile = buDao.selectProfile(empId);
+
+		}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			return profile;
+		}
+		if(con != null) {
+			try {
+				con.close();
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+				return profile;
+			}
+		}
+
+		return profile;
+	}
+
 //searchStampGraphメソッド（きもちグラフ）
-	public ArrayList<Object>searchStampGraph (int empId){
+	public ArrayList<Object> searchStampGraph (int empId){
 		Connection con = null;
 		ArrayList<Object> stampGraph = new ArrayList<>();
 		try {

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+table{
+	width: 70%;
+	margin: auto;
+}
+th{
+	background-color:#F19E6F;
+}
+.content{
+	width: 500px;
+}
+td{
+	background-color: #ffdbc9;
+}

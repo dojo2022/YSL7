@@ -10,6 +10,7 @@ import model.BEvaluationsBeans;
 import model.BGraphCalc;
 import model.BMessagesBeans;
 import model.BNotesBeans;
+import model.BProfileAllBeans;
 import model.BStampsBeans;
 import service.BTabService;
 
@@ -19,15 +20,20 @@ public class BTabAction {
 		this.request=request;
 	}
 	public String showMainPage() throws UnsupportedEncodingException{
+
 		//empIdを取ってくる
 		request.setCharacterEncoding("UTF-8");
 		int empId = Integer.parseInt(request.getParameter("empId"));
-		//取ったempIdをsessionに保存しておく
-		HttpSession session = request.getSession();
-		session.setAttribute("empId", empId);
-
 		//Serviceをインスタンス化（tabServiceという名前をつけたから、あわせてね）
 		BTabService tabService = new BTabService();
+
+		//プロフィール情報を取ってくる
+		BProfileAllBeans profile = tabService.searchProfile(empId);
+
+		//取ったempIdをsessionに保存しておく
+		HttpSession session = request.getSession();
+		session.setAttribute("profile", profile);
+		session.setAttribute("empId", empId);
 
 		//searchStampGraph(きもちグラフ)
 		ArrayList<Object> stampGraph = tabService.searchStampGraph(empId);
