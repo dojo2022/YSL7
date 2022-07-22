@@ -22,7 +22,7 @@ public class HistoryFeelingAction {
 
 		//1．sessionスコープからuserIdを取得する
 		HttpSession session = request.getSession();//セッションにアクセスする用意をする
-		Users u = (Users)session.getAttribute("users");//セッションからusers(userId, name, numberの入っているビーンズ)を取得
+		Users u = (Users)session.getAttribute("user");//セッションからusers(userId, name, numberの入っているビーンズ)を取得
 		int userId =u.getUserId();//usersの中からuserIdだけを取り出す
 
 		//2．HistoryFeelingServiceをnewする
