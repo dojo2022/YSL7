@@ -8,7 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import action.BListAction;
 import action.BNotesAction;
 import action.BTabAction;
 import action.BUserAction;
@@ -57,7 +59,10 @@ public class BControllerServlet extends HttpServlet {
 
 		//個人ページから一覧にもどる
 				if(pageId.equals("BP01") && button.equals("back_list")) {
-					url = "/WEB-INF/backjsp/listjsp";
+					HttpSession session = request.getSession();
+					session.removeAttribute("empId");
+					BListAction listAction=new BListAction(request);
+					url = listAction.selectAllList();
 				}
 
 		//メモの新規作成画面
