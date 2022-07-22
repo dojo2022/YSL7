@@ -65,9 +65,7 @@ public class ProfileAction {
 			return "/WEB-INF/jsp/profile.jsp";
 		//ちゃんと入っていたら
 		}else {
-			//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
-			HttpSession session1 = request.getSession();
-			session1.setAttribute("result",result );
+			//servletに次のＪＳＰのパスを送る
 			return "/WEB-INF/jsp/home.jsp";
 		}
 
