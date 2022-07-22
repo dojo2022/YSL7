@@ -14,6 +14,8 @@ public class BUPUSDAO {
 	//insertPost1
 	public void insertPost1(int empId, int intPost1)throws ClassNotFoundException, SQLException{
 
+		System.out.println(empId);
+		System.out.println(intPost1);
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
 
@@ -37,7 +39,7 @@ public class BUPUSDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "INSERT INTO Posts (u_id, post) VALUES (?, ?);";
+		String sql = "INSERT INTO UP (u_id, post) VALUES (?, ?);";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる
@@ -56,7 +58,7 @@ public class BUPUSDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "INSERT INTO Posts (u_id, post) VALUES (?, ?);";
+		String sql = "INSERT INTO UP (u_id, post) VALUES (?, ?);";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる

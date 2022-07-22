@@ -34,7 +34,11 @@ public class BUserService {
 			//----Userに関するinsert-------------------
 			//daoのdeleteUserメソッドを呼び出す（引数に上記でもらったempIdを渡す）
 			int intgender = Integer.parseInt(gender);
-			int ans = buDao.registUser(number,name,year, intgender);
+			System.out.println(number);
+			System.out.println(name);
+			System.out.println(year);
+			System.out.println(intgender);
+			int ans = buDao.registUser(number,name,year,intgender);
 			 //ansが0だった場合、insertできていない
 			if(ans != 0) {
 				empId = ans;
