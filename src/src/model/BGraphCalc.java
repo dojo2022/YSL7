@@ -51,7 +51,7 @@ public class BGraphCalc {
 			}
 			//stamp1のカテゴリのパーセントを求める
 			for(int k=0; k<10;k++) {
-				double s1 = (s1Category[k] / s1Count) * 100;
+				double s1 = ((double)s1Category[k] / (double)s1Count) * 100;
 				s1Percent.add(s1);
 
 			}
