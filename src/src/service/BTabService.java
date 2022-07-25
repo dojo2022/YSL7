@@ -65,6 +65,12 @@ public class BTabService {
 			ArrayList<BStampsBeans> stamp4 = bsDao.selectStamp4(empId);
 			ArrayList<BStampsBeans> stamp5 = bsDao.selectStamp5(empId);
 
+			System.out.println(stamp1.size()+"スタンプ1");
+			System.out.println(stamp2.size()+"スタンプ2");
+			System.out.println(stamp3.size()+"スタンプ3");
+			System.out.println(stamp4.size()+"スタンプ4");
+			System.out.println(stamp5.size()+"スタンプ5");
+
 			//sCount~stamp5までを一個のArrayListにまとめる
 			stampGraph.add(sCount);
 			stampGraph.add(stamp1);
