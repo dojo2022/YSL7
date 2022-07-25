@@ -41,7 +41,7 @@
 			<td class="section">　${profile.section}課</td>
 		</tr>
 		<tr>
-			<td class="back_button"><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
+			<td class="back_button"><a href="/miemo/BControllerServlet?page_id=BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
 			<td></td>
 			<td class="edit_button">
 			<input type="submit" name="bt_name" value="編集" class=edit>
