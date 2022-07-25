@@ -50,10 +50,10 @@ public class ProfileAction {
 
 
 		HttpSession session = request.getSession();
-		Users user = (Users)session.getAttribute("users");
+		Users user = (Users)session.getAttribute("user");
 		int userId = user.getUserId();
 		String password = request.getParameter("password");
-
+//新しいパスワード入力と新しいパスワード確認が一致しているかをかく
 		ProfileService service = new ProfileService();
 
 		boolean result = service.updatePw(userId,password);
