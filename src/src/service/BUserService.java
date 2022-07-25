@@ -76,6 +76,10 @@ public class BUserService {
 			//----Sectionのinsert-------------------
 			num3 = bupusDao.insertSection(empId, intSecId);
 
+			System.out.println("num1 = " + num1);
+			System.out.println("num2 = " + num2);
+			System.out.println("num3 = " + num3);
+
 			int sum = num1 + num2 + num3;
 			if(sum != 3) {
 				throw new SQLException();
@@ -114,7 +118,9 @@ public class BUserService {
 				return result;
 			}
 
-	//uRegist
+
+
+	//uUpdate
 	public int uUpdate(String empId, String number, String name,String year, String gender, int intSecId, String post1, String post2, String post3) {
 		Connection con = null;
 		int num1 = 0;
@@ -141,8 +147,8 @@ public class BUserService {
 			System.out.println(year);
 			System.out.println(intgender);
 			int ans = buDao.updateUser(intEmpId, number,name,year,intgender);
-			 //ansが0だった場合、insertできていない
-			if(ans == 0) {
+			 //ansが0だった場合、Updateできていない
+			if(ans == 1) {
 				num1 = 1;
 			}
 

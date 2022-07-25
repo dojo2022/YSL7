@@ -33,6 +33,9 @@ public class BUserAction {
 			String post3 = request.getParameter("post3");
 			String year = request.getParameter("year");
 
+			System.out.println(divId);
+			System.out.println(secId);
+
 //			if(number.strip().length()==0|| name.strip().length()==0 || gender.strip().length()==0
 //					|| secId.strip().length()==0 || post1.strip().length()==0 || year.strip().length()==0) {
 //				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
@@ -41,20 +44,23 @@ public class BUserAction {
 //			}
 
 			int intSecId = 0;
-			if (divId.equals("金融・保険サービス1部") && secId.equals("1課")) {
+			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("1課")) {
 				intSecId = 1;
 			}
-			if (divId.equals("金融・保険サービス1部") && secId.equals("2課")) {
+			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("2課")) {
 				intSecId = 2;
 			}
-			if (divId.equals("金融・保険サービス2部") && secId.equals("1課")) {
+			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("1課")) {
 				intSecId = 3;
 			}
-			if (divId.equals("金融・保険サービス2部") && secId.equals("2課")) {
+			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("2課")) {
 				intSecId = 4;
 			}
 
+			System.out.println("intSecId = " + intSecId);
 
+			//これはあとで消すこと！
+			//intSecId = 1;
 
 
 
@@ -90,6 +96,7 @@ public class BUserAction {
 		String post2 = request.getParameter("post2");
 		String post3 = request.getParameter("post3");
 		String year = request.getParameter("year");
+		System.out.println(empId);
 
 //		if(number.strip().length()==0|| name.strip().length()==0 || gender.strip().length()==0
 //				|| secId.strip().length()==0 || post1.strip().length()==0 || year.strip().length()==0) {
@@ -99,16 +106,16 @@ public class BUserAction {
 //		}
 
 		int intSecId = 0;
-		if (divId.equals("金融・保険サービス1部") && secId.equals("1課")) {
+		if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("1課")) {
 			intSecId = 1;
 		}
-		if (divId.equals("金融・保険サービス1部") && secId.equals("2課")) {
+		if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("2課")) {
 			intSecId = 2;
 		}
-		if (divId.equals("金融・保険サービス2部") && secId.equals("1課")) {
+		if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("1課")) {
 			intSecId = 3;
 		}
-		if (divId.equals("金融・保険サービス2部") && secId.equals("2課")) {
+		if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("2課")) {
 			intSecId = 4;
 		}
 
