@@ -24,11 +24,11 @@
 			<th><img alt="とても満足" src=""></th>
 		</tr>
 		<tr>
-			<td>${countAllStamps.countS1}</td>
-			<td>${countAllStamps.countS2}</td>
-			<td>${countAllStamps.countS3}</td>
-			<td>${countAllStamps.countS4}</td>
-			<td>${countAllStamps.countS5}</td>
+			<td>${sCount.countS1}</td>
+			<td>${sCount.countS2}</td>
+			<td>${sCount.countS3}</td>
+			<td>${sCount.countS4}</td>
+			<td>${sCount.countS5}</td>
 		</tr>
 	</table>
 	<!--押したスタンプのドーナツチャート -->

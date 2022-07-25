@@ -23,23 +23,26 @@ public class BControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("getにはいったよ");
+		request.setCharacterEncoding("UTF-8");
 		//★ページIDの取得
 				String pageId = request.getParameter("page_id");
 				//★ボタンの名前の取得
 				String button = request.getParameter("bt_name");
 				//次に飛ぶところのURLをNULLで宣言して、処理によって値を格納する
 				String url = null;
+				System.out.println(pageId);
+				System.out.println(button);
 
 
 //		//  //フロントから管理画面を押された時
-				if(pageId.equals("FH01") && button.equals("hr")) {
+/*				if(pageId.equals("FH01") && button.equals("hr")) {
 //					//★アクションをインスタンス化
 					BListAction lAction = new BListAction(request);
 //					//★アクションのsearchメソッドを呼び出す
 				url =lAction.selectAllList();
 				}
-
+*/
 		////一覧から個人ページを表示するとき
 				if(pageId.equals("BL01") && button.equals("to_profile")) {
 					//★アクションをインスタンス化
@@ -49,7 +52,7 @@ public class BControllerServlet extends HttpServlet {
 				}
 
 		//個人ページの先月・次月ボタンを押したとき
-				if(pageId.equals("BP01") && button.equals("last_month") || button.equals("next_month")) {
+				else if(pageId.equals("BP01") && button.equals("last_month") || button.equals("next_month")) {
 					//★アクションをインスタンス化
 					BTabAction tAction = new BTabAction(request);
 					//★アクションのsearchメソッドを呼び出す
@@ -58,7 +61,7 @@ public class BControllerServlet extends HttpServlet {
 
 
 		//個人ページから一覧にもどる
-				if(pageId.equals("BP01") && button.equals("back_list")) {
+				else if(pageId.equals("BP01") && button.equals("back_list")) {
 					HttpSession session = request.getSession();
 					session.removeAttribute("empId");
 					BListAction listAction=new BListAction(request);
@@ -66,19 +69,19 @@ public class BControllerServlet extends HttpServlet {
 				}
 
 		//メモの新規作成画面
-				if(pageId.equals("BN01") && button.equals("to_regist_note")) {
+				else if(pageId.equals("BN01") && button.equals("to_regist_note")) {
 					url = "/WEB-INF/backjsp/registNote.jsp";
 				}
 
 		// 新規社員登録画面に移動する
-				if(pageId.equals("BL01") && button.equals("to_regist_user")) {
+				else if(pageId.equals("BL01") && button.equals("to_regist_user")) {
 					BUserAction uAction = new BUserAction(request);
 					url = uAction.getSecId();
 				}
 
 
 		//新規社員登録画面から一覧に戻るのは
-				if(pageId.equals("BL01") && button.equals("戻る")) {
+				else if(pageId.equals("BL01") && button.equals("戻る")) {
 					//★アクションをインスタンス化
 					BTabAction tAction = new BTabAction(request);
 					//タブアクションのメソッドを実行
@@ -87,7 +90,7 @@ public class BControllerServlet extends HttpServlet {
 		//新規メモ作成画面から個人ページに戻るのもヒストリーバック
 
 		//社員用画面に戻る
-				if(pageId.equals("BL01") && button.equals("to_front")) {
+				else if(pageId.equals("BL01") && button.equals("to_front")) {
 					url = "WEB-INF/jsp/home.jsp";
 					}
 
@@ -103,12 +106,17 @@ public class BControllerServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		request.setCharacterEncoding("UTF-8");
 		//★ページIDの取得
 		String pageId = request.getParameter("page_id");
 		//★ボタンの名前の取得
 		String button = request.getParameter("bt_name");
+
+		System.out.println("pageId:"+pageId+"だよ");
+		System.out.println("button:"+button+"だよ");
 		//次に飛ぶところのURLをNULLで宣言して、処理によって値を格納する
 		String url = null;
+
 
 
 		//新規社員登録の登録ボタン
@@ -130,7 +138,7 @@ public class BControllerServlet extends HttpServlet {
 
 		//個人ページから個人情報編集画面
 		if(pageId.equals("BP01") && button.equals("編集")) {
-			url = "/WEB-INF/backjsp/uRegist.jsp";
+			url = "/WEB-INF/backjsp/bUUpdate.jsp";
 		}
 
 
@@ -177,6 +185,7 @@ public class BControllerServlet extends HttpServlet {
 		}
 
 		//JSPさんへ処理を依頼する
+		System.out.println("url:"+url+"だよ");
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 
