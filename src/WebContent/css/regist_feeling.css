@@ -1,1 +1,11 @@
 @charset "UTF-8";
+body {
+	max-width: 800px;
+    margin: auto;
+}
+
+/*テーブルを中央へ*/
+.regist_fe_tb {
+
+
+}
