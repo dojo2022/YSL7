@@ -1,1 +1,14 @@
 @charset "UTF-8";
+/* 評価表 */
+.eva_items{
+	background-color:#EBD61A;
+}
+
+.eva_data{
+	background-color:#f7ee9d;
+	border-bottom: solid 1px #efe350;
+}
+/* レーダーチャートを評価表の横にする */
+#evaluationChar{
+	display: flex;
+}
