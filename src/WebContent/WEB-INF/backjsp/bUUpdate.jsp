@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/miemo/backcss/bMainPage.css">
 </head>
 <link rel="stylesheet" href="/miemo/backcss/bStyle.css">
 <link rel="stylesheet" href="/miemo/backcss/uUpdate.css">

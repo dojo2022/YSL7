@@ -6,28 +6,31 @@
 <head>
 <meta charset="UTF-8">
 <title>新規社員登録</title>
+<link rel="stylesheet" href="/miemo/backcss/uRegist.css">
 </head>
 <body>
+	<div class="title">
 	<h1>新規社員登録</h1>
+	</div>
 
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
 	<form method="POST" action="/miemo/TestServlet">
 	<input type="hidden" name="page_id" value="BR01">
-	<input type="hidden" name="empId" value="1">
+	<!--  <input type="hidden" name="empId" value="1"> -->
 		<table>
 			<tr>
 				<td>社員番号</td>
-				<td><input type="text" name="number"><br> <span id="error_number"></span></td>
+				<td><input type="text" name="number" class="inText"><br> <span id="error_number"></span></td>
 
 			</tr>
 			<tr>
 				<td>氏名</td>
-				<td><input type="text" name="name"><br> <span id="error_name"></span></td>
+				<td><input type="text" name="name" class="inText"><br> <span id="error_name" ></span></td>
 			</tr>
 			<tr>
 				<td>性別</td>
 				<td>
-					<select name="gender">
+					<select name="gender" class="inText">
 						<option value="">性別を選択</option>
 					    <option value="0">男性</option>
 					    <option value="1">女性</option>
@@ -38,7 +41,7 @@
 			<tr>
 				<td>事業部</td>
 				<td>
-					<select name="dep_id">
+					<select name="dep_id" class="inText">
 						<option value="">事業部を選択</option>
 						<c:forEach var="e" items="${one}" varStatus="status">
 							<option value="${e}">${e}</option>
@@ -48,16 +51,16 @@
 			</tr>
 			<tr>
 				<td>部</td>
-				<td><select name="div_id">  	</select><br><span id="error_div_id"></span></td>
+				<td><select name="div_id" class="inText">  	</select><br><span id="error_div_id"></span></td>
 			</tr>
 			<tr>
 				<td>課</td>
-				<td><select name="sec_id">  	</select><br><span id="error_sec_id"></span></td>
+				<td><select name="sec_id" class="inText">  	</select><br><span id="error_sec_id"></span></td>
 			</tr>
 			<tr>
 				<td>役職1</td>
 				<td>
-					<select name="post1">
+					<select name="post1" class="inText">
 						<option value="">役職1を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -76,7 +79,7 @@
 			<tr>
 				<td>役職2</td>
 				<td>
-					<select name="post2">
+					<select name="post2" class="inText">
 						<option value="">役職2を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -95,7 +98,7 @@
 			<tr>
 				<td>役職3</td>
 				<td>
-					<select name="post3">
+					<select name="post3" class="inText">
 						<option value="">役職2を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -114,7 +117,7 @@
 			<tr>
 				<td>入社年度</td>
 				<td>
-					<select name="year">
+					<select name="year" class="inText">
 						<option value="">入社年度を選択</option>
 					    <option value="1991">1991</option>
 					    <option value="1992">1992</option>
@@ -152,12 +155,16 @@
 					<span id="error_year"></span>
 				<td><!-- プルダウン -->
 			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="button_id" value="登録" class="button"></td>
+			</tr>
 		</table>
 
-		<input type="submit" name="button_id" value="登録">
+
 	</form>
 	<p>${errMsg}</p>
-		<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る">戻る</a>
+	<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る" class="back">一覧に戻る</a>
 </body>
 
 <script>
@@ -237,6 +244,21 @@
 		ans = ans.replace(']','');
 		let arr = ans.split(',');
 		return arr;
+	}
+
+	function coloeSet(argObj){
+	 // ==============================================
+	 //	入力済み時の背景色設定
+	 // ==============================================
+	    if(argObj.value==""){
+	        argObj.style.backgroundColor = "";
+	    }else{
+	        argObj.style.backgroundColor = "rgba(102, 51, 0, 0.20)";
+	    }
+	}
+
+	function colorReset(argObj){
+	    argObj.style.backgroundColor = "";
 	}
 </script>
 </html>
