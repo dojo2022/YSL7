@@ -43,7 +43,6 @@ public class LoginAction {
 		//4．戻り値がnullじゃなかったら、sessionスコープに戻り値の値を格納する。
 		if (user == null) {
 			//5. home.jspにフォワードするpassをサーブレットに返す。
-			request.setAttribute("errMsg", "※IDまたはPWが間違っています");
 			return "WEB-INF/jsp/login.jsp";
 		}else {
 			HttpSession session = request.getSession();
