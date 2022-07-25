@@ -48,8 +48,7 @@
 		</tr>
     </table>
 </form>
-<!-- エラーメッセージの表示欄 -->
-	<div id="errMsg">${errMsg}</div>
+
 
 
 </body>
