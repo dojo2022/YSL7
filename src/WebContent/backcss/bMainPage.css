@@ -67,6 +67,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /*タブのスタイル*/
+/* きもちグラフ */
 .tab_item1 {
 	width: calc(100%/ 5);
 	height: 50px;
@@ -83,6 +84,7 @@ a:link, a:visited, a:hover, a:active {
 	transition: all 0.2s ease;
 }
 
+/* きもちスタンプ */
 .tab_item2 {
 	width: calc(100%/ 5);
 	height: 50px;
@@ -99,6 +101,7 @@ a:link, a:visited, a:hover, a:active {
 	transition: all 0.2s ease;
 }
 
+/* メッセージ */
 .tab_item3 {
 	width: calc(100%/ 5);
 	height: 50px;
@@ -115,6 +118,7 @@ a:link, a:visited, a:hover, a:active {
 	transition: all 0.2s ease;
 }
 
+/* メモ */
 .tab_item4 {
 	width: calc(100%/ 5);
 	height: 50px;
@@ -131,6 +135,7 @@ a:link, a:visited, a:hover, a:active {
 	transition: all 0.2s ease;
 }
 
+/* 評価 */
 .tab_item5 {
 	width: calc(100%/ 5);
 	height: 50px;
