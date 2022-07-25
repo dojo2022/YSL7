@@ -29,7 +29,7 @@ public class EvaluationsDao {
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		//SQL文を完成させる
-		pStmt.setInt(1,toUserId);
+		pStmt.setInt(1,fromUserId);
 		pStmt.setInt(2, toUserId);
 		pStmt.setInt(3, evaluation1);
 		pStmt.setInt(4, evaluation2);
