@@ -5,7 +5,9 @@
 <head>
 <meta charset="UTF-8">
 </head>
+<link rel="stylesheet" href="/miemo/backcss/evaluation.css">
 <body>
+<div class="tab">
 <table>
 	<tr>
 		<th>評価項目</th>
@@ -83,5 +85,6 @@ new Chart(context, {
 	}
 }
 </script>
+</div>
 </body>
 </html>
