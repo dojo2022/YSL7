@@ -34,7 +34,7 @@
 			<td class="year">　2022${profile.year}年</td>
 		</tr>
 		<tr>
-			<td class="division">　金融・保険${profile.divisiont}部</td>
+			<td class="division">　金融・保険${profile.division}部</td>
 		</tr>
 		<tr>
 			<td></td>
@@ -86,7 +86,7 @@
 			</div>
 
 			<div class="tab_content" id="ddd_content">
-				<%-- <jsp:include page="bEvaluations.jsp" /> --%>
+				<jsp:include page="bEvaluations.jsp" />
 			</div>
 	</div>
 </body>
