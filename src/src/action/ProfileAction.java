@@ -52,19 +52,33 @@ public class ProfileAction {
 		HttpSession session = request.getSession();
 		Users user = (Users)session.getAttribute("user");
 		int userId = user.getUserId();
-		String password = request.getParameter("password");
-//新しいパスワード入力と新しいパスワード確認が一致しているかをかく
-		ProfileService service = new ProfileService();
+		String password = request.getParameter("newpassbox");
+		String password2 = request.getParameter("newpass2box");
+		boolean result = false;
 
-		boolean result = service.updatePw(userId,password);
+
+	//新しいパスワード入力と新しいパスワード確認が一致しているかをかく
+		if(password.equals(password2)) {
+
+			ProfileService service = new ProfileService();
+
+			result = service.updatePw(userId,password);
+
+		}else {
+			request.setAttribute("errMsg", "確認用とパスワードが異なります");
+			return "/WEB-INF/jsp/home.jsp";
+		}
+
+
 
 		//戻ってきた値にデータが入っていなければ(nullであれば)
 		if(result==false) {
-			request.setAttribute("errMsg", "データを取得できませんでした");
+			request.setAttribute("errMsg", "パスワードの更新に失敗しました");
 			return "/WEB-INF/jsp/profile.jsp";
 		//ちゃんと入っていたら
 		}else {
 			//servletに次のＪＳＰのパスを送る
+			request.setAttribute("errMsg", "パスワードを更新しました");
 			return "/WEB-INF/jsp/home.jsp";
 		}
 
