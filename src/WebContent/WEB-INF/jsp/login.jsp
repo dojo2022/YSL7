@@ -15,8 +15,9 @@
 
 
 <form method = "POST" action = "/miemo/FrontControllerServlet">
+<input type="hidden" name="page_id" value="FL01">
 	<table>
-	<input type="hidden" name="page_id" value="FL01">
+
 
 	<tr>
 		<td>社員番号</td>
@@ -31,7 +32,7 @@
 		<td>
 			<input type="checkbox" id="checkPassword">
 			<div class="togglePassword">
-				<input type="password" class="hideText" value="">
+				<input type="password" name="password" class="hideText" value="">
 				<input type="text" class="showText" value="">
 				<label for="checkPassword" class="fa fa-eye"></label>
 				<label for="checkPassword" class="fa fa-eye-slash"></label>
