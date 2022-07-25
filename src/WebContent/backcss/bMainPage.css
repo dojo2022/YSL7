@@ -1,33 +1,35 @@
 @charset "UTF-8";
-/*プロフィール画面*/
+/*プロフィールとタブの画面*/
 html{
 	background-color: #fff3df;
 }
+/* プロフィール表示 */
 table{
 	margin: 0 auto 15px auto;
-	border: 2px #F18E3D solid;
+	border: 2px #F18E3D solid;  /*枠線*/
 }
 
 .profile{
-	background-color: #fff;
-	height: 50%;
-	width: 60%;
+	background-color: #fff;  /* プロフィールの背景 */
+	height: 50%;				/* 高さ？ */
+	width: 60%;					/* 幅 */
 }
 
-.item{
+.item{					/* プロフィールの項目 */
 	font-size: 13pt;
 	font-weight: bold;
 }
 
-.name{
+.name{					/* 名前だけ文字大きくした */
 	font-weight: bold;
 	font-size: 30px;
 }
 
-.gender{
+.gender{				/* 性別表示の位置 */
 	vertical-align: top;
 }
 
+/* 一覧に戻るボタン */
 .back{
 	font-size: 14pt;
 	display: inline-block;
@@ -40,6 +42,8 @@ table{
 a:link, a:visited, a:hover, a:active {
   color: #444444;
 }
+
+/* 編集ボタン */
 .edit_button{
 	text-align: right;
 }
@@ -52,6 +56,7 @@ a:link, a:visited, a:hover, a:active {
 	background: #76D8BE;
 	border: 2px solid #76D8BE;
 }
+
 /*タブ切り替え全体のスタイル*/
 .tabs {
 	margin-top: 50px;
