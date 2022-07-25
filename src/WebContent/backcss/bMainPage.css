@@ -5,13 +5,18 @@ html{
 }
 table{
 	margin: 0 auto 15px auto;
-	border: 2px #565656 solid;
+	border: 2px #F18E3D solid;
 }
 
 .profile{
 	background-color: #fff;
 	height: 50%;
 	width: 60%;
+}
+
+.item{
+	font-size: 13pt;
+	font-weight: bold;
 }
 
 .name{
@@ -24,7 +29,7 @@ table{
 }
 
 .back{
-	font-size: 15pt;
+	font-size: 14pt;
 	display: inline-block;
 	padding: 3px 18px;
 	background: #F4AB3F;

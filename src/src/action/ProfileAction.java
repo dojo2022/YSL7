@@ -57,6 +57,15 @@ public class ProfileAction {
 		boolean result = false;
 
 
+		//入力値のチェック（空文字チェック）
+		//空白を入力されたら空白はすべて取り除く処理id.strip()という決まったメソッド
+		//空白で文字も入っていない、どちらか片方でもその状態だったらこの処理を返してねのif文
+		if(password.strip().length()==0|| password2.strip().length()==0) {
+			//errMsg",に"※ID/PWの入力は必須ですを入れて返す処理
+			request.setAttribute("errMsg", "※パスワードの入力は必須です");
+			return "/WEB-INF/jsp/profile.jsp";
+		}
+
 	//新しいパスワード入力と新しいパスワード確認が一致しているかをかく
 		if(password.equals(password2)) {
 
@@ -69,13 +78,9 @@ public class ProfileAction {
 			return "/WEB-INF/jsp/home.jsp";
 		}
 
-
-
-		//戻ってきた値にデータが入っていなければ(nullであれば)
 		if(result==false) {
 			request.setAttribute("errMsg", "パスワードの更新に失敗しました");
 			return "/WEB-INF/jsp/profile.jsp";
-		//ちゃんと入っていたら
 		}else {
 			//servletに次のＪＳＰのパスを送る
 			request.setAttribute("errMsg", "パスワードを更新しました");

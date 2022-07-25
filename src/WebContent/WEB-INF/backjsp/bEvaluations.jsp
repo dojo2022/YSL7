@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 </head>
+<link rel="stylesheet" href="/miemo/backcss/evaluation.css">
 <body>
-<table>
+<%--<div class="tab">
+ <table>
 	<tr>
 		<th>評価項目</th>
 		<th>自己評価</th>
@@ -14,7 +16,7 @@
 	</tr>
 	<tr>
 		<td>職場内の人間関係にストレスを感じていない</td>
-		<td>${myEvaluationList.eva1}</td>
+ 		<td>${myEvaluationList.eva1}</td>
 		<td>${otherEvaluationList.eva1}</td>
 	</tr>
 		<tr>
@@ -42,7 +44,7 @@
 <!-- レーダーチャート -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 <canvas id="evaluationChart"></canvas>
-<script>
+ <script>
 let inputData =${myEvaluationList},${otherEvaluationList};
 let context = document.querySelector("#evaluationChart").getContext('2d')
 new Chart(context, {
@@ -83,5 +85,6 @@ new Chart(context, {
 	}
 }
 </script>
+</div> --%>
 </body>
 </html>
