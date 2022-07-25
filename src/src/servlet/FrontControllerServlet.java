@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import action.BListAction;
 import action.EditFeelingAction;
+import action.EvaluationAction;
 import action.HistoryFeelingAction;
 import action.LoginAction;
 import action.MessageAction;
@@ -119,11 +120,11 @@ public class FrontControllerServlet extends HttpServlet {
 			path = "WEB-INF/jsp/evaluation.jsp";
 		}
 		//評価のdoPost
-//		if(pageId.equals("FE02") && button.equals("登録")) {
-//			EvaluationAction action = new EvaluationAction(request);
-//			path = action.registEval();
-//
-//		}
+		if(pageId.equals("FE02") && button.equals("登録")) {
+			EvaluationAction action = new EvaluationAction(request);
+			path = action.registEval();
+
+		}
 
 
 

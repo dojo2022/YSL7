@@ -130,13 +130,7 @@ public class BUserDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "SELECT Users.number AS number,Users.name AS name,Departments.department AS dep,Divisions.division AS div,Sections.section AS sec,Posts.post AS post,Users.year AS year"
-				+ "FROM US LEFT JOIN Users ON US.u_id = Users.u_id "
-				+ "LEFT JOIN Sections ON US.sec_id = Sections.sec_id "
-				+ "LEFT JOIN Divisions ON Sections.div_id = Divisions.div_id "
-				+ "LEFT JOIN Departments ON Divisions.dep_id = Departments.dep_id "
-				+ "LEFT JOIN UP ON US.u_id = UP.u_id "
-				+ "LEFT JOIN Posts ON UP.Post_id = Posts.id;";
+		String sql = "SELECT USERS.NUMBER AS NUMBER,USERS.NAME AS NAME,DEPARTMENTS.DEPARTMENT AS DEP,DIVISIONS.DIVISION AS DIV,SECTIONS.SECTION AS SEC,POSTS.POST AS POST,USERS.YEAR AS YEAR FROM US LEFT JOIN USERS ON US.U_ID = USERS.U_ID LEFT JOIN SECTIONS ON US.SEC_ID = SECTIONS.SEC_ID LEFT JOIN DIVISIONS ON SECTIONS.DIV_ID = DIVISIONS.DIV_ID LEFT JOIN DEPARTMENTS ON DIVISIONS.DEP_ID = DEPARTMENTS.DEP_ID LEFT JOIN UP ON US.U_ID = UP.U_ID LEFT JOIN POSTS ON UP.POST_ID = POSTS.POST_ID; ";
 
 
 

@@ -33,12 +33,12 @@ public class BControllerServlet extends HttpServlet {
 
 
 //		//  //フロントから管理画面を押された時
-//				if(pageId.equals("FH01") && button.equals("hr")) {
+				if(pageId.equals("FH01") && button.equals("hr")) {
 //					//★アクションをインスタンス化
-//					BListAction lAction = new BListAction()(request);
+					BListAction lAction = new BListAction(request);
 //					//★アクションのsearchメソッドを呼び出す
-//					url =lAction.selectAllList();
-//				}
+				url =lAction.selectAllList();
+				}
 
 		////一覧から個人ページを表示するとき
 				if(pageId.equals("BL01") && button.equals("to_profile")) {

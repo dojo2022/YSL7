@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>きもち記録</title>
+<link rel = "stylesheet" href = "/miemo/css/regist_feeling.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
+<h2>きもち記録</h2>
 	${errMsg}<br>
+	<div class="regist_fe_tb">
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FF01">
 		<table>
@@ -37,6 +40,7 @@
 			コメント:<input type="text"  name="comment" value="${param.comment}">
 		<input type="submit"  name="bt_name" value="登録">
 	</form>
+	</div>
 
 </body>
 <script>

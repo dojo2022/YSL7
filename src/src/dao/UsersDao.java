@@ -1,5 +1,6 @@
 package dao;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -110,12 +111,12 @@ public class UsersDao {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = " UPDATE Users set password = '? 'WHERE u_id =?";
+		String sql = " UPDATE Users set password = ? WHERE u_id =?";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる
-		pStmt.setInt(1, userId);
-		pStmt.setString(2, password);
+		pStmt.setString(1, password);
+		pStmt.setInt(2,userId);
 
 		// SQL文を実行し、更新件数を取得する
 		int num = pStmt.executeUpdate();

@@ -42,8 +42,7 @@ public class EvaluationAction {
 			return "/WEB-INF/jsp/evaluation.jsp";
 			//ちゃんと入っていたらservletにhome.jspのパスを送るよ
 		} else {
-			session = request.getSession();
-			session.setAttribute("result", ans);
+			request.setAttribute("errMsg", "評価を登録しました");
 			return "/WEB-INF/jsp/home.jsp";
 		}
 	}

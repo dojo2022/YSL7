@@ -11,7 +11,7 @@
 <body>
 
 	<!-- Servletへ遷移させる(PassWord変更) -->
-	<form method="POST" action="miemo/FrontControllerServlet">
+	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FP01">
 		<input type="hidden" name="user_id" value="${user.userId }">
 		<table>
