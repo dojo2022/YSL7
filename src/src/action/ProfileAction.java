@@ -22,7 +22,7 @@ public class ProfileAction {
 
 
 		HttpSession session = request.getSession();
-		Users user = (Users)session.getAttribute("users");
+		Users user = (Users)session.getAttribute("user");
 		int userId = user.getUserId();
 
 		ProfileService service = new ProfileService();
@@ -36,8 +36,7 @@ public class ProfileAction {
 		//ちゃんと入っていたら
 		}else {
 			//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
-			HttpSession session1 = request.getSession();
-			session1.setAttribute("users",users );
+			request.setAttribute("users", users);
 			return "/WEB-INF/jsp/profile.jsp";
 		}
 
@@ -51,10 +50,10 @@ public class ProfileAction {
 
 
 		HttpSession session = request.getSession();
-		Users user = (Users)session.getAttribute("users");
+		Users user = (Users)session.getAttribute("user");
 		int userId = user.getUserId();
 		String password = request.getParameter("password");
-
+//新しいパスワード入力と新しいパスワード確認が一致しているかをかく
 		ProfileService service = new ProfileService();
 
 		boolean result = service.updatePw(userId,password);

@@ -27,11 +27,11 @@ public class BNotesDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "(SELECT Notes.date AS date, f.name AS from_name, Notes.title AS title, Notes.content AS content"
+		String sql = "SELECT Notes.date AS date, f.name AS from_name, Notes.title AS title, Notes.content AS content"
 				+ " FROM Notes"
-				+ " LEFT JOIN Users AS f ON f.id = Notes.from_u_id"
-				+ " LEFT JOIN Users AS a ON a.id = Notes.about_u_id"
-				+ " WHERE about_u_id = ? ORDER BY DATE DESC;)";
+				+ " LEFT JOIN Users AS f ON f.u_id = Notes.from_u_id"
+				+ " LEFT JOIN Users AS a ON a.u_id = Notes.about_u_id"
+				+ " WHERE about_u_id = ? ORDER BY DATE DESC;";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる
