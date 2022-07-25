@@ -26,13 +26,13 @@ public class BListAction {
 				//戻ってきた値がnullだったら
 				if(listAll.size() == 0) {
 					request.setAttribute("errMsg", "リストが正常に表示されませんでした。。");
-					return "/WEB-INF/bList.jsp";
+					return "/WEB-INF/backjsp/bList.jsp";
 				//ちゃんと入っていたら
 				}else {
 					//戻ってきたuser型のデータをsessionに格納し、servletに次のＪＳＰのパスを送る
 					HttpSession session = request.getSession();
 					session.setAttribute("listAll", listAll);
-					return "/WEB-INF/bList.jsp";
+					return "/WEB-INF/backjsp/bList.jsp";
 					}
 			}
 

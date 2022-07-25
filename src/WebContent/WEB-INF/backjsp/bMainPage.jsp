@@ -34,7 +34,7 @@
 			<td class="year">　2022${profile.year}年</td>
 		</tr>
 		<tr>
-			<td class="division">　金融・保険${profile.divisiont}部</td>
+			<td class="division">　金融・保険${profile.division}部</td>
 		</tr>
 		<tr>
 			<td></td>
@@ -43,7 +43,10 @@
 		<tr>
 			<td class="back_button"><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
 			<td></td>
-			<td class="edit_button"><input type="submit" name="bt_name" value="編集" class=edit></td>
+			<td class="edit_button">
+			<input type="submit" name="bt_name" value="編集" class=edit>
+			<input type="hidden" name="page_id" value="BP01">
+			</td>
 		</tr>
 	</table>
 </form>
@@ -83,7 +86,7 @@
 			</div>
 
 			<div class="tab_content" id="ddd_content">
-				<%-- <jsp:include page="bEvaluations.jsp" /> --%>
+				<jsp:include page="bEvaluations.jsp" />
 			</div>
 	</div>
 </body>
