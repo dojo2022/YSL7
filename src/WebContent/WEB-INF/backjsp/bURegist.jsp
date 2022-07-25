@@ -13,6 +13,7 @@
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
 	<form method="POST" action="/miemo/TestServlet">
 	<input type="hidden" name="page_id" value="BR01">
+	<input type="hidden" name="empId" value="1">
 		<table>
 			<tr>
 				<td>社員番号</td>
@@ -62,12 +63,12 @@
 					    <option value="2">新人</option>
 					    <option value="3">一般職</option>
 					    <option value="4">総合職</option>
-					    <option value="6">主任職</option>
-					    <option value="7">専任職</option>
-					    <option value="8">管理職</option>
-					    <option value="9">顧問・嘱託</option>
-					    <option value="10">執行役員</option>
-					    <option value="11">取締役</option>
+					    <option value="5">主任職</option>
+					    <option value="6">専任職</option>
+					    <option value="7">管理職</option>
+					    <option value="8">顧問・嘱託</option>
+					    <option value="9">執行役員</option>
+					    <option value="10">取締役</option>
 					  </select><br>
 					  <span id="error_post1"></span>
 				<td><!-- プルダウン -->
@@ -81,12 +82,12 @@
 					    <option value="2">新人</option>
 					    <option value="3">一般職</option>
 					    <option value="4">総合職</option>
-					    <option value="6">主任職</option>
-					    <option value="7">専任職</option>
-					    <option value="8">管理職</option>
-					    <option value="9">顧問・嘱託</option>
-					    <option value="10">執行役員</option>
-					    <option value="11">取締役</option>
+					    <option value="5">主任職</option>
+					    <option value="6">専任職</option>
+					    <option value="7">管理職</option>
+					    <option value="8">顧問・嘱託</option>
+					    <option value="9">執行役員</option>
+					    <option value="10">取締役</option>
 					  </select><br>
 					  <span id="error_post2"></span>
 				<td><!-- プルダウン -->
@@ -95,17 +96,17 @@
 				<td>役職3</td>
 				<td>
 					<select name="post3">
-						<option value="">役職3を選択</option>
+						<option value="">役職2を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
 					    <option value="3">一般職</option>
 					    <option value="4">総合職</option>
-					    <option value="6">主任職</option>
-					    <option value="7">専任職</option>
-					    <option value="8">管理職</option>
-					    <option value="9">顧問・嘱託</option>
-					    <option value="10">執行役員</option>
-					    <option value="11">取締役</option>
+					    <option value="5">主任職</option>
+					    <option value="6">専任職</option>
+					    <option value="7">管理職</option>
+					    <option value="8">顧問・嘱託</option>
+					    <option value="9">執行役員</option>
+					    <option value="10">取締役</option>
 					  </select><br>
 					  <span id="error_post3"></span>
 				<td>
@@ -124,6 +125,7 @@
 					    <option value="1997">1997</option>
 					    <option value="1998">1998</option>
 					    <option value="1999">1999</option>
+					    <option value="2000">2000</option>
 					    <option value="2001">2001</option>
 					    <option value="2002">2002</option>
 					    <option value="2003">2003</option>
