@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
- html{
- background-color:#fff3df;
- }
+
 
 
 /* ログイン画面：入力したパスワードの表示 */
@@ -53,6 +51,29 @@
   display: inline-block;
 }
 
+/* ログインボタン */
+
+.btn-circle-stitch {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffd3a8;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #ffd3a8;
+  border: dashed 1px #FFF;
+  transition: .4s;
+  margin-left: 30px;
+}
+
+.btn-circle-stitch:hover {
+  background: #ffab57;
+  box-shadow: 0px 0px 0px 5px #ffab57;
+}
 
 /* 文字を中央揃え */
 
@@ -60,3 +81,20 @@
 	margin: auto;
 	margin-top: 300px;
 }
+
+/* 文字の大きさ */
+ #size_test {
+ font-size:  30px;
+ }
+
+ #size_test2 {
+ font-size:  30px;
+ }
+
+ /* ロゴ画像の大きさ変更 */
+ .logo img {
+ width: 500px;
+ margin-left: 440px;
+ margin-bottom: -283px;
+
+ }
