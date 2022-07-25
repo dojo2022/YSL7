@@ -13,16 +13,16 @@
 <form action="/miemo/BControllerServlet" method="POST">
 	<table class=profile>
 		<tr>
-			<td rowspan="2" class=name>石貝真奈${profile.name}</td>
+			<td rowspan="2" class=name>${profile.name}</td>
 			<td class="item">《社員番号》</td>
 			<td class="item">《役職》</td>
 		</tr>
 		<tr>
-		<td class="number">　1000${profile.number}</td>
-		<td class="post">　一般職${profile.post}</td>
+		<td class="number">　${profile.number}</td>
+		<td class="post">　${profile.post}</td>
 		</tr>
 		<tr>
-			<td rowspan="3" class="gender">女性
+			<td rowspan="3" class="gender">
 			<c:if test="${profile.gender==0}">男性</c:if>
 			<c:if test="${profile.gender==1}">女性</c:if>
 			</td>
@@ -30,15 +30,15 @@
 			<td class="item">《入社年度》</td>
 		</tr>
 		<tr>
-			<td class="department">　SI事業部${profile.department}</td>
-			<td class="year">　2022${profile.year}年</td>
+			<td class="department">　${profile.department}</td>
+			<td class="year">　${profile.year}年</td>
 		</tr>
 		<tr>
-			<td class="division">　金融・保険${profile.division}部</td>
+			<td class="division">　${profile.division}部</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="section">　1${profile.section}課</td>
+			<td class="section">　${profile.section}課</td>
 		</tr>
 		<tr>
 			<td class="back_button"><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
