@@ -137,7 +137,7 @@ public class UsersDao {
 		Class.forName("org.h2.Driver");
 
 		//SQL文コーナー。
-		String sql = "SELECT Users.name, Departments.department, Divisions.division, Sections.section, Posts.post\r\n"
+		String sql = "SELECT Users.u_id, Users.name, Users.number, Departments.department, Divisions.division, Sections.section, Posts.post\r\n"
 				+ " FROM US\r\n"
 				+ " LEFT JOIN Users ON US.u_id = Users.u_id\r\n"
 				+ " LEFT JOIN Sections ON US.sec_id = Sections.sec_id\r\n"
@@ -153,7 +153,9 @@ public class UsersDao {
 		//while回してrsに入れる。
 		while(rs.next()) {
 			Users users = new Users();
+			users.setUserId(rs.getInt("u_id"));
 			users.setName(rs.getString("name"));
+			users.setNumber(rs.getString("number"));
 			users.setDepartment(rs.getString("department"));
 			users.setDivision(rs.getString("division"));
 			users.setSection(rs.getString("section"));
