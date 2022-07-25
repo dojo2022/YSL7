@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+ html{
+ background-color:#fff3df;
+ }
+
+
 /* ログイン画面：入力したパスワードの表示 */
 
 #checkPassword{
@@ -46,4 +51,12 @@
 }
 #checkPassword:checked + .togglePassword > .showText {
   display: inline-block;
+}
+
+
+/* 文字を中央揃え */
+
+.login_center {
+	margin: auto;
+	margin-top: 300px;
 }

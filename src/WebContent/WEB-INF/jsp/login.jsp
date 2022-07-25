@@ -10,17 +10,18 @@
 <script type = "text/javascript" src ="/miemo/js/script.js"></script>
 </head>
 <body>
+<%-- <%@ include file="/WEB-INF/jsp/common.jsp" %> --%>
 
 <!-- サーブレットへ遷移させる -->
 
 
 <form method = "POST" action = "/miemo/FrontControllerServlet">
 <input type="hidden" name="page_id" value="FL01">
-	<table>
+	<table class ="login_center">
 
 
 	<tr>
-		<td>社員番号</td>
+		<td div = >【社員番号】</td>
 		<td>
 			<input class= "member_number" type = "text" name = "number" value = "${param.number}">
 		</td>
@@ -28,7 +29,7 @@
 
 
 	<tr>
-		<td>パスワード</td>
+		<td>【パスワード】</td>
 		<td>
 			<input type="checkbox" id="checkPassword">
 			<div class="togglePassword">
