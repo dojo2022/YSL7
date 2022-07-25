@@ -22,7 +22,7 @@ public class BStampsDAO {
 		Class.forName("org.h2.Driver");
 
 		//SQL文を準備する
-		String sql = "select count(stamp1), count(stamp2), count(stamp3),count(stamp4), count(stamp5) FROM STAMPS where u_id = ? and date>='2022-07-01' and date<'2022-08-01'";
+		String sql = "select stamp1, stamp2, stamp3,stamp4, stamp5 FROM STAMPS where u_id = ? and date>='2022-07-01' and date<'2022-08-01'";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		//SQL文の?部分を埋める
@@ -33,11 +33,22 @@ public class BStampsDAO {
 
 		//取ってきたデータをbeansにしまう
 		while(rs.next()) {
-			sCount.setCountS1(rs.getInt("count(stamp1)"));
-			sCount.setCountS2(rs.getInt("count(stamp2)"));
-			sCount.setCountS3(rs.getInt("count(stamp3)"));
-			sCount.setCountS4(rs.getInt("count(stamp4)"));
-			sCount.setCountS5(rs.getInt("count(stamp5)"));
+			if(rs.getInt("stamp1") == 1) {
+				sCount.setCountS1(sCount.getCountS1()+1);
+			}
+			if(rs.getInt("stamp2") == 1) {
+				sCount.setCountS2(sCount.getCountS2()+1);
+			}
+			if(rs.getInt("stamp3") == 1) {
+				sCount.setCountS3(sCount.getCountS3()+1);
+				}
+			if(rs.getInt("stamp4") == 1) {
+				sCount.setCountS4(sCount.getCountS4()+1);
+			}
+			if(rs.getInt("stamp5") == 1) {
+				sCount.setCountS5(sCount.getCountS5()+1);
+			}
+
 		}
 
 		//結果を返す

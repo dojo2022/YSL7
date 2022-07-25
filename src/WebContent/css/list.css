@@ -1,0 +1,52 @@
+	#foo-table_length{
+		/* background-color: skyblue; */
+		/* text-align: center; */
+		display: block;
+		padding-left: 10px;
+	}
+	#foo-table_filter{
+		/* background-color: pink; */
+		text-align: center;
+	}
+	#foo-table_paginate{
+		/* background-color: yellow; */
+	}
+
+	#foo-table_info{
+		/* background-color: blue; */
+	}
+	.col-sm-5{
+		padding:0;
+		margin:0;
+	}
+	.col-sm-6{
+		padding:0;
+		margin:0;
+	}
+	.col-sm-7{
+		padding:0;
+		margin:0;
+	}
+
+	.sh_d {
+
+		background-color:skyblue;
+	}
+	.sh_h{
+
+		background-color:deepskyblue;
+	}
+	#sh_head{
+		background-color: yellow;
+	}
+
+	#sh_data{
+		background-color: lemonchiffon;
+	}
+	.row{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+
+
