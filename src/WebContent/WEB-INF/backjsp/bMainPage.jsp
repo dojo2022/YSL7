@@ -1,81 +1,68 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
- /*タブ切り替え全体のスタイル*/
-.tabs {
-	margin-top: 50px;
-	padding-bottom: 40px;
-	background-color: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	width: 700px;
-	margin: 0 auto;
-}
+<link rel="stylesheet" href="/miemo/backcss/bMainPage.css">
 
-/*タブのスタイル*/
-.tab_item {
-	width: calc(100%/ 3);
-	height: 50px;
-	border-bottom: 3px solid #5ab4bd;
-	background-color: #d9d9d9;
-	line-height: 50px;
-	font-size: 16px;
-	text-align: center;
-	color: #565656;
-	display: block;
-	float: left;
-	text-align: center;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-
-.tab_item:hover {
-	opacity: 0.75;
-}
-
-/*ラジオボタンを全て消す*/
-input[name="tab_item"] {
-	display: none;
-}
-
-/*タブ切り替えの中身のスタイル*/
-.tab_content {
-	display: none;
-	padding: 40px 40px 0;
-	clear: both;
-	overflow: hidden;
-}
-
-/*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content, #aaa:checked ~ #aaa_content,
-	#bbb:checked ~ #bbb_content {
-	display: block;
-}
-
-/*選択されているタブのスタイルを変える*/
-.tabs input:checked+.tab_item {
-	background-color: #5ab4bd;
-	color: #fff;
-}
-
-</style>
 </head>
 <body>
+<form action="/miemo/BControllerServlet" method="POST">
+	<table class=profile>
+		<tr>
+			<td rowspan="2" class=name>石貝真奈${profile.name}</td>
+			<td class=item>社員番号:</td>
+			<td rowspan="1" class=number>1000${profile.number}</td>
+
+		</tr>
+		<tr>
+		<td class=item>事業部:</td>
+		<td class=department>SI事業部${profile.department}</td>
+		</tr>
+		<tr>
+			<td rowspan="3" class=gender>性別: 女性
+			<c:if test="${profile.gender==0}">男性</c:if>
+			<c:if test="${profile.gender==1}">女性</c:if>
+			</td>
+			<td class=item>部:</td>
+			<td class=division>金融・保険${profile.divisiont}</td>
+		</tr>
+		<tr>
+			<td>課:</td>
+			<td class=section>1課${profile.section}</td>
+		</tr>
+		<tr>
+			<td>役職:</td>
+			<td class=post>一般職${profile.post}</td>
+		</tr>
+		<tr>
+		<td class=back_button><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
+			<td>入社年度:</td>
+			<td class=year>2022${profile.year}年</td>
+			<td class=edit_button><input type="submit" name="bt_name" value="編集" class=edit></td>
+		</tr>
+	</table>
+</form>
 
 	<div class="tabs">
 		<input id="all" type="radio" name="tab_item" checked>
 		<!-- ここからタブ -->
-			<label class="tab_item" for="all">AAA</label>
+			<label class="tab_item1" for="all">きもちグラフ</label>
 			<input id="aaa" type="radio" name="tab_item">
 
-			<label class="tab_item"	for="aaa">BBB</label>
+			<label class="tab_item2"	for="aaa">きもちスタンプ</label>
 			<input id="bbb" type="radio"	name="tab_item">
 
-			<label class="tab_item" for="bbb">CCC</label>
+			<label class="tab_item3" for="bbb">メッセージ</label>
+			<input id="ccc" type="radio"	name="tab_item">
+
+			<label class="tab_item4" for="ccc">メモ</label>
+			<input id="ddd" type="radio"	name="tab_item">
+
+			<label class="tab_item5" for="ddd">評価</label>
 
 		<!-- ここから内容 -->
 			<div class="tab_content" id="all_content">
@@ -88,6 +75,14 @@ input[name="tab_item"] {
 
 			<div class="tab_content" id="bbb_content">
 				CCCの内容がここに入ります
+			</div>
+
+			<div class="tab_content" id="ccc_content">
+				DDDの内容がここに入ります
+			</div>
+
+			<div class="tab_content" id="ddd_content">
+				EEEの内容がここに入ります
 			</div>
 	</div>
 </body>
