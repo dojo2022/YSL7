@@ -64,7 +64,7 @@ public class BUserDAO {
 		ResultSet rs = pStmt.executeQuery();
 
 		while (rs.next()) {
-			empId = rs.getInt("u_id");
+			empId = rs.getInt("MAX(u_id)");
 		}
 
 		return empId;

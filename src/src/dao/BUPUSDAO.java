@@ -14,8 +14,8 @@ public class BUPUSDAO {
 	//insertPost1
 	public void insertPost1(int empId, int intPost1)throws ClassNotFoundException, SQLException{
 
-		System.out.println(empId);
-		System.out.println(intPost1);
+		System.out.println("empId" + empId);
+		System.out.println("intPost1" + intPost1);
 		// JDBCドライバを読み込む
 		Class.forName("org.h2.Driver");
 
@@ -70,7 +70,7 @@ public class BUPUSDAO {
 
 	}
 
-	//insertSection1
+	//insertSection
 	public int insertSection(int empId, int intSecId)throws ClassNotFoundException, SQLException{
 		int result = 0;
 
@@ -84,6 +84,9 @@ public class BUPUSDAO {
 		// SQL文を完成させる
 		pStmt.setInt(1,empId);
 		pStmt.setInt(2,intSecId);
+
+		result = pStmt.executeUpdate();
+		System.out.println("insertSection = " + result);
 
 		return result;
 	}
@@ -157,6 +160,28 @@ public class BUPUSDAO {
 
 
 	}
+
+	//insertSection
+	public int updateSection(int empId, int intSecId)throws ClassNotFoundException, SQLException{
+		int result = 0;
+
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		// SQL文を準備する
+		String sql = "UPDATE UP SET sec_id = ? WHERE u_id = ?;";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+
+		// SQL文を完成させる
+		pStmt.setInt(1,empId);
+		pStmt.setInt(2,intSecId);
+
+		result = pStmt.executeUpdate();
+		System.out.println("insertSection = " + result);
+
+		return result;
+	}
+
 
 
 }

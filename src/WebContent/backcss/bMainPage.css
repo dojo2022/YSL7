@@ -1,1 +1,201 @@
 @charset "UTF-8";
+/*プロフィール画面*/
+html{
+	background-color: #fff3df;
+}
+table{
+	margin: 0 auto 15px auto;
+	border: 2px #565656 solid;
+}
+
+.profile{
+	background-color: #fff;
+	height: 50%;
+	width: 60%;
+}
+
+.name{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.gender{
+	vertical-align: top;
+}
+
+.back{
+	font-size: 15pt;
+	display: inline-block;
+	padding: 3px 18px;
+	background: #F4AB3F;
+	border: 2px solid #F4AB3F;
+	text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #444444;
+}
+.edit_button{
+	text-align: right;
+}
+
+.edit{
+	font-size: 15pt;
+	color: #444444;
+	display: inline-block;
+	padding: 3px 20px;
+	background: #76D8BE;
+	border: 2px solid #76D8BE;
+}
+/*タブ切り替え全体のスタイル*/
+.tabs {
+	margin-top: 50px;
+	padding-bottom: 40px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item1 {
+	width: calc(100%/ 5);
+	height: 50px;
+	border-bottom: 3px solid #e17751;
+	background-color: #fff8ea;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.tab_item2 {
+	width: calc(100%/ 5);
+	height: 50px;
+	border-bottom: 3px solid #F19E6F;
+	background-color: #fff8ea;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.tab_item3 {
+	width: calc(100%/ 5);
+	height: 50px;
+	border-bottom: 3px solid #DD3B84;
+	background-color: #fff8ea;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.tab_item4 {
+	width: calc(100%/ 5);
+	height: 50px;
+	border-bottom: 3px solid #F4AB3F;
+	background-color: #fff8ea;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.tab_item5 {
+	width: calc(100%/ 5);
+	height: 50px;
+	border-bottom: 3px solid #EBD61A;
+	background-color: #fff8ea;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+.tab_item1:hover {
+	opacity: 0.75;
+}
+
+.tab_item2:hover {
+	opacity: 0.75;
+}
+
+.tab_item3:hover {
+	opacity: 0.75;
+}
+
+.tab_item4:hover {
+	opacity: 0.75;
+}
+
+.tab_item5:hover {
+	opacity: 0.75;
+}
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+	display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+	display: none;
+	padding: 40px 40px 0;
+	clear: both;
+	overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content, #aaa:checked ~ #aaa_content,
+	#bbb:checked ~ #bbb_content, #ccc:checked ~ #ccc_content, #ddd:checked ~ #ddd_content{
+	display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked+.tab_item1 {
+	background-color: #e17751;
+	color: #fff;
+}
+
+.tabs input:checked+.tab_item2 {
+	background-color: #F19E6F;
+	color: #fff;
+}
+
+.tabs input:checked+.tab_item3 {
+	background-color: #DD3B84;
+	color: #fff;
+}
+
+.tabs input:checked+.tab_item4 {
+	background-color: #F4AB3F;
+	color: #fff;
+}
+
+.tabs input:checked+.tab_item5 {
+	background-color: #EBD61A;
+	color: #fff;
+}

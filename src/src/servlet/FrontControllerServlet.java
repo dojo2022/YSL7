@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import action.BListAction;
 import action.EditFeelingAction;
-import action.EvaluationAction;
 import action.HistoryFeelingAction;
 import action.LoginAction;
 import action.MessageAction;
@@ -59,10 +59,10 @@ public class FrontControllerServlet extends HttpServlet {
 				SearchEvaluationAction action = new SearchEvaluationAction(request);
 				path = action.showEmp();
 			}
-//			if (pageId.equals("FH01") && button.equals("hr")) {//home.jspかlist.jsp(人事部画面へ)
-//				BListAction action = new BListAction(request);
-//				path = action.selectAllList();
-//			}
+			if (pageId.equals("FH01") && button.equals("hr")) {//home.jspかlist.jsp(人事部画面へ)
+				BListAction action = new BListAction(request);
+				path = action.selectAllList();
+			}
 		}else {
 			//単にlogin画面に遷移させるだけのメソッド
 			path="/WEB-INF/jsp/login.jsp";
@@ -119,10 +119,11 @@ public class FrontControllerServlet extends HttpServlet {
 			path = "WEB-INF/jsp/evaluation.jsp";
 		}
 		//評価のdoPost
-		if(pageId.equals("FE02") && button.equals("登録")) {
-			EvaluationAction action = new EvaluationAction(request);
-			path = action.registEval();
-		}
+//		if(pageId.equals("FE02") && button.equals("登録")) {
+//			EvaluationAction action = new EvaluationAction(request);
+//			path = action.registEval();
+//
+//		}
 
 
 
