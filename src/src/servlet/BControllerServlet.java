@@ -124,7 +124,7 @@ public class BControllerServlet extends HttpServlet {
 			//★アクションをインスタンス化
 			BUserAction uAction = new BUserAction(request);
 			//★アクションのsearchメソッドを呼び出す
-			url = uAction.udelete();
+			url = uAction.uDelete();
 		}
 
 

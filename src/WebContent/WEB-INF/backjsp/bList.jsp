@@ -9,7 +9,8 @@
 </head>
 <body>
 <h1>YSL 社員一覧</h1>
-<form method="GET">
+<form method="GET" action="/miemo/BControllerServlet">
+<input type="hidden" name="page_id" value="BL01">
 	<table>
 		<tr>
 		<th>社員番号</th>
@@ -22,6 +23,7 @@
 		<tr>
 			<td>
 			<input type="hidden" name="empId" value="${list.empId}">
+			<input type="hidden" name="bt_name" value="to_profile">
 			<input type="submit" value="${list.number} ${list.name}${list.department}${list.division}${list.section}${list.post}${list.year}"
 				name="empData"></td>
 		</tr>
