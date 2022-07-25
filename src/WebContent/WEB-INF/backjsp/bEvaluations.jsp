@@ -17,27 +17,27 @@
 	<tr>
 		<td>職場内の人間関係にストレスを感じていない</td>
  		<td>${myEvaluationList.eva1}</td>
-		<td>${otherEvaluationList.eva1}</td>
+		<td>${e1Avg}</td>
 	</tr>
 		<tr>
 		<td>業務に意欲的に取り組んでいる</td>
 		<td>${myEvaluationList.eva2}</td>
-		<td>${otherEvaluationList.eva2}</td>
+		<td>${e2Avg}</td>
 	</tr>
 		<tr>
 		<td>報告・連絡・相談が適切にできている</td>
 		<td>${myEvaluationList.eva3}</td>
-		<td>${otherEvaluationList.eva3}</td>
+		<td>${e3Avg}</td>
 	</tr>
 		<tr>
 		<td>業務に必要な技術や知識を発揮できている</td>
 		<td>${myEvaluationList.eva4}</td>
-		<td>${otherEvaluationList.eva4}</td>
+		<td>${e4Avg)}</td>
 	</tr>
 		<tr>
 		<td>タスク量と期限は適切である</td>
 		<td>${myEvaluationList.eva5}</td>
-		<td>${otherEvaluationList.eva5}</td>
+		<td>${e5Avg}</td>
 	</tr>
 </table>
 
@@ -72,11 +72,11 @@ new Chart(context, {
 		},{
 			label:'他者評価',
 			data:[
-				${otherEvaluationList.eva1},
-				${otherEvaluationList.eva2},
-				${otherEvaluationList.eva3},
-				${otherEvaluationList.eva4},
-				${otherEvaluationList.eva5}
+				${e1Avg},
+				${e2Avg},
+				${e3Avg},
+				${e4Avg},
+				${e5Avg}
 			],
             borderColor: 'RGBA(225,95,150, 1)',
             borderWidth: 1,
