@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 public class BEvaluationCalc {
 
-	public double evaCalc(ArrayList<BEvaluationsBeans> otherEvaluationList){
+	public ArrayList<Double> evaCalc(ArrayList<BEvaluationsBeans> otherEvaluationList){
+
+		//戻り値入れるArrayList作成
+		ArrayList<Double> eAvgList = new ArrayList<Double>();
+
 		//人数を求める
 		int s = otherEvaluationList.size();
 
@@ -24,11 +28,21 @@ public class BEvaluationCalc {
 			e5 += b.getEva5();
 		}
 
+		//それぞれの項目の複数人からの評価の平均を求める
+		double e1Avg = e1 / s;
+		eAvgList.add(e1Avg);
+		double e2Avg = e2 / s;
+		eAvgList.add(e2Avg);
+		double e3Avg = e3 / s;
+		eAvgList.add(e3Avg);
+		double e4Avg = e4 / s;
+		eAvgList.add(e4Avg);
+		double e5Avg = e5 / s;
+		eAvgList.add(e5Avg);
 
+		/*		//複数人からの評価の平均を求める
+				double eAvg = (e1 + e2 + e3 + e4 + e5) /  s;*/
 
-		//複数人からの評価の平均を求める
-		double eAvg = (e1 + e2 + e3 + e4 + e5) /  s;
-
-		return eAvg;
+		return eAvgList;
 	}
 }

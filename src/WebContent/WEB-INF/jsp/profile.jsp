@@ -6,54 +6,63 @@
 <head>
 <meta charset="UTF-8">
 <title>Profile</title>
-<link rel="stylesheet" href="/miemo/css/profile.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/profile.css">
 </head>
 <body>
 
 	<!-- Servletへ遷移させる(PassWord変更) -->
+
 	<form method="POST" action="/miemo/FrontControllerServlet">
+		<h1>プロフィール</h1>
 		<input type="hidden" name="page_id" value="FP01">
 		<input type="hidden" name="user_id" value="${user.userId }">
-		<table>
+		<div>
+		<table class = profile>
 			<tr>
-				<td>名前:</td>
+				<th>名前</th>
 				<td>${users.name}</td>
 			</tr>
 			<tr>
-				<td>社員番号：</td>
+				<th>社員番号</th>
 				<td>${users.number}</td>
 			</tr>
 			<tr>
-				<td>部署：</td>
+				<th>部署</th>
 				<td>${users.department}</td>
 			</tr>
 			<tr>
-				<td>事業部：</td>
+				<th>事業部</th>
 				<td>${users.division}</td>
 			</tr>
 			<tr>
-				<td>課：</td>
+				<th>課</th>
 				<td>${users.section}</td>
 			</tr>
 			<tr>
-				<td>役職：</td>
+				<th>役職</th>
 				<td>${users.post}</td>
 			</tr>
 			<tr>
-				<td>入社年度：</td>
+				<th>入社年度</th>
 				<td>${users.year}</td>
 			</tr>
+			</table>
+			<h2>*パスワード変更*</h2>
+			<table  class = profile>
 			<tr>
-				<td>新しいパスワード：</td>
+				<th>新しいパスワード</th>
 				<td><input type="text" name="newpassbox"></td>
 			</tr>
 			<tr>
-				<td>新しいパスワード確認：</td>
+				<th>新しいパスワード確認</th>
 				<td><input type="text" name="newpass2box"></td>
 			</tr>
-			</table>
-		<input type="submit" name="bt_name" value="変更">
+		</table><br>
+		<input type="submit" name="bt_name" value="変更" class="btn">
+		</div>
 	</form>
+
 	<!-- エラーメッセージの表示欄 -->
 	<div id="errMsg">${errMsg}</div>
 </body>

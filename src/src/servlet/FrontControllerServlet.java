@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import action.BListAction;
 import action.EditFeelingAction;
 import action.EvaluationAction;
+import action.GraphFeelingAction;
 import action.HistoryFeelingAction;
 import action.LoginAction;
 import action.MessageAction;
@@ -53,10 +54,10 @@ public class FrontControllerServlet extends HttpServlet {
 				HistoryFeelingAction action = new HistoryFeelingAction(request);
 				path = action.showHistory();
 			}
-//			if (pageId.equals("FH01") && button.equals("graph_feeling")) {//home.jspからgraph_feeling.jsp
-//				GraphFeelingAction action = new GraphFeelingAction(request);
-//				path = action.showGraph();
-//			}
+			if (pageId.equals("FH01") && button.equals("graph_feeling")) {//home.jspからgraph_feeling.jsp
+				GraphFeelingAction action = new GraphFeelingAction(request);
+				path = action.showGraph();
+			}
 			if ((pageId.equals("FH01") && button.equals("evaluation")) || (pageId.equals("FE02") && button.equals("evaluation"))) {//home.jspからsearch_evaluation.jsp
 				SearchEvaluationAction action = new SearchEvaluationAction(request);
 				path = action.showEmp();
@@ -96,6 +97,9 @@ public class FrontControllerServlet extends HttpServlet {
 		if(pageId.equals("FP01") && button.equals("変更")) {
 			ProfileAction action = new ProfileAction(request);
 			path = action.updatePw();
+			if(path.equals("/WEB-INF/jsp/profile.jsp")) {
+				path = action.showProfile();
+			}
 		}
 		//メッセージ送信のdoPost
 		if(pageId.equals("FM01") && button.equals("送信")) {
