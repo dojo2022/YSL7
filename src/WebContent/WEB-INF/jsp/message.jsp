@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Message</title>
+<link rel="stylesheet" href="/miemo/css/common.css">
 <link rel="stylesheet" href="/miemo/css/message.css">
 </head>
 <body>

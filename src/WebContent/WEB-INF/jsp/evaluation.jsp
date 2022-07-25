@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link rel = "stylesheet" href = "/miemo/css/search_evaluation.css">
 <meta charset="UTF-8">
 <title>評価シート画面</title>
 <style>
@@ -33,6 +34,7 @@
 </style>
 </head>
 <body>
+
 	<!-- サーブレットへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FE02">
@@ -44,7 +46,7 @@
 		<a href="/miemo/FrontControllerServlet?page_id=FE02&bt_name=evaluation">評価相手選択画面に戻る</a>
 	</div>
 	<!-- 評価相手の名前を表示 -->
-		<input type="hidden" name="evaluate_name" value="${param.user_id }">
+		<input type="text" name="evaluate_name" value="${param.user_id }">
 		<p>To:${param.evaluate_name}</p>
 
 	<!-- ★評価 -->
@@ -66,6 +68,8 @@
 					 		 </div>
 						</div>
 					</td>
+				</tr>
+				<tr>
 					<td>質問2:業務に意欲的に取り組んでいる</td>
 					<td>
 						<div class="review">
@@ -80,6 +84,8 @@
 					 		 </div>
 						</div>
 					</td>
+				</tr>
+				<tr>
 					<td>質問3:報告・連絡・相談が適切にできている</td>
 					<td>
 						<div class="review">
@@ -94,6 +100,8 @@
 					 		 </div>
 						</div>
 					</td>
+				</tr>
+				<tr>
 					<td>質問4:業務に必要な技術や知識を発揮できている</td>
 					<td>
 						<div class="review">
@@ -108,6 +116,8 @@
 					 		 </div>
 						</div>
 					</td>
+				</tr>
+				<tr>
 					<td>質問5:タスク量と期限は適切である</td>
 					<td>
 						<div class="review">
@@ -122,12 +132,8 @@
 					 		 </div>
 						</div>
 					</td>
-
 				</tr>
 			</table>
-
-
-
 		</span>
 	</div>
 	<br>
@@ -135,6 +141,7 @@
 	<div>
 		<input type="submit" name="bt_name" value="登録" >
 	</div>
+
 </form>
 
 </body>

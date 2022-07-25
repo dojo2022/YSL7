@@ -96,6 +96,9 @@ public class FrontControllerServlet extends HttpServlet {
 		if(pageId.equals("FP01") && button.equals("変更")) {
 			ProfileAction action = new ProfileAction(request);
 			path = action.updatePw();
+			if(path.equals("/WEB-INF/jsp/profile.jsp")) {
+				path = action.showProfile();
+			}
 		}
 		//メッセージ送信のdoPost
 		if(pageId.equals("FM01") && button.equals("送信")) {
