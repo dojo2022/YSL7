@@ -5,16 +5,20 @@ html{
 }
 /* 評価表 */
 .evaList{
-	width: 500px;
+	width: 700px;
 	height: 400px;
 }
 .eva_items{
+	width: 750px;
+	height: 50px;
 	background-color:#EBD61A;
 	text-align: center;
+	padding: 0 15px 0 15px;
 }
 
 .eva_items1{
-	padding: 0 10px 0 10px;
+	width: 200px;
+	padding: 0 12px 0 12px;
 }
 .eva_data{
 	background-color:#f7ee9d;
@@ -23,7 +27,7 @@ html{
 }
 
 .radar_graph{
-	padding-left: 80px;
+	padding-left: 30px;
 }
 
 .tab{
