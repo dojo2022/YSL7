@@ -5,14 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel = "stylesheet" href = "/miemo/css/common.css">
+<link rel = "stylesheet" href = "/miemo/css/graph_feeling.css">
+
 <title>きもちグラフ | miemo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
 <script  src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@next/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-
+<link rel = "stylesheet" href = "/miemo/backcss/bStamps.css">
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/common.jsp" %>
 	<!-- スタンプの個数を表示する部分 -->
+	<main>
 	<table class="stamp_table">
 		<tr>
 		<!-- 見出し -->
@@ -43,7 +48,7 @@
 	<canvas id="stamp4" width="250" height="250"></canvas>
 	とても満足のきもちグラフ
 	<canvas id="stamp5" width="250" height="250"></canvas>
-
+	</main>
 		<script>
 		//ドーナツチャートを書くためのjs
 		let inputData =${stampPercent};
