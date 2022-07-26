@@ -4,6 +4,20 @@ body {
     margin: auto;
 }
 
+/* テーブル全体のCSS */
+td {
+	height: 130px;
+}
+
+.font {
+	font-size: 25px;
+	font-family: Noto Sans CJK JP;
+	margin-bottom: 20px;
+}
+
+
+
+/* スタンプ系のCSS */
 .check {
 	display: none;
 }
@@ -13,6 +27,37 @@ body {
 }
 
  .check:checked  + label img {
-      border: 3px solid black;
+ 	 background-color: #FFF099;
       border-radius: 50px;
-    }
+}
+
+.stamp_span {
+	margin-right: 30px;
+}
+
+
+/* 項目系のCSS */
+.radio_bt {
+	display: none;
+}
+
+
+ .radio_bt:checked  + label span {
+      background-color: #FFF099;
+      border-radius: 50px;
+}
+
+.c_span {
+	border: 1px solid black;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+/* コメント系のCSS */
+.textarea {
+	width: 660px;
+    height: 60px;
+}
+
