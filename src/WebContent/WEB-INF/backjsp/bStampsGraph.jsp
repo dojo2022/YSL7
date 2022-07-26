@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>きもちグラフ | miemo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<script src="/WebContent/backjs/bStampsGraph.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
 <script  src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@next/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
@@ -39,6 +38,7 @@
 	<canvas id="stamp3" width="250" height="250"></canvas>
 	<canvas id="stamp4" width="250" height="250"></canvas>
 	<canvas id="stamp5" width="250" height="250"></canvas>
+	<canvas id="kimo" width="250" height="250"></canvas>
 
 		<script>
 		//ドーナツチャートを書くためのjs
@@ -48,7 +48,7 @@
 			type: 'doughnut',
 			data: {
 				//グラフのラベルを設定
-				labels: ["にっこり", "ちょっとにっこり", "普通", "ちょっと不満", "不満"],
+				labels: ["とても満足", "満足", "普通", "不満", "とても不満"],
 				datasets: [{
 					data: [inputData[4], inputData[3],inputData[2],inputData[1],inputData[0],],
 					backgroundColor: ['#7fffd4', '#87cefa', '#f5deb3','#ff69b4','#dc143c'],
@@ -59,22 +59,41 @@
 			}
 		});
 		//stamp1の円グラフ
-		let inputData1 =${s1Percent};
+	/* 	let inputData1 =${s1Percent};
 		let context1 = documet.querySelector("#stamp1").getContext('2d');
 		new Chart(context1, {
 			type: 'pie',
 			data: {
 				labels: ['人間関係','納期','資格','残業', '通勤','職場環境','睡眠','家族','健康','お金'],
 				datasets: [{
-					data: [inputData1[0], inputData1[1], inputData1[2], inputData1[3], inputData1[4], inputData1[5],inputData1[6],inputData1[7],inputData1[8],inputData1[9],],
+					data: [10, 20, 30,10, 5, 5,0,5,5,10],
 					backgroundColor: ['#87cefa', '#7cfc00', '#d2691e','#dda0dd','#ffebcd'],
 				}]
 			},
 			options: {
 				responsive: false,
 			}
+		}); */
+
+		let inputData1 =${s1Percent};
+		//二つ以上グラフを書くときはcontext2,3,4...となんでもいいので名前を変更する
+		let context2 = document.querySelector("#stamp1").getContext('2d')
+		//上記を変更した場合は、この下の名前（context）も上の名前に合わせる
+		new Chart(context2, {
+		  type: 'pie',
+		  data: {
+			  labels: ['人間関係','納期','資格','残業', '通勤','職場環境','睡眠','家族','健康','お金'],
+		    datasets: [{
+		      //ここで取得した配列の中身を分解して配置する
+		      data: [inputData1[1],10.5, 19.5, 30, 0,20,0,10,10,0],
+		      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+		    }]
+		  },
+		  options: {
+		    responsive: false,
+		  }
 		});
-		//stamp2の円グラフ
+/* 		//stamp2の円グラフ
 		let inputData2 =${s2Percent};
 		let context2 = documet.querySelector("#stamp2").getContext('2d');
 		new Chart(context2, {
@@ -138,7 +157,7 @@
 				responsive: false,
 			}
 		});
-
+ */
 		</script>
 </body>
 </html>

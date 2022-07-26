@@ -13,7 +13,7 @@ public class BStampsBeans implements Serializable {
     private int stamp3;
     private int stamp4;
     private int stamp5;
-    private int comment;
+    private String comment;
     private String date;
     private int countS1;
     private int countS2;
@@ -69,10 +69,10 @@ public class BStampsBeans implements Serializable {
 	public void setStamp5(int stamp5) {
 		this.stamp5 = stamp5;
 	}
-	public int getComment() {
+	public String getComment() {
 		return comment;
 	}
-	public void setComment(int comment) {
+	public void setComment(String comment) {
 		this.comment = comment;
 	}
 	public String getDate() {
