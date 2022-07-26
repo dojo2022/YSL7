@@ -63,3 +63,9 @@ textarea:focus{
   background: #ffab57;
   box-shadow: 0px 0px 0px 5px #ffab57;
 }
+
+.alert {
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
+}
