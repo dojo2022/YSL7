@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/miemo/css/profile.css">
 </head>
 <body>
-
+<%@ include file="/WEB-INF/jsp/common.jsp" %>
 	<!-- Servletへ遷移させる(PassWord変更) -->
 
 	<form method="POST" action="/miemo/FrontControllerServlet">
