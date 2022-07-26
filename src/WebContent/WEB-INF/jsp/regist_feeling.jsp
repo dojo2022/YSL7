@@ -16,29 +16,91 @@
 		<input type="hidden" name="page_id" value="FF01">
 		<table>
 		<tr>
-			<td>きもち:</td>
-			<td>絶不調<input type="checkbox" name="stamp1" value="1" class="check"></td>
-			<td>不調<input type="checkbox" name="stamp2" value="1" class="check"></td>
-			<td>普通<input type="checkbox" name="stamp3" value="1" class="check"></td>
-			<td>好調<input type="checkbox" name="stamp4" value="1" class="check"></td>
-			<td>絶好調<input type="checkbox" name="stamp5" value="1" class="check"></td>
+			<td><div class="font">きもち</div>
+				<span class="stamp_span">
+					<input type="checkbox" name="stamp1" value="1" class="check" id="stamp1">
+					<label for="stamp1" class="stamp_label">
+						<img src="/miemo/img/stamp1.png" width="40px" class="stamp_img">
+					</label>
+				</span>
+				<span class="stamp_span">
+					<input type="checkbox" name="stamp2" value="1" class="check" id="stamp2">
+					<label for="stamp2" class="stamp_label">
+						<img src="/miemo/img/stamp2.png" width="40px" class="stamp_img">
+					</label>
+				</span>
+				<span class="stamp_span">
+					<input type="checkbox" name="stamp3" value="1" class="check" id="stamp3">
+					<label for="stamp3" class="stamp_label">
+						<img src="/miemo/img/stamp3.png" width="40px" class="stamp_img">
+					</label>
+				</span>
+				<span class="stamp_span">
+					<input type="checkbox" name="stamp4" value="1" class="check" id="stamp4">
+					<label for="stamp4" class="stamp_label">
+						<img src="/miemo/img/stamp4.png" width="40px" class="stamp_img">
+					</label>
+				</span>
+				<span class="stamp_span">
+					<input type="checkbox" name="stamp5" value="1" class="check" id="stamp5">
+					<label for="stamp5" class="stamp_label">
+						<img src="/miemo/img/stamp5.png" width="40px" class="stamp_img">
+					</label>
+				</span>
+			</td>
 		</tr>
 		<tr>
-			<td>項目　:</td>
-			<td>人間関係<input type="radio"  name="category_id" value="1"></td>
-			<td>納期<input type="radio"  name="category_id" value="2"></td>
-			<td>資格<input type="radio"  name="category_id" value="3"></td>
-			<td>残業<input type="radio"  name="category_id" value="4"></td>
-			<td>通勤<input type="radio"  name="category_id" value="5"></td>
-			<td>職場環境<input type="radio"  name="category_id" value="6"></td>
-			<td>睡眠<input type="radio"  name="category_id" value="7"></td>
-			<td>家族<input type="radio"  name="category_id" value="8"></td>
-			<td>健康<input type="radio"  name="category_id" value="9"></td>
-			<td>お金<input type="radio"  name="category_id" value="10"></td>
+			<td><div class="font">項目</div>
+				<input type="radio"  name="category_id" value="1" id="c_1" class="radio_bt">
+				<label for="c_1">
+					<span class="c_span">人間関係</span>
+				</label>
+				<input type="radio"  name="category_id" value="2" id="c_2" class="radio_bt">
+				<label for="c_2">
+					<span class="c_span">納期</span>
+				</label>
+				<input type="radio"  name="category_id" value="3" id="c_3" class="radio_bt">
+				<label for="c_3">
+					<span class="c_span">資格</span>
+				</label>
+				<input type="radio"  name="category_id" value="4" id="c_4" class="radio_bt">
+				<label for="c_4">
+					<span class="c_span">残業</span>
+				</label>
+				<input type="radio"  name="category_id" value="5" id="c_5" class="radio_bt">
+				<label for="c_5">
+					<span class="c_span">通勤</span>
+				</label>
+				<input type="radio"  name="category_id" value="6" id="c_6" class="radio_bt">
+				<label for="c_6">
+					<span class="c_span">職場環境</span>
+				</label>
+				<input type="radio"  name="category_id" value="7" id="c_7" class="radio_bt">
+				<label for="c_7">
+					<span class="c_span">睡眠</span>
+				</label>
+				<input type="radio"  name="category_id" value="8" id="c_8" class="radio_bt">
+				<label for="c_8">
+					<span class="c_span">家族</span>
+				</label>
+				<input type="radio"  name="category_id" value="9" id="c_9" class="radio_bt">
+				<label for="c_9">
+					<span class="c_span">健康</span>
+				</label>
+				<input type="radio"  name="category_id" value="10" id="c_10" class="radio_bt">
+				<label for="c_10">
+					<span class="c_span">お金</span>
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td><div class="font">コメント</div>
+				<textarea  name="comment" class="textarea">${param.comment}</textarea>
+			</td>
 		</tr>
 		</table>
-			コメント:<input type="text"  name="comment" value="${param.comment}">
 		<input type="submit"  name="bt_name" value="登録">
+
 	</form>
 	</div>
 

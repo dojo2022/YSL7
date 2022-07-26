@@ -78,11 +78,10 @@ public class BTabAction {
 		ArrayList<Double> s4Percent = bgc.s1Calc(stamp4);
 		ArrayList<Double> s5Percent = bgc.s1Calc(stamp5);
 
-		for(int i=0;i<s2Percent.size();i++) {
-			System.out.println("ふぉーぶんはいったよ");
-			System.out.println(s2Percent.get(i));
+		for(int i=0;i<s4Percent.size();i++) {
+			System.out.println("入ってる？" + i + "回目");
+			System.out.println(s4Percent.get(i));
 		}
-
 
 		//戻り値が０行のとき
 		if(s1Percent.size() == 0) {

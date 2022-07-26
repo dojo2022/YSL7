@@ -5,15 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Miemo|新規メモ登録</title>
-<link rel="stylesheet" href="/multiMVC/css/bStyle.css">
-<link rel="stylesheet" href="/multiMVC/css/bRegistNote.css">
+<link rel="stylesheet" href="/miemo/backcss/bStyle.css">
+<link rel="stylesheet" href="/miemo/backcss/bRegistNote.css">
 <script type="text/javascript" src="/miemo/js/bRegistNote.js"></script>
 <script type="text/javascript" src="/miemo/js/backCommon.js"></script>
 </head>
 <body>
- <% request.setAttribute("errMsgTitle", "タイトルを入力してください。"); %>
- <% request.setAttribute("errMsgContent", "内容を記入してください。"); %>
- <% session.setAttribute("user", "user"); %>
 <h2>${user.name}さんの新規メモ</h2>
 <form method=POST action="/miemo/bControllerServlet/" onsubmit="check()">
 	<table class="registNote">

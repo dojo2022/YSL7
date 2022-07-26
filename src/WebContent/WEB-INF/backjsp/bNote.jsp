@@ -4,22 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
-<link rel="stylesheet" href="/miemo/backcss/bStyle.css">
-<link rel="stylesheet" href="/miemo/backcss/bNote.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
-<script type="text/javascript" src="/miemo/backjs/bNote.js"></script>
-<script type="text/javascript" src="/miemo/backjs/backCommon.js"></script>
-<meta charset="UTF-8">
-<title>Miemo|</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
+	<link rel="stylesheet" href="/miemo/backcss/bStyle.css">
+	<link rel="stylesheet" href="/miemo/backcss/bNote.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+	<script type="text/javascript" src="/miemo/backjs/bNote.js"></script>
+	<script type="text/javascript" src="/miemo/backjs/backCommon.js"></script>
+	<meta charset="UTF-8">
+	<title>Miemo|</title>
 </head>
 <body>
 	<form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
 	<table border="1" id="foo-table" class="table table-bordered table_blue_stripe">
 	<thead>
 		<tr>
-			<td><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=to_regist_user"><input type="button" value="新規作成"></a></td>
+			<td><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=to_regist_note"><input type="button" value="新規作成" class="nRegistButton"></a></td>
 		</tr>
 		<tr class="n-tablehead">
 			<th>日付</th>

@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+html{
+ background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px),repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+  }
 
 
 
@@ -94,7 +97,12 @@
  /* ロゴ画像の大きさ変更 */
  .logo img {
  width: 500px;
- margin-left: 440px;
- margin-bottom: -283px;
-
+ margin-left: 450px;
+ margin-bottom: -250px;
  }
+
+.alert {
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
+}

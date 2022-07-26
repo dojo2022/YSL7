@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>新規社員登録</title>
 <link rel="stylesheet" href="/miemo/backcss/uRegist.css">
+<script type="text/javascript" src="/miemo/backjs/uRegist.js"></script>
 </head>
 <body>
 	<div class="title">
@@ -157,14 +158,14 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="button_id" value="登録" class="button"></td>
+				<td><input type="submit" name="button_id" value="登録" class="button" onclick ="return uRegist()"></td>
 			</tr>
 		</table>
 
 
 	</form>
 	<p>${errMsg}</p>
-	<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る" class="back">一覧に戻る</a>
+	<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る" class="back" onclick ="return back()">一覧に戻る</a>
 </body>
 
 <script>
