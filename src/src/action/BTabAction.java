@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import model.BEvaluationCalc;
+import model.BEvaluationsBeans;
 import model.BGraphCalc;
 import model.BMessagesBeans;
 import model.BNotesBeans;
@@ -154,20 +156,23 @@ public class BTabAction {
 
 		//selectEvaluation(評価です)
 		//サービスのselectMessagesメソッドを実行する（引数empId）
-		/*		ArrayList<BEvaluationsBeans> myEvaluationList = tabService.selectMyEvaluation(empId);
+			ArrayList<BEvaluationsBeans> myEvaluationList = tabService.selectMyEvaluation(empId);
+
 
 				//検索結果をsessionに保存
-				session.setAttribute("myEvaluation", myEvaluationList);
+				session.setAttribute("myEvaluation", myEvaluationList.get(0));
 
 				ArrayList<BEvaluationsBeans> otherEvaluationList = tabService.selectOtherEvaluation(empId);
+
+				BEvaluationCalc calc = new BEvaluationCalc();
+				ArrayList<Double> avg= calc.evaCalc(otherEvaluationList);
 				//検索結果をsessionに保存
-				session.setAttribute("otherEvaluationList", otherEvaluationList);
+				session.setAttribute("avg", avg);
 
 				//自己評価と他己評価の両方がないとき
-				if(myEvaluationList.size() == 0 && otherEvaluationList.size() == 0) {
+				if(myEvaluationList.size() == 0 && avg.size() == 0) {
 					request.setAttribute("evErrMsg", "評価はまだされていないようです。");
 				}
-		*/
 		//戻ってきた値がnullだったら(ここにこれまで全部のArrayListを入れる)
 			return "/WEB-INF/backjsp/bMainPage.jsp";
 
