@@ -157,9 +157,16 @@ public class BTabAction {
 		//selectNotes(メモです)
 		//サービスのselectNotesメソッドを実行する（引数empId）
 		ArrayList<BNotesBeans> notesList=tabService.selectNotes(empId);
+		System.out.println("AA"+notesList.size());
+		for(BNotesBeans s : notesList) {
+			System.out.println(s.getName()+"aaaaaaaaaaa");
+			System.out.println(s.getTitle());
+			System.out.println(s.getContent());
+			System.out.println(s.getDate());
+		}
 
 		//検索結果をsessionに保存
-		session.setAttribute("noteList", notesList);
+		session.setAttribute("notesList", notesList);
 
 		//検索結果が0件の場合の処理
 		if(notesList.size() == 0) {
