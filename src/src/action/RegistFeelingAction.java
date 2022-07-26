@@ -27,6 +27,7 @@ public class RegistFeelingAction {
 		int stamp3 = 0;
 		int stamp4 = 0;
 		int stamp5 = 0;
+		int categoryId = 0;
 
 		String sStamp1 = request.getParameter("stamp1");
 		if (sStamp1 != null) {
@@ -48,11 +49,19 @@ public class RegistFeelingAction {
 		if (sStamp5 != null) {
 			stamp5 = Integer.parseInt(sStamp5);
 		}
-		int categoryId = Integer.parseInt(request.getParameter("category_id"));
+		String sCategoryId = request.getParameter("category_id");
+		if(sCategoryId != null) {
+			categoryId = Integer.parseInt(sCategoryId);
+		}
 		String comment = request.getParameter("comment");
 
-		RegistFeelingService service = new RegistFeelingService();
-		boolean result = service.registFeeling(userId, categoryId, stamp1, stamp2, stamp3, stamp4, stamp5, comment);
+		boolean result = false;
+
+		if((sStamp1 != null || sStamp2 != null || sStamp3 != null || sStamp4 != null || sStamp5 != null) && sCategoryId != null) {
+			RegistFeelingService service = new RegistFeelingService();
+			result = service.registFeeling(userId, categoryId, stamp1, stamp2, stamp3, stamp4, stamp5, comment);
+		}
+
 
 		if(result == false) {
 			request.setAttribute("errMsg", "※登録失敗");
