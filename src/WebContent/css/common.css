@@ -22,7 +22,7 @@
 	display: inline-block;
 }
 /* menu */
-.cp_offcm01 .cp_menu {
+.cp_offcm01 .cp_menu { /* ハンバーガー背景 */
 	position: fixed;
 	top: 0;
 	right: 100vw;
@@ -45,9 +45,10 @@
 	list-style: none;
 }
 
-.cp_offcm01 .cp_menu li a {
+.cp_offcm01 .cp_menu li a { /* ハンバーガー文字 */
 	display: block;
-	padding: 30px;
+	margin-left:40px;
+	padding: 20px; /* 項目の縦幅 */
 	text-decoration: none;
 	color: #ffffff;
 	font-weight: bold;
