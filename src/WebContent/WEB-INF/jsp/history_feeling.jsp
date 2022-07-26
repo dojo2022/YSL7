@@ -8,6 +8,7 @@
 <title>きもち履歴</title>
 <link rel="stylesheet" href="/miemo/css/history_feeling.css">
 </head>
+<h1>きもち履歴</h1>
 <body>
 <table class="stamps">
 <tr>
