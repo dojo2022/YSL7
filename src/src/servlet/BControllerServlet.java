@@ -51,13 +51,13 @@ public class BControllerServlet extends HttpServlet {
 					url = tAction.showMainPage();
 				}
 
-		//個人ページの先月・次月ボタンを押したとき
-				else if(pageId.equals("BP01") && button.equals("last_month") || button.equals("next_month")) {
-					//★アクションをインスタンス化
-					BTabAction tAction = new BTabAction(request);
-					//★アクションのsearchメソッドを呼び出す
-					url = tAction.showMainPage();
-				}
+//		//個人ページの先月・次月ボタンを押したとき
+//				else if(pageId.equals("BP01") && button.equals("last_month") || button.equals("next_month")) {
+//					//★アクションをインスタンス化
+//					BTabAction tAction = new BTabAction(request);
+//					//★アクションのsearchメソッドを呼び出す
+//					url = tAction.showMainPage();
+//				}
 
 
 		//個人ページから一覧にもどる
@@ -83,9 +83,9 @@ public class BControllerServlet extends HttpServlet {
 		//新規社員登録画面から一覧に戻るのは
 				else if(pageId.equals("BL01") && button.equals("戻る")) {
 					//★アクションをインスタンス化
-					BTabAction tAction = new BTabAction(request);
+					BListAction lAction= new BListAction(request);
 					//タブアクションのメソッドを実行
-					url = tAction.showMainPage();;
+					url = lAction.selectAllList();;
 					}
 		//新規メモ作成画面から個人ページに戻るのもヒストリーバック
 
