@@ -37,7 +37,7 @@
 }
 
 .cp_offcm01 .cp_menu ul {
-	margin: 0;
+	margin: 50;
 	padding: 0;
 }
 
@@ -119,7 +119,7 @@
 
 /* マイページの部分に色を付ける */
 .mypage {
-	background: #EFCF24;
+	background: #EBD61A;
 }
 
 /* コンテキストメニューの設定 */
