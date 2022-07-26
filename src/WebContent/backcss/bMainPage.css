@@ -75,7 +75,7 @@ a:link, a:visited, a:hover, a:active {
 .tab_item1 {
 	width: calc(100%/ 5);
 	height: 50px;
-	border-bottom: 3px solid #e17751;
+	border-bottom: 3px solid #5674B5;
 	background-color: #fff8ea;
 	line-height: 50px;
 	font-size: 16px;
@@ -92,7 +92,7 @@ a:link, a:visited, a:hover, a:active {
 .tab_item2 {
 	width: calc(100%/ 5);
 	height: 50px;
-	border-bottom: 3px solid #F19E6F;
+	border-bottom: 3px solid #92C9FE;
 	background-color: #fff8ea;
 	line-height: 50px;
 	font-size: 16px;
@@ -109,7 +109,7 @@ a:link, a:visited, a:hover, a:active {
 .tab_item3 {
 	width: calc(100%/ 5);
 	height: 50px;
-	border-bottom: 3px solid #DD3B84;
+	border-bottom: 3px solid #C8EA69;
 	background-color: #fff8ea;
 	line-height: 50px;
 	font-size: 16px;
@@ -126,7 +126,7 @@ a:link, a:visited, a:hover, a:active {
 .tab_item4 {
 	width: calc(100%/ 5);
 	height: 50px;
-	border-bottom: 3px solid #F4AB3F;
+	border-bottom: 3px solid #FFC14A;
 	background-color: #fff8ea;
 	line-height: 50px;
 	font-size: 16px;
@@ -143,7 +143,7 @@ a:link, a:visited, a:hover, a:active {
 .tab_item5 {
 	width: calc(100%/ 5);
 	height: 50px;
-	border-bottom: 3px solid #EBD61A;
+	border-bottom: 3px solid #FF944D;
 	background-color: #fff8ea;
 	line-height: 50px;
 	font-size: 16px;
@@ -195,26 +195,26 @@ input[name="tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked+.tab_item1 {
-	background-color: #e17751;
+	background-color: #5674B5;
 	color: #fff;
 }
 
 .tabs input:checked+.tab_item2 {
-	background-color: #F19E6F;
+	background-color: #92C9FE;
 	color: #fff;
 }
 
 .tabs input:checked+.tab_item3 {
-	background-color: #DD3B84;
+	background-color: #C8EA69;
 	color: #fff;
 }
 
 .tabs input:checked+.tab_item4 {
-	background-color: #F4AB3F;
+	background-color: #FFC14A;
 	color: #fff;
 }
 
 .tabs input:checked+.tab_item5 {
-	background-color: #EBD61A;
+	background-color: #FF944D;
 	color: #fff;
 }
