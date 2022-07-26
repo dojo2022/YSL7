@@ -59,10 +59,9 @@
 				<td><input type="text" name="newpass2box"></td>
 			</tr>
 		</table><br>
-		<input type="submit" name="bt_name" value="変更" class="btn">
 		</div>
 	</form>
-
+		<input type="submit" name="bt_name" value="変更" class="btn">
 	<!-- エラーメッセージの表示欄 -->
 	<div id="errMsg">${errMsg}</div>
 </body>
