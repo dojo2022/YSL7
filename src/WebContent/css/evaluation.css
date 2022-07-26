@@ -24,7 +24,21 @@ h1{
 	height: 100%;
 }
 
+.button_area{
+	margin-left: 280px;
+}
+
+p {
+  margin: 0 auto;
+  width:50%;
+  height: 30%;
+  background: #ffd3a8;
+  text-align: center;
+  border-radius: 5%;
+}
+
 #stars_table {
+	margin:auto;
 border-collapse: collapse; /* 隣接するセルの罫線を重ねて表示する */
 font-family: "メイリオ", sans-serif;/* フォントのスタイルを指定する */
 }
