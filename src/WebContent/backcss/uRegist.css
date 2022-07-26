@@ -23,6 +23,10 @@ table {
 	padding: 10px 30px 10px 500px;
 }
 
+span {
+	color: red;
+	font-size: 12px;
+}
  /* --- INPUT=TEXTの標準デザイン設定 ---------------------*/
 .inText {
   box-sizing    : border-box;

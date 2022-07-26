@@ -122,3 +122,6 @@ textArea:-ms-input-placeholder {
   color         : rgb(0, 0, 0);     /* 背景色     */
   background    : #ec3d17;     /* 文字色     */
 }
+.ErrorMsg{
+	color:red;
+}

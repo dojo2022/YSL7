@@ -218,6 +218,7 @@ public class BStampsDAO {
 			sAll.setStamp3(rs.getInt("stamp3"));
 			sAll.setStamp4(rs.getInt("stamp4"));
 			sAll.setStamp5(rs.getInt("stamp5"));
+			sAll.setComment(rs.getString("comment"));
 			sAll.setCategory(rs.getString("category"));
 
 

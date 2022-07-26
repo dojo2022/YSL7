@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html{
+	background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+	background-color: #fff3df;
+}
 /* 評価表 */
 .eva_items{
 	background-color:#EBD61A;
@@ -8,7 +12,7 @@
 	background-color:#f7ee9d;
 	border-bottom: solid 1px #efe350;
 }
-/* レーダーチャートを評価表の横にする */
+レーダーチャートを評価表の横にする
 #evaluationChar{
 	display: flex;
 }

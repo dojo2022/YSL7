@@ -4,12 +4,16 @@ html{
 	background-color: #fff3df;
 }
 /* プロフィール表示 */
-table{
+/* table{
 	margin: 0 auto 15px auto;
-	border: 2px #F18E3D solid;  /*枠線*/
+	border: 2px #F18E3D solid;  枠線
 }
+ */
 
 .profile{
+	margin: 0 auto 15px auto;
+	border: 2px #F18E3D solid;  /*枠線*/
+	padding: 5px;
 	background-color: #fff;  /* プロフィールの背景 */
 	height: 50%;				/* 高さ？ */
 	width: 60%;					/* 幅 */

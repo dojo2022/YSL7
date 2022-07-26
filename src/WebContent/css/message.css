@@ -41,20 +41,31 @@ textarea:focus{
 
 
 /*ボタン*/
+
 .button {
-  display       : inline-block;
-  border-radius : 17%;          /* 角丸       */
-  font-size     : 12pt;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  cursor        : pointer;     /* カーソル   */
-  padding       : 10px 10px;   /* 余白       */
-  background    : rgba(127, 70, 0, 0.86);     /* 背景色     */
-  color         : #ffffff;     /* 文字色     */
-  line-height   : 1em;         /* 1行の高さ  */
-  transition    : .3s;         /* なめらか変化 */
-  border        : 2px solid rgba(127, 70, 0, 0.86);    /* 枠の指定 */
+  background: #ffd3a8;
+  color:#FFF;
+  /*
+  width:110px;
+  height:50px;
+  border-radius:30%;
+  */
+  width: 110px;
+  height: 50px;
+  border-radius: 5%;
+  font-size:20px;
+  box-shadow:0px 0px 0px 5px #ffd3a8;
+  border: dashed 1px #FFF;
+  margin-top: 20px
 }
+
 .button:hover {
-  color         : rgba(127, 70, 0, 0.86);     /* 背景色     */
-  background    : #ffffff;     /* 文字色     */
+  background: #ffab57;
+  box-shadow: 0px 0px 0px 5px #ffab57;
+}
+
+.alert {
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
 }
