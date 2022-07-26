@@ -27,6 +27,9 @@ public class SearchEvaluationAction {
 
 		//ServiceのSearchメソッドを実行するよ。
 		ArrayList<Users> userList = service.showEmp();
+		System.out.println(userList.get(0).getUserId());
+		System.out.println(userList.get(0).getNumber());
+		System.out.println(userList.get(0).getName());
 
 		//userListの中身がnullだったらsearch_evaluation.jspに戻るよ。
 		if (userList.size() == 0) {
