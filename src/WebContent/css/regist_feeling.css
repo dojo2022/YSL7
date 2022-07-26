@@ -69,15 +69,45 @@ td {
 .radio_bt {
 	display: none;
 }
+.radio_bt1 {
+	display: none;
+}
+.radio_bt2 {
+	display: none;
+}
 
 
  .radio_bt:checked  + label span {
+      background-color: #F4AB3F;
+      border-radius: 50px;
+}
+ .radio_bt1:checked  + label span {
       background-color: #FFF099;
+      border-radius: 50px;
+}
+ .radio_bt2:checked  + label span {
+      background-color: #F19E6F;
       border-radius: 50px;
 }
 
 .c_span {
-	border: 1px solid black;
+	border: 2px solid #e17751;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    margin-right: 20px;
+
+}
+.c_span1 {
+	border: 2px solid #EBD61A;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    margin-right: 20px;
+
+}
+.c_span2 {
+	border: 2px solid #DD3B84;
     font-size: 15px;
     padding: 5px;
     border-radius: 40px;
