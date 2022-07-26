@@ -41,21 +41,21 @@ img.stamp{
 
 .btn {
   /*background: #ffd3a8;*/
-  background:#deb887;
+  background:#EFCF24;
   color:#FFF;
   width: 100px;
   height: 30px;
   border-radius: 5%;
   font-size:15px;
   /*box-shadow:0px 0px 0px 5px #ffd3a8;*/
-  box-shadow:0px 0px 0px 5px #deb887;
+  box-shadow:0px 0px 0px 5px #EFCF24;
   border: dashed 1px #FFF;
 }
 
 
 .btn:hover {
   /*background: #ffab57;*/
-   background:#a0522d;
+   background:#ffab57;
   /*box-shadow: 0px 0px 0px 5px #ffab57;*/
-  box-shadow: 0px 0px 0px 5px #a0522d;
+  box-shadow: 0px 0px 0px 5px #ffab57;
 }
