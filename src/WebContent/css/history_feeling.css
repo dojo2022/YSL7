@@ -1,1 +1,30 @@
 @charset "UTF-8";
+.stamps{
+	width: 70%;
+	margin: auto;
+	border-collapse:  collapse;
+}
+.stamps th{
+	text-align: center;
+}
+.items,.items_content{
+	padding: 10px;
+	background-color:#F19E6F;
+}
+
+.data{
+	text-align: center;
+	background-color: #ffdbc9;
+	border-bottom: solid 1px #DEB887;
+}
+.items_content{
+	width: 500px;
+}
+.content_data{
+	background-color: #ffdbc9;
+	border-bottom: solid 1px #DEB887;
+}
+img.stamp{
+	width: 70px;
+	height: 70px;
+}
