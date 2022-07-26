@@ -11,6 +11,7 @@
 	</head>
 	<body>
 	<%@ include file="/WEB-INF/jsp/common.jsp" %>
+	<main>
 	<h1>ホーム</h1>
 	<table class = home_table >
 		<tr>
@@ -45,5 +46,6 @@
 	       </td>
 	    </tr>
 	</table>
+	</main>
 </body>
 </html>
