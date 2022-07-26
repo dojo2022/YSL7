@@ -163,7 +163,7 @@
 			<tr>
 				<td>
 				</td>
-				<td><input type="submit" name="button_id" value="登録" class="button" onclick ="return uRegist()"></td>
+				<td><input type="submit" name="bt_name" value="登録" class="button" onclick ="return uRegist()"></td>
 			</tr>
 		</table>
 

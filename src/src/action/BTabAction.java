@@ -25,7 +25,7 @@ public class BTabAction {
 
 		//empIdを取ってくる
 		request.setCharacterEncoding("UTF-8");
-		int empId = Integer.parseInt(request.getParameter("empId"));
+		int empId = Integer.parseInt(request.getParameter("emp_id"));
 		//Serviceをインスタンス化（tabServiceという名前をつけたから、あわせてね）
 		BTabService tabService = new BTabService();
 
@@ -199,8 +199,9 @@ public class BTabAction {
 
 
 				//検索結果をsessionに保存
-				session.setAttribute("myEvaluation", myEvaluationList.get(0));
-
+				if(myEvaluationList.size()!=0) {
+					session.setAttribute("myEvaluation", myEvaluationList.get(0));
+				}
 				ArrayList<BEvaluationsBeans> otherEvaluationList = tabService.selectOtherEvaluation(empId);
 
 				BEvaluationCalc calc = new BEvaluationCalc();
