@@ -209,8 +209,6 @@ a.btn-tag--ver i {
 }
 
 a.btn-tag--ver:hover {
-  margin-top: 1px;
-
   border-bottom: 2px solid #ffc4c4;
   background: #fa479c;
 }
