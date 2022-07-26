@@ -64,6 +64,7 @@ public class BControllerServlet extends HttpServlet {
 				else if(pageId.equals("BP01") && button.equals("back_list")) {
 					HttpSession session = request.getSession();
 					session.removeAttribute("empId");
+					session.removeAttribute("profile");
 					BListAction listAction=new BListAction(request);
 					url = listAction.selectAllList();
 				}

@@ -43,6 +43,7 @@ public class LoginAction {
 		//4．戻り値がnullじゃなかったら、sessionスコープに戻り値の値を格納する。
 		if (user == null) {
 			//5. home.jspにフォワードするpassをサーブレットに返す。
+			request.setAttribute("errMsg", "※社員番号とパスワードの入力は必須です");
 			return "WEB-INF/jsp/login.jsp";
 		}else {
 			HttpSession session = request.getSession();

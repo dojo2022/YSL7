@@ -2,6 +2,7 @@ package action;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -33,6 +34,13 @@ public class BTabAction {
 
 		//取ったempIdをsessionに保存しておく
 		HttpSession session = request.getSession();
+		Enumeration en = session.getAttributeNames();
+
+		String eName;
+		while(en.hasMoreElements()){
+		  eName = (String)en.nextElement();
+		  session.removeAttribute(eName);
+		}
 		session.setAttribute("profile", profile);
 		session.setAttribute("empId", empId);
 
