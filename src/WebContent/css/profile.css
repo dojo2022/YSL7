@@ -89,7 +89,7 @@ table td{
   box-shadow: 0px 0px 0px 5px #ffab57;
 }
 
-#errMsg{
+.alert {
 	text-align: center;
 	color: #db006d;
 	font-weight: bold;

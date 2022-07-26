@@ -60,10 +60,11 @@
 			</tr>
 		</table><br>
 		</div>
+		<input type="submit" name="bt_name" value="変更" class="btn">
 	</form>
-		<input type="submit" name="bt_name" value="変更" class="btn"><br>
+
 	<!-- エラーメッセージの表示欄 -->
-	<br><div id="errMsg">${errMsg}</div>
+	<br><div class = "alert" id="errMsg">${errMsg}</div>
 </body>
 </html>
 
