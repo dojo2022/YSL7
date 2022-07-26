@@ -9,7 +9,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-<h2>きもち記録</h2>
+<%@ include file="/WEB-INF/jsp/common.jsp" %>
+<h1>きもち記録</h1>
 	${errMsg}<br>
 	<div class="regist_fe_tb">
 	<form method="POST" action="/miemo/FrontControllerServlet">
