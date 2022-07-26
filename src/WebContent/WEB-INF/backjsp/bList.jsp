@@ -9,6 +9,9 @@
 </head>
 <body>
 <h1>YSL 社員一覧</h1>
+
+<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_regist_user" >新規社員登録</a>
+<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_front" >社員用画面に戻る</a>
 <form method="GET" action="/miemo/BControllerServlet">
 <input type="hidden" name="page_id" value="BL01">
 	<table>
