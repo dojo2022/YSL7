@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="/miemo/backjs/backCommon.js"></script>
 </head>
 <body>
+<c:if test="${messageList.size()!=0}">
 <table border="1" class="table_blue_stripe" >
 	<thead>
 			<tr>
@@ -37,5 +38,9 @@
 			</c:forEach>
 		</tbody>
 </table>
+</c:if>
+<c:if test="${messageList.size()==0}">
+	<h3>評価はまだされていないようです。</h3>
+</c:if>
 </body>
 </html>
