@@ -11,17 +11,34 @@ background-image:repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, tran
 
 /* テーマ */
  html{
-	background-color:#fff3df;
 	width: 100%;
 	height: calc(100% - 60px)
 }
 
-
 /* 左右に余白を付ける */
 #main_theme{
-	/*background-color:#fff3df;*/
 	width: 100%;
 	height: 100%;
+	 background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px),
+ repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+}
+
+
+
+/* グラフ上の部分 */
+#foo-table_length{ /* 件数指定 */
+	padding-left: 152px;
+}
+
+#foo-table_filter{ /* 件数指定 */
+	padding-right: 152px;
+}
+
+
+
+/* 見出し */
+h1{
+	padding-left: 152px;
 }
 
 /* グラフの見た目 */
@@ -29,3 +46,52 @@ background-image:repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, tran
 	margin:auto;
 	width: calc(100% - 300px);
 }
+
+thead{ /* 見出し背景色 */
+	background-color:#f5f5f5;
+}
+
+
+table th.sorting_asc{ /* 社員番号 押す前*/
+	color:#B64621;
+}
+
+table th.sorting_desc{ /* 社員番号押した後 */
+	color:#B64621;
+
+}
+
+#th2{ /* 名前 */
+	color:#F4AB3F;
+
+}
+
+#th3{ /* 部署 */
+	color:#EBD61A;
+
+}
+
+#th4{ /* 役職 */
+	color:#F19E6F;
+
+}
+#th5{ /* チェック */
+	color:#DD3B84;
+
+}
+
+
+td{ /* 見出し以外の部分 */
+	background-color:#ffff;
+}
+
+
+/* グラフ下部分 */
+#foo-table_info{ /* 「〇件中〇から〇まで表示」 */
+	padding-left: 152px;
+}
+
+#foo-table_paginate{ /* ページ移動 */
+	padding-right: 152px;
+}
+

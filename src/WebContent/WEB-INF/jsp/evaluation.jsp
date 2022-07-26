@@ -4,7 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel = "stylesheet" href = "/miemo/css/search_evaluation.css">
+<%@ include file="common.jsp" %>
+
+ <link rel = "stylesheet" href = "/miemo/css/evaluation.css">
 <meta charset="UTF-8">
 <title>評価シート画面</title>
 <style>
@@ -34,7 +36,7 @@
 </style>
 </head>
 <body>
-
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FE02">
@@ -46,7 +48,7 @@
 		<a href="/miemo/FrontControllerServlet?page_id=FE02&bt_name=evaluation">評価相手選択画面に戻る</a>
 	</div>
 	<!-- 評価相手の名前を表示 -->
-		<input type="text" name="evaluate_name" value="${param.user_id }">
+		<input type="hidden" name="evaluate_name" value="${param.user_id }">
 		<p>To:${param.evaluate_name}</p>
 
 	<!-- ★評価 -->
