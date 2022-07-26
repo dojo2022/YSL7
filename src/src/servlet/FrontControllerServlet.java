@@ -66,6 +66,9 @@ public class FrontControllerServlet extends HttpServlet {
 				BListAction action = new BListAction(request);
 				path = action.selectAllList();
 			}
+			if (pageId.equals("FH01") && button.equals("home")) {
+				path = "WEB-INF/jsp/home.jsp";
+			}
 		}else {
 			//単にlogin画面に遷移させるだけのメソッド
 			path="/WEB-INF/jsp/login.jsp";

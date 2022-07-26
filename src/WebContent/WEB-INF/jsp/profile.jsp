@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/miemo/css/profile.css">
 </head>
 <body>
-
+<%@ include file="/WEB-INF/jsp/common.jsp" %>
 	<!-- Servletへ遷移させる(PassWord変更) -->
 
 	<form method="POST" action="/miemo/FrontControllerServlet">
@@ -60,10 +60,11 @@
 			</tr>
 		</table><br>
 		</div>
+		<input type="submit" name="bt_name" value="変更" class="btn">
 	</form>
-		<input type="submit" name="bt_name" value="変更" class="btn"><br>
+
 	<!-- エラーメッセージの表示欄 -->
-	<br><div id="errMsg">${errMsg}</div>
+	<br><div class = "alert" id="errMsg">${errMsg}</div>
 </body>
 </html>
 

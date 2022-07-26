@@ -15,7 +15,7 @@
 	</div>
 
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
-	<form method="POST" action="/miemo/TestServlet" id="uRegist">
+	<form method="POST" action="/miemo/BControllerServlet" id="uRegist">
 	<input type="hidden" name="page_id" value="BR01">
 	<!--  <input type="hidden" name="empId" value="1"> -->
 		<table>
@@ -170,7 +170,7 @@
 
 	</form>
 	<p>${errMsg}</p>
-	<a href="/miemo/servlet/BControllerServlet/?page_id="BR01"&bt_name=戻る" class="back" onclick ="return back()">一覧に戻る</a>
+	<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=戻る"  class="back" onclick ="return back()">一覧に戻る</a>
 </body>
 
 <script>
