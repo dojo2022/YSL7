@@ -108,6 +108,7 @@
 	</form>
 	</div>
 		<div class = "alert" id="errMsg">${errMsg}</div><br>
+
 </body>
 <script>
 $(function(){
