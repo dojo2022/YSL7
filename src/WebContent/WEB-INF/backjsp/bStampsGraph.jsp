@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/miemo/backcss/bStamps.css">
 <title>きもちグラフ | miemo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
@@ -60,10 +61,10 @@
 			type: 'doughnut',
 			data: {
 				//グラフのラベルを設定
-				labels: ["とても満足", "満足", "普通", "不満", "とても不満"],
+				labels: ["とても不満", "不満", "普通", "満足", "とても満足"],
 				datasets: [{
-					data: [inputData[4], inputData[3],inputData[2],inputData[1],inputData[0],],
-					backgroundColor: ['#7fffd4', '#87cefa', '#f5deb3','#ff69b4','#dc143c'],
+					data: [inputData[0], inputData[1],inputData[2],inputData[3],inputData[4],],
+					backgroundColor: ['#5674B5', '#92C9FE', '#C8EA69','#FFC14A','#FF944D'],
 				}]
 			},
 			options: {
@@ -84,7 +85,7 @@
 			    datasets: [{
 			      //ここで取得した配列の中身を分解して配置する
 			      data: [${s1Percent[0]},${s1Percent[1]}, ${s1Percent[2]}, ${s1Percent[3]}, ${s1Percent[4]},${s1Percent[5]},${s1Percent[6]},${s1Percent[7]},${s1Percent[8]},${s1Percent[9]},],
-			      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+			      backgroundColor: ['#ffbf7f', '#ffff7f', '#bfff7f','#7fff7f','#7fffff','#7fbfff','#ff9a00','#7f7fff','#bf7fff','#ff7f7f'],
 			    }]
 			  },
 			  options: {
@@ -109,7 +110,7 @@
 			    datasets: [{
 			      //ここで取得した配列の中身を分解して配置する
 			      data: [${s2Percent[0]},${s2Percent[1]}, ${s2Percent[2]}, ${s2Percent[3]}, ${s2Percent[4]},${s2Percent[5]},${s2Percent[6]},${s2Percent[7]},${s2Percent[8]},${s2Percent[9]},],
-			      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+			      backgroundColor: ['#ffbf7f', '#ffff7f', '#bfff7f','#7fff7f','#7fffff','#7fbfff','#ff9a00','#7f7fff','#bf7fff','#ff7f7f'],
 			    }]
 			  },
 			  options: {
@@ -134,7 +135,7 @@
 			    datasets: [{
 			      //ここで取得した配列の中身を分解して配置する
 			      data: [${s3Percent[0]},${s3Percent[1]}, ${s3Percent[2]}, ${s3Percent[3]}, ${s3Percent[4]},${s3Percent[5]},${s3Percent[6]},${s3Percent[7]},${s3Percent[8]},${s3Percent[9]},],
-			      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+			      backgroundColor: ['#ffbf7f', '#ffff7f', '#bfff7f','#7fff7f','#7fffff','#7fbfff','#ff9a00','#7f7fff','#bf7fff','#ff7f7f'],
 			    }]
 			  },
 			  options: {
@@ -158,7 +159,7 @@
 			    datasets: [{
 			      //ここで取得した配列の中身を分解して配置する
 			      data: [${s4Percent[0]},${s4Percent[1]}, ${s4Percent[2]}, ${s4Percent[3]}, ${s4Percent[4]},${s4Percent[5]},${s4Percent[6]},${s4Percent[7]},${s4Percent[8]},${s4Percent[9]},],
-			      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+			      backgroundColor: ['#ffbf7f', '#ffff7f', '#bfff7f','#7fff7f','#7fffff','#7fbfff','#ff9a00','#7f7fff','#bf7fff','#ff7f7f'],
 			    }]
 			  },
 			  options: {
@@ -182,7 +183,7 @@
 			    datasets: [{
 			      //ここで取得した配列の中身を分解して配置する
 			      data: [${s5Percent[0]},${s5Percent[1]}, ${s5Percent[2]}, ${s5Percent[3]}, ${s5Percent[4]},${s5Percent[5]},${s5Percent[6]},${s5Percent[7]},${s5Percent[8]},${s5Percent[9]},],
-			      backgroundColor: ['#87CEFA', '#7CFC00', '#D2691E','#DDA0DD','#FFEBCD'],
+			      backgroundColor: ['#ffbf7f', '#ffff7f', '#bfff7f','#7fff7f','#7fffff','#7fbfff','#ff9a00','#7f7fff','#bf7fff','#ff7f7f'],
 			    }]
 			  },
 			  options: {
