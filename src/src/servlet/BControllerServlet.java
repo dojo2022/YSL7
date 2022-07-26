@@ -159,8 +159,9 @@ public class BControllerServlet extends HttpServlet {
 			BTabAction tAction = new BTabAction(request);
 			//★アクションのメソッドから成功したかどうかを受け取る
 			String sAns =nAction.nRegist();
+			System.out.println("sAns" + sAns);
 			//TacActionのshowMainPageを呼び出す（引数どしよ）
-			if(sAns=="1") {
+			if(sAns.equals("1")) {
 				url = tAction.showMainPage();
 			}
 			else {

@@ -4,15 +4,34 @@ html{
 	background-color: #fff3df;
 }
 /* 評価表 */
+.evaList{
+	width: 500px;
+	height: 400px;
+}
 .eva_items{
 	background-color:#EBD61A;
+	text-align: center;
 }
 
+.eva_items1{
+	padding: 0 10px 0 10px;
+}
 .eva_data{
 	background-color:#f7ee9d;
 	border-bottom: solid 1px #efe350;
+	font-size: 16px;
 }
-レーダーチャートを評価表の横にする
-#evaluationChar{
+
+.radar_graph{
+	padding-left: 80px;
+}
+
+.tab{
 	display: flex;
+	text-align: center;
 }
+
+/* body{
+	background-color: red;
+}
+ */

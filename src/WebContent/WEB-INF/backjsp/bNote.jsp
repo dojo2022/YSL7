@@ -32,6 +32,7 @@
 		<tbody>
 		<c:forEach var="e" items="${notesList}" varStatus="status">
 			<tr class="n-tabledata">
+				<td>${e.date}</td>
 				<td>${e.name}</td>
 				<td>${e.title}</td>
 				<td class="tw">
