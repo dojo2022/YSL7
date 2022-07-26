@@ -12,22 +12,24 @@
 </head>
 <body>
 <h2>${user.name}さんの新規メモ</h2>
-<form method=POST action="/miemo/bControllerServlet/" onsubmit="check()">
+<form method="POST" action="/miemo/BControllerServlet"  onsubmit="check()">
 	<table class="registNote">
 		<tr>
 			<th>タイトル</th>
 		</tr>
 		<tr>
-			<td><input type="text" name="title" class="title"></td>
-			<td><input type="hidden" name="emp_id" value="${user.userId}"></td>
+			<td><input type="text" name="title" class="title" value="${pram.title}"></td>
+			<td><input type="hidden" name="empId" value="${empId}"></td>
 		</tr>
 		<tr><td class="ErrorMsg">${errMsgTitle}</td></tr>
 		<tr>
 			<th>内容</th>
 		</tr>
 		<tr>
-			<td><textarea name="content"></textarea></td>
-			<td><input type="hidden" name="page_id" value="BN01"></td>
+			<td><textarea name="content" value="${pram.content}"></textarea></td>
+			<td><input type="hidden" name="page_id" value="BN01">
+				<input type="hidden" name="uId" value="${user.userId}">
+			</td>
 		</tr>
 		<tr><td class="ErrorMsg">${errMsgContent}</td></tr>
 		<tr>

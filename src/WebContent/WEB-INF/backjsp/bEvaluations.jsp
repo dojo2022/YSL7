@@ -11,47 +11,47 @@
 <script src="/WebContent/backjs/bStampsGraph.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
 <script  src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@next/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-
-</head>
 <link rel="stylesheet" href="/miemo/backcss/bEvaluations.css">
+</head>
+
 <body>
 <div class="tab">
- <table id="evaList">
+ <table class="evaList">
 	<tr class="eva_items">
-		<th>評価項目</th>
-		<th>自己評価</th>
-		<th>他者評価</th>
+		<th class="eva_items">評価項目</th>
+		<th class="eva_items1">自己評価</th>
+		<th class="eva_items1">他者評価</th>
 	</tr>
 	<tr class="eva_data">
-		<td>職場内の人間関係にストレスを感じていない</td>
- 		<td>${myEvaluation.eva1}</td>
-		<td>${avg[0]}</td>
+		<td class="eva_data">職場内の人間関係にストレスを感じていない</td>
+ 		<td class="eva_data">${myEvaluation.eva1}</td>
+		<td class="eva_data">${avg[0]}</td>
 	</tr>
 		<tr class="eva_data">
-		<td>業務に意欲的に取り組んでいる</td>
-		<td>${myEvaluation.eva2}</td>
-		<td>${avg[1]}</td>
+		<td class="eva_data">業務に意欲的に取り組んでいる</td>
+		<td class="eva_data">${myEvaluation.eva2}</td>
+		<td class="eva_data">${avg[1]}</td>
 	</tr>
 		<tr class="eva_data">
-		<td>報告・連絡・相談が適切にできている</td>
-		<td>${myEvaluation.eva3}</td>
-		<td>${avg[2]}</td>
+		<td class="eva_data">報告・連絡・相談が適切にできている</td>
+		<td class="eva_data">${myEvaluation.eva3}</td>
+		<td class="eva_data">${avg[2]}</td>
 	</tr>
 	<tr class="eva_data">
-		<td>業務に必要な技術や知識を発揮できている</td>
-		<td>${myEvaluation.eva4}</td>
-		<td>${avg[3]}</td>
+		<td class="eva_data">業務に必要な技術や知識を発揮できている</td>
+		<td class="eva_data">${myEvaluation.eva4}</td>
+		<td class="eva_data">${avg[3]}</td>
 	</tr>
 		<tr class="eva_data">
-		<td>タスク量と期限は適切である</td>
-		<td>${myEvaluation.eva5}</td>
-		<td>${avg[4]}</td>
+		<td class="eva_data">タスク量と期限は適切である</td>
+		<td class="eva_data">${myEvaluation.eva5}</td>
+		<td class="eva_data">${avg[4]}</td>
 	</tr>
 </table>
 
 <!-- レーダーチャート -->
-
-<canvas id="evaluationChart"></canvas>
+<div class=radar_graph>
+<canvas id="evaluationChart" width="600" height="400"></canvas>
 <script>
 
 
@@ -76,9 +76,10 @@ new Chart(context10, {
 				${myEvaluation.eva4},
 				${myEvaluation.eva5}
 			],
-			borderColor: 'RGBA(115,255,25, 1)',
+			backgroundColor: 'RGBA(0,0,0,0)',
+			borderColor: '#00C2CB',
             borderWidth: 1,
-            pointBackgroundColor: 'RGB(46,106,177)'
+            pointBackgroundColor: '#00C2CB'
 		},{
 			label:'他者評価',
 			data:[
@@ -88,13 +89,18 @@ new Chart(context10, {
 				${avg[3]},
 				${avg[4]}
 			],
-            borderColor: 'RGBA(225,95,150, 1)',
+			backgroundColor: 'RGBA(0,0,0,0)',
+            borderColor: '#CB6CE6',
             borderWidth: 1,
-            pointBackgroundColor: 'RGB(46,106,177)'
+            pointBackgroundColor: '#CB6CE6'
 		}]
+	},
+	options: {
+		responsive: false,
 	}
 });
 </script>
+</div>
 </div>
 </body>
 </html>

@@ -58,41 +58,41 @@
 				<label for="c_1">
 					<span class="c_span">人間関係</span>
 				</label>
-				<input type="radio"  name="category_id" value="2" id="c_2" class="radio_bt">
+				<input type="radio"  name="category_id" value="2" id="c_2" class="radio_bt1">
 				<label for="c_2">
-					<span class="c_span">納期</span>
+					<span class="c_span1">納期</span>
 				</label>
-				<input type="radio"  name="category_id" value="3" id="c_3" class="radio_bt">
+				<input type="radio"  name="category_id" value="3" id="c_3" class="radio_bt1">
 				<label for="c_3">
-					<span class="c_span">資格</span>
+					<span class="c_span1">資格</span>
 				</label>
-				<input type="radio"  name="category_id" value="4" id="c_4" class="radio_bt">
+				<input type="radio"  name="category_id" value="4" id="c_4" class="radio_bt1">
 				<label for="c_4">
-					<span class="c_span">残業</span>
+					<span class="c_span1">残業</span>
 				</label>
-				<input type="radio"  name="category_id" value="5" id="c_5" class="radio_bt">
+				<input type="radio"  name="category_id" value="5" id="c_5" class="radio_bt1">
 				<label for="c_5">
-					<span class="c_span">通勤</span>
+					<span class="c_span1">通勤</span>
 				</label>
-				<input type="radio"  name="category_id" value="6" id="c_6" class="radio_bt">
+				<input type="radio"  name="category_id" value="6" id="c_6" class="radio_bt1">
 				<label for="c_6">
-					<span class="c_span">職場環境</span>
+					<span class="c_span1">職場環境</span>
 				</label>
-				<input type="radio"  name="category_id" value="7" id="c_7" class="radio_bt">
+				<input type="radio"  name="category_id" value="7" id="c_7" class="radio_bt2">
 				<label for="c_7">
-					<span class="c_span">睡眠</span>
+					<span class="c_span2">睡眠</span>
 				</label>
-				<input type="radio"  name="category_id" value="8" id="c_8" class="radio_bt">
+				<input type="radio"  name="category_id" value="8" id="c_8" class="radio_bt2">
 				<label for="c_8">
-					<span class="c_span">家族</span>
+					<span class="c_span2">家族</span>
 				</label>
-				<input type="radio"  name="category_id" value="9" id="c_9" class="radio_bt">
+				<input type="radio"  name="category_id" value="9" id="c_9" class="radio_bt2">
 				<label for="c_9">
-					<span class="c_span">健康</span>
+					<span class="c_span2">健康</span>
 				</label>
-				<input type="radio"  name="category_id" value="10" id="c_10" class="radio_bt">
+				<input type="radio"  name="category_id" value="10" id="c_10" class="radio_bt2">
 				<label for="c_10">
-					<span class="c_span">お金</span>
+					<span class="c_span2">お金</span>
 				</label>
 			</td>
 		</tr>
@@ -106,10 +106,8 @@
 		<div >
 			<input type="submit"  name="bt_name" value="登録" class="regist_bts">
 		</div>
-
 	</form>
 	</div>
-
 </body>
 <script>
 $(function(){

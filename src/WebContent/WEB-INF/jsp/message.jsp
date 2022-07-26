@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Message</title>
-<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 <link rel="stylesheet" type="text/css" href="/miemo/css/message.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>

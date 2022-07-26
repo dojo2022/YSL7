@@ -35,6 +35,7 @@ public class BNotesAction {
 			ans = noteService.nRegist(uId, empId,title,content);
 
 			String sAns=Integer.toString(ans);
+			System.out.println("sAns" + sAns);
 			//ansをServletにかえします
 			return sAns;
 		}

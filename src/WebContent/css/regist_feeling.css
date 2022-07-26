@@ -8,21 +8,17 @@ h1{
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
 }
-
 .regist_fe_tb {
 	max-width: 800px;
     margin: auto;
 }
-
 /* テーブル全体のCSS */
 td {
 	height: 170px;
 }
-
-
 .font {
 	display: inline-block;
-	color: #e17751;
+	color: #E17751;
 	font-size: 25px;
 	font-family: Noto Sans CJK JP;
 	margin-bottom: 24px;
@@ -31,98 +27,107 @@ td {
 	border-radius: 5%;
 	position: relative;
 	padding: 0.3em 2.5em;
-	background: #fff3df;
+	background: #FFF3DF;
 }
-
 .font:after {
   position: absolute;
   content: '';
   top: 100%;
   left: 30px;
   border: 15px solid transparent;
-  border-top: 15px solid #fff3df;
+  border-top: 15px solid #FFF3DF;
   width: 0;
   height: 0;
 }
-
-
 /* スタンプ系のCSS */
 .check {
 	display: none;
 }
-
 .stamp_img {
 	width: 100px;
 }
-
  .check:checked  + label img {
  	 background-color: #FFF099;
       border-radius: 50px;
 }
-
 .stamp_span {
 	margin-right: 30px;
 }
-
-
 /* 項目系のCSS */
 .radio_bt {
 	display: none;
 }
-
-
+.radio_bt1 {
+	display: none;
+}
+.radio_bt2 {
+	display: none;
+}
  .radio_bt:checked  + label span {
+      background-color: #F4AB3F;
+      border-radius: 50px;
+}
+ .radio_bt1:checked  + label span {
       background-color: #FFF099;
       border-radius: 50px;
 }
-
+ .radio_bt2:checked  + label span {
+      background-color: #F19E6F;
+      border-radius: 50px;
+}
 .c_span {
-	border: 1px solid black;
+	border: 2px solid #E17751;
     font-size: 15px;
     padding: 5px;
     border-radius: 40px;
     margin-right: 20px;
-
 }
-
+.c_span1 {
+	border: 2px solid #EBD61A;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+.c_span2 {
+	border: 2px solid #DD3B84;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
 /* コメント系のCSS */
 /*.textarea {
 	width: 660px;
     height: 60px;
 }*/
-
-
 .textarea{
 	text-align:left;
 	font-size:  15px;
 	width:100%;
 	height:60px;
     padding: 1em 1em;
-    background-color: #fff3df;
-    border: solid 3px #ffb55b; /* 線の色 */
+    background-color: #FFF3DF;
+    border: solid 3px #FFB55B; /* 線の色 */
     resize: none;
 }
 .textarea:focus{
 	outline: solid 3px #F19E6F;
 }
-
-
-
 /* 登録ボタンのCSS */
 .regist_bts  {
   margin-left: 330px;
-  background: #ffd3a8;
+  background: #FFD3A8;
   color:#FFF;
   width: 110px;
   height: 50px;
   border-radius: 5%;
   font-size:20px;
-  box-shadow:0px 0px 0px 5px #ffd3a8;
+  box-shadow:0px 0px 0px 5px #FFD3A8;
   border: dashed 1px #FFF;
   margin-top: 20px
 }
-
 .regist_bts :hover {
-  background: #ffab57;
-  box-shadow: 0px 0px 0px 5px #ffab57;
+  background: #FFAB57;
+  box-shadow: 0px 0px 0px 5px #FFAB57;
 }
