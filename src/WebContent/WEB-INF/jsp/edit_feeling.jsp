@@ -6,9 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>きもち編集</title>
-<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+
 <link rel = "stylesheet" href = "/miemo/css/regist_feeling.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>

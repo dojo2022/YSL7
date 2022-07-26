@@ -5,8 +5,9 @@
 		<head>
 	<meta charset="UTF-8">
 		<title>Insert title here</title>
-		<link rel="stylesheet" href="/miemo/css/common.css">
+
 		<link rel = "stylesheet" href = "/miemo/css/home.css">
+		<link rel="stylesheet" href="/miemo/css/common.css">
 	</head>
 	<h1>ホーム</h1>
 	<body>
