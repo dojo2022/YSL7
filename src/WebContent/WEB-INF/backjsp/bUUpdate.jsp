@@ -10,7 +10,7 @@
 </head>
 <link rel="stylesheet" href="/miemo/backcss/bStyle.css">
 <link rel="stylesheet" href="/miemo/backcss/uUpdate.css">
-<script type="text/javascript" src="/miemo/js/uUpdate.js"></script>
+<script type="text/javascript" src="/miemo/backjs/uUpdate.js"></script>
 <script type="text/javascript" src="/miemo/js/backCommon.js"></script>
 <body>
 
