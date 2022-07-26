@@ -15,34 +15,34 @@
 	</div>
 
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
-	<form method="POST" action="/miemo/TestServlet">
+	<form method="POST" action="/miemo/TestServlet" id="uRegist">
 	<input type="hidden" name="page_id" value="BR01">
 	<!--  <input type="hidden" name="empId" value="1"> -->
 		<table>
 			<tr>
 				<td>社員番号</td>
-				<td><input type="text" name="number" class="inText"><br> <span id="error_number"></span></td>
+				<td><input type="text" name="number" value="${param.number}" id="number" class="inText"><br> <span id="error_number">${numberErrMsg}</span></td>
 
 			</tr>
 			<tr>
 				<td>氏名</td>
-				<td><input type="text" name="name" class="inText"><br> <span id="error_name" ></span></td>
+				<td><input type="text" name="name" value="${param.name}" id="name" class="inText"><br> <span id="error_name" >${nameErrMsg}</span></td>
 			</tr>
 			<tr>
 				<td>性別</td>
 				<td>
-					<select name="gender" class="inText">
+					<select name="gender" class="inText" id="gender" >
 						<option value="">性別を選択</option>
 					    <option value="0">男性</option>
 					    <option value="1">女性</option>
 					</select><br>
-					<span id="error_gender"></span>
+					<span id="error_gender">${genderErrMsg}</span>
 				</td>
 			</tr>
 			<tr>
 				<td>事業部</td>
 				<td>
-					<select name="dep_id" class="inText">
+					<select name="dep_id" class="inText" id="dep_id">
 						<option value="">事業部を選択</option>
 						<c:forEach var="e" items="${one}" varStatus="status">
 							<option value="${e}">${e}</option>
@@ -52,16 +52,16 @@
 			</tr>
 			<tr>
 				<td>部</td>
-				<td><select name="div_id" class="inText">  	</select><br><span id="error_div_id"></span></td>
+				<td><select name="div_id" class="inText" id="div_id">  	</select><br><span id="error_div_id">${divIdErrMsg}</span></td>
 			</tr>
 			<tr>
 				<td>課</td>
-				<td><select name="sec_id" class="inText">  	</select><br><span id="error_sec_id"></span></td>
+				<td><select name="sec_id" class="inText" id="sec_id" >  	</select><br><span id="error_sec_id">${secIdErrMsg}</span></td>
 			</tr>
 			<tr>
 				<td>役職1</td>
 				<td>
-					<select name="post1" class="inText">
+					<select name="post1" class="inText" id="post1">
 						<option value="">役職1を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -74,7 +74,7 @@
 					    <option value="9">執行役員</option>
 					    <option value="10">取締役</option>
 					  </select><br>
-					  <span id="error_post1"></span>
+					  <span id="error_post1">${post1ErrMsg}</span>
 				<td><!-- プルダウン -->
 			</tr>
 			<tr>
@@ -118,7 +118,7 @@
 			<tr>
 				<td>入社年度</td>
 				<td>
-					<select name="year" class="inText">
+					<select name="year" class="inText" id="year">
 						<option value="">入社年度を選択</option>
 					    <option value="1991">1991</option>
 					    <option value="1992">1992</option>
@@ -153,11 +153,16 @@
 					    <option value="2021">2021</option>
 					    <option value="2022">2022</option>
 					</select><br>
-					<span id="error_year"></span>
+					<span id="error_year">${yearErrMsg}</span>
 				<td><!-- プルダウン -->
 			</tr>
 			<tr>
-				<td></td>
+				<td> </td>
+				<td> </td>
+			</tr>
+			<tr>
+				<td>
+				</td>
 				<td><input type="submit" name="button_id" value="登録" class="button" onclick ="return uRegist()"></td>
 			</tr>
 		</table>
