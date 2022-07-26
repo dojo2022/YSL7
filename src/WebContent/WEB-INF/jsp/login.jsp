@@ -6,13 +6,12 @@
 <meta charset="UTF-8">
 <title>ログイン画面</title>
 <link rel = "stylesheet" href = "/miemo/css/login.css">
-<link rel = "stylesheet" href = "/miemo/css/common.css">
+
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
 <script type = "text/javascript" src ="/miemo/js/script.js"></script>
 </head>
 <body>
-<%-- <%@ include file="/WEB-INF/jsp/common.jsp" %> --%>
 <div class="logo">
 <img src="/miemo/img/Logo_mark.png"  alt="ロゴ" title="MiEmo" >
 </div>
