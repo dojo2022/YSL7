@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="common.jsp" %>
 
  <link rel = "stylesheet" href = "/miemo/css/evaluation.css">
  <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
@@ -38,6 +37,8 @@
 </style>
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/common.jsp" %>
+<main>
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
@@ -147,6 +148,6 @@
 	</div>
 
 </form>
-
+</main>
 </body>
 </html>

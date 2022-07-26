@@ -45,10 +45,14 @@ public class BControllerServlet extends HttpServlet {
 */
 		////一覧から個人ページを表示するとき
 				if(pageId.equals("BL01") && button.equals("to_profile")) {
+					HttpSession session = request.getSession();
+					session.removeAttribute("empId");
+					session.removeAttribute("plofile");
 					//★アクションをインスタンス化
 					BTabAction tAction = new BTabAction(request);
 					//★アクションのsearchメソッドを呼び出す
 					url = tAction.showMainPage();
+
 				}
 
 //		//個人ページの先月・次月ボタンを押したとき
