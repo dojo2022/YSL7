@@ -141,7 +141,7 @@
 	<br>
 	<!-- 登録ボタン -->
 	<div>
-		<input type="submit" name="bt_name" value="登録" >
+		<input type="submit" name="bt_name" value="登録" class = regist_btn >
 	</div>
 
 </form>
