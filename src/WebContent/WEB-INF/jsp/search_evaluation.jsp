@@ -46,7 +46,7 @@
 				<tr>
 					<form method="POST" action="/miemo/FrontControllerServlet">
 						<input type="hidden" name="page_id" value="FE01">
-						<td>${e.number}pppp<input type="hidden" name="user_id" value="${e.userId}"></td>
+						<td>${e.number}<input type="hidden" name="user_id" value="${e.userId}"></td>
 						<td>${e.name}<input type="hidden" name="evaluate_name" value="${e.name}"></td>
 						<td>${e.department}</td>
 						<td>${e.post}</td>
