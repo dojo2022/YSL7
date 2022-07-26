@@ -22,22 +22,21 @@
 	<tr>
 		<td id = "size_test" >【社員番号】</td>
 		<td>
-			<input class= "member_number" type = "text" name = "number" value = "${param.number}">
+			<div class="field">
+				<input class= "text" type = "text" name = "number" value = "${param.number}">
+			</div>
 		</td>
 	</tr>
 	<tr>
 		<td id = "size_test2">【パスワード】</td>
 		<td>
-			<input type="checkbox" id="checkPassword">
-			<div class="togglePassword">
-				<input type="password" name="password" class="hideText" value="YSL2022">
-				<input type="text" class="showText" value="">
-				<label for="checkPassword" class="fa fa-eye"></label>
-				<label for="checkPassword" class="fa fa-eye-slash"></label>
+			<div class="field">
+				<input type="password" name="password"  class="text" id="textPassword">
+				<span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
 			</div>
 		</td>
 			<td>
-			<input class="btn-circle-stitch" type = "submit" name = "bt_name" value = "ログイン">
+				<input class="btn-circle-stitch" type = "submit" name = "bt_name" value = "ログイン">
 			</td>
 		</tr>
 
@@ -46,6 +45,20 @@
 
 <!-- エラーメッセージの表示欄 -->
 	<div class = "alert" id="errMsg">${errMsg}</div>
+
+<script>
+      function pushHideButton() {
+        var txtPass = document.getElementById("textPassword");
+        var btnEye = document.getElementById("buttonEye");
+        if (txtPass.type === "text") {
+          txtPass.type = "password";
+          btnEye.className = "fa fa-eye";
+        } else {
+          txtPass.type = "text";
+          btnEye.className = "fa fa-eye-slash";
+        }
+      }
+    </script>
 
 </body>
 </html>
