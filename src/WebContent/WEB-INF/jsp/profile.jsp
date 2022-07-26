@@ -61,9 +61,9 @@
 		</table><br>
 		</div>
 	</form>
-		<input type="submit" name="bt_name" value="変更" class="btn">
+		<input type="submit" name="bt_name" value="変更" class="btn"><br>
 	<!-- エラーメッセージの表示欄 -->
-	<div id="errMsg">${errMsg}</div>
+	<br><div id="errMsg">${errMsg}</div>
 </body>
 </html>
 

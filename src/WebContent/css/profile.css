@@ -67,7 +67,7 @@ table td{
 /*共通ボタンCSS　コピペして使ってね*/
 
 .btn {
-  margin-left: 730px; /*これで無理やり真ん中よせしてるので各ページいい塩梅でpx設定してください*/
+  margin-left: 700px; /*これで無理やり真ん中よせしてるので各ページいい塩梅でpx設定してください*/
   background: #ffd3a8;
   color:#FFF;
   /*
@@ -89,7 +89,11 @@ table td{
   box-shadow: 0px 0px 0px 5px #ffab57;
 }
 
-
+#errMsg{
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
+}
 
 /*
 .btn{
