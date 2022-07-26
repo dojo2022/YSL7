@@ -41,11 +41,12 @@
 			<input class="btn-circle-stitch" type = "submit" name = "bt_name" value = "ログイン">
 			</td>
 		</tr>
+
     </table>
 </form>
 
 <!-- エラーメッセージの表示欄 -->
-	<div id="errMsg">${errMsg}</div>
+	<div class = "alert" id="errMsg">${errMsg}</div>
 
 </body>
 </html>

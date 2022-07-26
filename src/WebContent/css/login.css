@@ -98,3 +98,9 @@
  margin-bottom: -283px;
 
  }
+
+.alert {
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
+}
