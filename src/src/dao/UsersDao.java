@@ -154,6 +154,7 @@ public class UsersDao {
 		while(rs.next()) {
 			Users users = new Users();
 			users.setUserId(rs.getInt("u_id"));
+			System.out.println(rs.getInt("u_id"));
 			users.setName(rs.getString("name"));
 			users.setNumber(rs.getString("number"));
 			users.setDepartment(rs.getString("department"));

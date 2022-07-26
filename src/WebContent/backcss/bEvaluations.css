@@ -11,7 +11,7 @@ html{
 .eva_items{
 	width: 750px;
 	height: 50px;
-	background-color:#EBD61A;
+	background-color:#FF944D;
 	text-align: center;
 	padding: 0 15px 0 15px;
 }
@@ -21,8 +21,8 @@ html{
 	padding: 0 12px 0 12px;
 }
 .eva_data{
-	background-color:#f7ee9d;
-	border-bottom: solid 1px #efe350;
+	background-color:#ffe3d0;
+	border-bottom: solid 1px #FF944D;
 	font-size: 16px;
 }
 
