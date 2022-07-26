@@ -8,6 +8,9 @@ h1{
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
 }
+body{
+    padding: 50px
+}
 .regist_fe_tb {
 	max-width: 800px;
     margin: auto;
@@ -130,4 +133,11 @@ td {
 .regist_bts :hover {
   background: #FFAB57;
   box-shadow: 0px 0px 0px 5px #FFAB57;
+}
+
+.alert {
+	text-align: center;
+	color: #db006d;
+	font-weight: bold;
+	padding: 1em 1em;
 }
