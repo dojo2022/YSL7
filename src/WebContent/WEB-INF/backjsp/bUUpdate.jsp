@@ -165,6 +165,6 @@
 	</form>
 	<p>${errMsg}</p>
 <!-- 		<a href="/miemo/servlet/BControllerServlet/?page_id=BR02&bt_name=戻る">戻る</a> -->
-	<input type="button" value="戻る" id="uUpdateReturn">
+	<input type="button" value="戻る" id="uUpdateReturn" onclick="history.back()">
 </body>
 </html>
