@@ -18,7 +18,7 @@
 		<input type="hidden" name="page_id" value="FF01">
 		<table>
 		<tr>
-			<td><div class="font">きもち</div>
+			<td><div class="font">きもち</div><br>
 				<span class="stamp_span">
 					<input type="checkbox" name="stamp1" value="1" class="check" id="stamp1">
 					<label for="stamp1" class="stamp_label">
@@ -52,7 +52,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td><div class="font">項目</div>
+		<br>
+			<td><div class="font">項目</div><br>
 				<input type="radio"  name="category_id" value="1" id="c_1" class="radio_bt">
 				<label for="c_1">
 					<span class="c_span">人間関係</span>
@@ -96,7 +97,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td><div class="font">コメント</div>
+		<br>
+			<td><div class="font">コメント</div><br>
 				<textarea  name="comment" class="textarea">${param.comment}</textarea>
 			</td>
 		</tr>

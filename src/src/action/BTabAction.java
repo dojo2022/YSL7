@@ -63,6 +63,7 @@ public class BTabAction {
 		if(stamp5.size() == 0) {
 			request.setAttribute("s5ErrMsg", "表示できるデータがありません。");
 		}
+		System.out.println("スタンプだよ"+stamp2);
 
 
 		//計算モデルを実体化する
@@ -75,15 +76,38 @@ public class BTabAction {
 
 		//stamp1~stamp5のカテゴリ割合が入ったArrayList
 		ArrayList<Double> s1Percent = bgc.s1Calc(stamp1);
-		ArrayList<Double> s2Percent = bgc.s1Calc(stamp2);
-		ArrayList<Double> s3Percent = bgc.s1Calc(stamp3);
-		ArrayList<Double> s4Percent = bgc.s1Calc(stamp4);
-		ArrayList<Double> s5Percent = bgc.s1Calc(stamp5);
-
-		for(int i=0;i<s4Percent.size();i++) {
-			System.out.println("入ってる？" + i + "回目");
-			System.out.println(s4Percent.get(i));
+		for(double b:s1Percent) {
+			System.out.print("1:"+b+",");
+			System.out.println();
 		}
+		ArrayList<Double> s2Percent = bgc.s1Calc(stamp2);
+
+		for(double b:s2Percent) {
+			System.out.print("2:"+b+",");
+			System.out.println();
+		}
+		ArrayList<Double> s3Percent = bgc.s1Calc(stamp3);
+		for(double b:s3Percent) {
+			System.out.print("3:"+b+",");
+			System.out.println();
+		}
+		ArrayList<Double> s4Percent = bgc.s1Calc(stamp4);
+		for(double b:s4Percent) {
+			System.out.print("4:"+b+",");
+			System.out.println();
+		}
+		ArrayList<Double> s5Percent = bgc.s1Calc(stamp5);
+		for(double b:s5Percent) {
+			System.out.print("5:"+b+",");
+			System.out.println();
+		}
+
+		System.out.println(s1Percent.size());
+
+//		for(int i=0;i<s4Percent.size();i++) {
+//			System.out.println("入ってる？" + i + "回目");
+//			System.out.println(s4Percent.get(i));
+//		}
 
 		//戻り値が０行のとき
 		if(s1Percent.size() == 0) {
