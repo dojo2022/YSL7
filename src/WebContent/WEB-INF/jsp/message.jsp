@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 </head>
 <body>
+<div id="body1">
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
 	<h1>メッセージ</h1>
 		<h2>メッセージは人事部にのみ送られます</h2>
@@ -22,6 +23,6 @@
 	</form>
 	<!-- エラーメッセージの表示欄 -->
 	<br><div class = "alert" id="errMsg">${errMsg}</div>
-
+</div>
 </body>
 </html>
