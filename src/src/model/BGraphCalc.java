@@ -45,7 +45,7 @@ public class BGraphCalc {
 			for(int i=0; i<stamp1.size(); i++) {
 				for(int j=1; j<11; j++) {
 					if(stamp1.get(i).getCategoryId() == j) {
-						s1Category[i] += 1;
+						s1Category[j] += 1;
 					}
 				}
 			}
