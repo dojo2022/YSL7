@@ -8,7 +8,6 @@
  <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
  <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
  <link rel = "stylesheet" href = "/miemo/css/search_evaluation.css">
-
  <script>
     jQuery(function($){
     	 // デフォルトの設定を変更（日本語化）--------------------
@@ -25,17 +24,19 @@
    <meta charset="UTF-8">
 <title>評価相手検索画面</title>
 </head>
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 <body>
+<%@ include file="common.jsp" %>
 <div  id="main_theme">
 <h1>評価シート</h1>
 	<table border="1" id="foo-table" class="table table-bordered">
 		<thead>
 			<tr>
 				<th>社員番号</th>
-				<th>名前</th>
-				<th>部署</th>
-				<th>役職</th>
-				<th>チェック</th>
+				<th id="th2">名前</th>
+				<th id="th3">部署</th>
+				<th id="th4">役職</th>
+				<th id="th5">チェック</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -43,7 +44,7 @@
 				<tr>
 					<form method="POST" action="/miemo/FrontControllerServlet">
 						<input type="hidden" name="page_id" value="FE01">
-						<td>${e.number}<input type="hidden" name="user_id" value="${e.userId}"></td>
+						<td>${e.number}pppp<input type="hidden" name="user_id" value="${e.userId}"></td>
 						<td>${e.name}<input type="hidden" name="evaluate_name" value="${e.name}"></td>
 						<td>${e.department}</td>
 						<td>${e.post}</td>
