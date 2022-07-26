@@ -36,6 +36,49 @@ public class BUserAction {
 			System.out.println(divId);
 			System.out.println(secId);
 
+			if(number.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("numberErrMsg", "※社員番号を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(name.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("nameErrMsg", "※名前を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(gender.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("genderErrMsg", "※性別を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(divId.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("divIdErrMsg", "※部を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(secId.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("secIdErrMsg", "※課を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(post1.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("post1ErrMsg", "※役職１を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+			if(year.strip().length()==0){
+				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+				request.setAttribute("yearErrMsg", "※入社年度を入力してください");
+				return "/WEB-INF/backjsp/bURegist.jsp";
+
+			}
+
 //			if(number.strip().length()==0|| name.strip().length()==0 || gender.strip().length()==0
 //					|| secId.strip().length()==0 || post1.strip().length()==0 || year.strip().length()==0) {
 //				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
