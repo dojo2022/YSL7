@@ -2,16 +2,16 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/miemo/css/common.css">
-<link rel = "stylesheet" href = "/miemo/css/home.css">
-
-<img src="/miemo/img/Logo_mark.png"  alt="ロゴ" title="MiEmo">
-</head>
-<body>
-	<table>
+		<head>
+	<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="/miemo/css/common.css">
+		<link rel = "stylesheet" href = "/miemo/css/home.css">
+	</head>
+	<h1>ホーム</h1>
+	<body>
+	<%@ include file="/WEB-INF/jsp/common.jsp" %>
+	<table class = home_table >
 
 	<tr>
 	<td>
