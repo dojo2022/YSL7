@@ -7,6 +7,8 @@
 <%@ include file="common.jsp" %>
 
  <link rel = "stylesheet" href = "/miemo/css/evaluation.css">
+ <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+
 <meta charset="UTF-8">
 <title>評価シート画面</title>
 <style>
