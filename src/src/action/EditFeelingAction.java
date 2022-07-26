@@ -63,6 +63,7 @@ public class EditFeelingAction {
 		//ちゃんと入っていたら
 		}else {
 			//servletに次のＪＳＰのパスを送る
+			request.setAttribute("errMsg", "※きもちを更新しました");
 			return "/WEB-INF/jsp/home.jsp";
 		}
 	}
