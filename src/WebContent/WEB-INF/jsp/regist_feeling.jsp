@@ -52,6 +52,7 @@
 			</td>
 		</tr>
 		<tr>
+		<br>
 			<td><div class="font">項目</div><br>
 				<input type="radio"  name="category_id" value="1" id="c_1" class="radio_bt">
 				<label for="c_1">
@@ -96,6 +97,7 @@
 			</td>
 		</tr>
 		<tr>
+		<br>
 			<td><div class="font">コメント</div><br>
 				<textarea  name="comment" class="textarea">${param.comment}</textarea>
 			</td>
@@ -104,10 +106,8 @@
 		<div >
 			<input type="submit"  name="bt_name" value="登録" class="regist_bts">
 		</div>
-
 	</form>
 	</div>
-
 </body>
 <script>
 $(function(){
