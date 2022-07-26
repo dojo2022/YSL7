@@ -1,22 +1,45 @@
 @charset "UTF-8";
 
-/*テキストエリア*/
-input[type="text"] {
 
-	display: inline-block;
-    width: 100%;
+
+h1{
+	margin-left: 280px;
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+  	color: #F19E6F;/*文字色*/
+  	font-size:  50px;
+  	background: transparent;/*背景透明に*/
+ 	border-left: solid 5px #EBD61A;/*左線*/
+}
+
+h2{
+	margin-left: 280px;
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+  	color: #F4AB3F;/*文字色*/
+}
+
+.message{
+	text-align: center;
+	margin: auto;
+	max-width:auto;
+}
+
+
+/*テキストエリア*/
+textarea{
+	text-align:left;
+	font-size:  15px;
+	width:60%; height:350px;
     padding: 1em 1em;
-    line-height: 50;
-    border: 1px solid #999;
-    box-sizing: border-box;
-    background: #f2f2f2;
-    margin: 0.5em 0.5;
+    background-color: #fff3df;
+    border: solid 3px #ffb55b; /* 線の色 */
+    resize: none;
 }
-/* フォーカス時のスタイル */
-input[type="text"]:focus {
-  border-color: #529fff; /* 線の色 */
-  outline: 0;
+textarea:focus{
+	outline: solid 3px #F19E6F;
 }
+
+
+
 /*ボタン*/
 .button {
   display       : inline-block;

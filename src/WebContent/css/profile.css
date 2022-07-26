@@ -10,6 +10,7 @@ h1{
 	margin-left: 280px;
 	padding: 0.25em 0.5em;/*上下 左右の余白*/
   	color: #F19E6F;/*文字色*/
+  	font-size:  50px;
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
 }
