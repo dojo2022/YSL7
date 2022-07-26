@@ -54,7 +54,7 @@
 			<td class="data">${e.category}<input type="hidden" name="category" value="${e.category}">
 			<input type="hidden" name="category_id" value="${e.categoryId}"></td>
 			<td class="content_data">${e.comment}<input type="hidden" name="comment" value="${e.comment}"></td>
-			<td class="data"><input type="submit" name="bt_name" value="編集画面へ"></td>
+			<td class="data"><input type="submit" name="bt_name" value="編集画面へ" class="btn"></td>
 	</form>
 </tr>
 </c:forEach>

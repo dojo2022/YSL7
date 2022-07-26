@@ -35,18 +35,53 @@ public class GraphFeelingAction {
 		ArrayList<BStampsBeans> stamp4 = (ArrayList<BStampsBeans>) stampGraph.get(4);
 		ArrayList<BStampsBeans> stamp5 = (ArrayList<BStampsBeans>) stampGraph.get(5);
 
+		//戻り値が０行のとき
+		if(stamp1.size() == 0) {
+			request.setAttribute("s1ErrMsg", "表示できるデータがありません。");
+		}
+		if(stamp2.size() == 0) {
+			request.setAttribute("s2ErrMsg", "表示できるデータがありません。");
+		}
+		if(stamp3.size() == 0) {
+			request.setAttribute("s3ErrMsg", "表示できるデータがありません。");
+		}
+		if(stamp4.size() == 0) {
+			request.setAttribute("s4ErrMsg", "表示できるデータがありません。");
+		}
+		if(stamp5.size() == 0) {
+			request.setAttribute("s5ErrMsg", "表示できるデータがありません。");
+		}
+
 		//計算モデルを実体化する
 		BGraphCalc bgc = new BGraphCalc();
 
 		//スタンプ割合が入ったArrayList
-		ArrayList<Integer> stampPercent = bgc.stCalc(sCount);
+		ArrayList<Double> stampPercent = bgc.stCalc(sCount);
+		session.setAttribute("stampPercent", stampPercent);
 
 		//stamp1~stamp5のカテゴリ割合が入ったArrayList
-		ArrayList<Integer> s1Percent = bgc.s1Calc(stamp1);
-		ArrayList<Integer> s2Percent = bgc.s2Calc(stamp2);
-		ArrayList<Integer> s3Percent = bgc.s3Calc(stamp3);
-		ArrayList<Integer> s4Percent = bgc.s4Calc(stamp4);
-		ArrayList<Integer> s5Percent = bgc.s5Calc(stamp5);
+		ArrayList<Double> s1Percent = bgc.s1Calc(stamp1);
+		ArrayList<Double> s2Percent = bgc.s1Calc(stamp2);
+		ArrayList<Double> s3Percent = bgc.s1Calc(stamp3);
+		ArrayList<Double> s4Percent = bgc.s1Calc(stamp4);
+		ArrayList<Double> s5Percent = bgc.s1Calc(stamp5);
+
+		//戻り値が０行のとき
+		if(s1Percent.size() == 0) {
+			request.setAttribute("s1ErrMsg", "表示できるデータがありません。");
+		}
+		if(s2Percent.size() == 0) {
+			request.setAttribute("s2ErrMsg", "表示できるデータがありません。");
+		}
+		if(s3Percent.size() == 0) {
+			request.setAttribute("s3ErrMsg", "表示できるデータがありません。");
+		}
+		if(s4Percent.size() == 0) {
+			request.setAttribute("s4ErrMsg", "表示できるデータがありません。");
+		}
+		if(s5Percent.size() == 0) {
+			request.setAttribute("s5ErrMsg", "表示できるデータがありません。");
+		}
 
 		//計算結果をsessionに保存する
 		session.setAttribute("sCount", sCount);

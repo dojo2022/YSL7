@@ -5,6 +5,10 @@
  repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
   }
 
+body{
+	margin: 0px;
+	padding: 0px;
+}
 
 /* ハンバーガーメニュー*/
 .cp_menu ol, ul {

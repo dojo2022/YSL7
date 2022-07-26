@@ -32,7 +32,7 @@
 		<tr><td class="ErrorMsg">${errMsgContent}</td></tr>
 		<tr>
 		<!-- 戻るボタンはjsのhistorybackを使います -->
-			<td><input type="button" value="戻る" id="noteReturn"></td>
+			<td><input type="button" value="戻る" id="noteReturn" onclick="history.back()"></td>
 			<td><input type="submit" name="bt_name" value="保存" class="cNote"></td>
 		</tr>
 	</table>
