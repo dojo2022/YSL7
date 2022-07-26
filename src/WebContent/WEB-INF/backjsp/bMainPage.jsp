@@ -78,7 +78,7 @@
 			</div>
 
 			<div class="tab_content" id="bbb_content">
-				 <jsp:include page="bMessages.jsp" />
+				 <%-- <jsp:include page="bMessages.jsp" /> --%>
 			</div>
 
 			<div class="tab_content" id="ccc_content">
@@ -86,7 +86,8 @@
 			</div>
 
 			<div class="tab_content" id="ddd_content">
-				<jsp:include page="bEvaluations.jsp" />
+
+			<jsp:include page="bEvaluations.jsp" />
 			</div>
 	</div>
 </body>
