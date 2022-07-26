@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Profile</title>
-<link rel="stylesheet" href="/miemo/css/common.css">
-<link rel="stylesheet" href="/miemo/css/profile.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/profile.css">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
 				<td>${users.year}</td>
 			</tr>
 			</table>
-			<h2>パスワード変更</h2>
+			<h2>*パスワード変更*</h2>
 			<table  class = profile>
 			<tr>
 				<th>新しいパスワード</th>

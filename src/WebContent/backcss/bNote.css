@@ -158,16 +158,16 @@
   text-align    : center;      /* 文字位置   */
   cursor        : pointer;     /* カーソル   */
   padding       : 12px 15px;   /* 余白       */
-  background    : #ffbf00;     /* 背景色     */
-  color         : #ffffff;     /* 文字色     */
+  background    : #F4AB3F;     /* 背景色     */
+  color         : rgb(0, 0, 0);   /* 文字色     */
   line-height   : 0.5em;         /* 1行の高さ  */
   transition    : .3s;         /* なめらか変化 */
   box-shadow    : 1px 1px #666666;  /* 影の設定 */
-  border        : 2px solid #ffbf00;    /* 枠の指定 */
+  border        : 2px solid #F4AB3F;    /* 枠の指定 */
   vertical-align:middle;
 }
 .nDelete:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
-  color         : #ffbf00;     /* 背景色     */
-  background    : #ffffff;     /* 文字色     */
+  color         : #F4AB3F;     /* 背景色     */
+  background    : rgb(0, 0, 0);     /* 文字色     */
 }

@@ -4,8 +4,15 @@ body {
     margin: auto;
 }
 
-/*テーブルを中央へ*/
-.regist_fe_tb {
-
-
+.check {
+	display: none;
 }
+
+.stamp_img {
+	width: 100px;
+}
+
+ .check:checked  + label img {
+      border: 3px solid black;
+      border-radius: 50px;
+    }

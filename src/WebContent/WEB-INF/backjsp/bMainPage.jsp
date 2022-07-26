@@ -70,7 +70,7 @@
 
 		<!-- ここから内容 -->
 			<div class="tab_content" id="all_content">
-				<%-- <jsp:include page="bStampsGraph.jsp" /> --%>
+				 <jsp:include page="bStampsGraph.jsp" />
 			</div>
 
 			<div class="tab_content" id="aaa_content">
@@ -78,11 +78,11 @@
 			</div>
 
 			<div class="tab_content" id="bbb_content">
-				<%-- <jsp:include page="bMessages.jsp" /> --%>
+				 <jsp:include page="bMessages.jsp" />
 			</div>
 
 			<div class="tab_content" id="ccc_content">
-				<%-- <jsp:include page="bNote.jsp" /> --%>
+				 <jsp:include page="bNote.jsp" />
 			</div>
 
 			<div class="tab_content" id="ddd_content">
