@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
+main {
+    margin: 0px auto;
+    text-align: center;
+    max-width: 1000px;
+}
+
  html{
+ margin: 0 0 0 0;
+ padding:0 0 0 0;
  background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px),
  repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
   }
@@ -10,6 +18,21 @@ body{
 	padding: 0px;
 }
 
+span{
+	font-family: Arial Black;
+	color: #ffff;
+
+}
+
+#span1{
+position: absolute;
+left: 0;
+height: 2px;
+width: 28px;
+border-radius: 2px;
+
+
+}
 /* ハンバーガーメニュー*/
 .cp_menu ol, ul {
 	list-style: none;
@@ -21,15 +44,20 @@ body{
 	z-index: 10;
 }
 
+
+/* ハンバーガーメニューの見た目反映 */
 .cp_offcm01 {
 	position: fixed;
 	display: inline-block;
 }
+
+
 /* menu */
 .cp_offcm01 .cp_menu { /* ハンバーガー背景 */
+margin-right: 50;
 	position: fixed;
 	top: 0;
-	right: 100vw;
+	right: 100vw; /* ここが左空く原因?*/
 	width: 250px;
 	height: 100%;
 	cursor: pointer;
@@ -60,21 +88,10 @@ body{
 	border-bottom: 2px solid #ffffff;
 }
 
-.cp_offcm01 .cp_menu li input[type=submit] {
-	width: 100%;
-	height: 85px;
-	border: none;
-	border-bottom: 2px solid #ffffff;
-	background-color: transparent;
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 20px;
-	text-align: left;
-	padding-left: 30px;
-	cursor: pointer;
-}
 
-.cp_offcm01 #cp_toggle01 {
+.cp_offcm01 #cp_toggle01 { /* チェックボックスをハンバーガーメニューにする */
+	margin: 0px;
+	padding: 0px;
 	position: absolute;
 	display: none;
 	opacity: 0;
@@ -82,7 +99,7 @@ body{
 
 .cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
 	-webkit-transform: translateX(18vw);
-	transform: translateX(18vw);
+	transform: translateX(13vw); 									/* /////////////////////動く幅 */
 }
 /* menu toggle */
 .cp_offcm01 #cp_toggle01 ~ label {
@@ -113,50 +130,9 @@ body{
 
 
 
-/* マイページの部分に色を付ける */
-.mypage {
-	background: #EBD61A;
-}
-
-/* コンテキストメニューの設定 */
-.popup {
-	width: 150px;
-	height: 60px;
-	background: #7DB6BB;
-	box-sizing: border-box;
-	display: none;
-	position: absolute;
-	top: 35px;
-	left: 115px;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-}
-
-.popup button {
-	border: inherit;
-	background-color: inherit;
-	cursor: pointer;
-	width: 100%;
-	height: 100%;
-	font-size: inherit;
-	color: inherit;
-	font-weight: inherit;
-}
-
-.context_menu {
-	width: 150px;
-	font: 25px sans-serif;
-	font-weight: bold;
-	position: relative;
-	color: white;
-	list-style: none;
-	text-align: center;
-	top: 10px
-}
 
 #logout{
-	background-color: yellow;
+	background-color: #7d91ba;
 }
 
 
