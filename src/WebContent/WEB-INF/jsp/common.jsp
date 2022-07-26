@@ -14,7 +14,7 @@
 		<div class="cp_menu">
 				<ul>
 					<li><a
-						href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=hr">ホーム</a></li>
+						href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=home" >ホーム</a></li>
 					<li><a
 						href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=regist_feeling">きもち記録</a></li>
 					<li><a
