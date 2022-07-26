@@ -21,7 +21,7 @@
 			<input type="submit" name="bt_name" value="送信"  class="button">
 	</form>
 	<!-- エラーメッセージの表示欄 -->
-	<div id="errMsg">${errMsg}</div>
+	<br><div class = "alert" id="errMsg">${errMsg}</div>
 
 </body>
 </html>
