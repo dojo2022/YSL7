@@ -2,6 +2,16 @@
 
 @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
 
+h1{
+	/*text-align: center;*/
+	margin-left: 280px;
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+  	color: #F19E6F;/*文字色*/
+  	font-size:  50px;
+  	background: transparent;/*背景透明に*/
+ 	border-left: solid 5px #EBD61A;/*左線*/
+}
+
 *,
 *:before,
 *:after {
@@ -15,12 +25,15 @@ html {
   font-size: 62.5%;
 }
 
-/* 背景用*/
-body {
-  padding: 268px;
-  margin: auto;
+.home_table {
+	margin: auto;
 }
 
+/* 背景用*/
+body {
+  margin: auto;
+}
+/* ボタンのデザイン */
 .btn,
 a.btn,
 button.btn {
@@ -201,3 +214,12 @@ a.btn-tag--ver:hover {
   border-bottom: 2px solid #ffc4c4;
   background: #fa479c;
 }
+
+/* ここまで */
+
+.home_logo {
+	width: 300px;
+}
+
+
+
