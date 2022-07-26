@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 		<head>
@@ -43,9 +44,9 @@
 	</tr>
 
 	</table>
-
-	<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=hr" class="btn btn-tag btn-tag--ver"><i class="fas fa-star"></i>人事部画面へ</a>
-
+	<c:if test="${user.number.equals('L10003') || user.number.equals('L10004') }">
+		<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=hr" class="btn btn-tag btn-tag--ver"><i class="fas fa-star"></i>人事部画面へ</a>
+    </c:if>
 
 
 </body>

@@ -64,7 +64,7 @@ public class RegistFeelingAction {
 
 
 		if(result == false) {
-			request.setAttribute("errMsg", "※登録失敗");
+			request.setAttribute("errMsg", "※きもち登録に失敗しました");
 			return "WEB-INF/jsp/regist_feeling.jsp";
 		}else {
 			request.setAttribute("errMsg", "※きもちを登録しました");

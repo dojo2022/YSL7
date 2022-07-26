@@ -29,7 +29,30 @@ border-collapse: collapse; /* 隣接するセルの罫線を重ねて表示す�
 font-family: "メイリオ", sans-serif;/* フォントのスタイルを指定する */
 }
 
+/* 登録ボタン */
 
+.regist_btn {
+  margin-left: 700px; /*これで無理やり真ん中よせしてるので各ページいい塩梅でpx設定してください*/
+  background: #ffd3a8;
+  color:#FFF;
+  /*
+  width:110px;
+  height:50px;
+  border-radius:30%;
+  */
+  width: 110px;
+  height: 50px;
+  border-radius: 5%;
+  font-size:20px;
+  box-shadow:0px 0px 0px 5px #ffd3a8;
+  border: dashed 1px #FFF;
+}
+
+
+.regist_btn:hover {
+  background: #ffab57;
+  box-shadow: 0px 0px 0px 5px #ffab57;
+}
 
 
 
