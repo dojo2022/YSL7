@@ -69,8 +69,8 @@ public class BControllerServlet extends HttpServlet {
 				}
 
 		//メモの新規作成画面
-				else if(pageId.equals("BN01") && button.equals("to_regist_note")) {
-					url = "/WEB-INF/backjsp/registNote.jsp";
+				else if(pageId.equals("BP01") && button.equals("to_regist_note")) {
+					url = "/WEB-INF/backjsp/bRegistNote.jsp";
 				}
 
 		// 新規社員登録画面に移動する
@@ -88,6 +88,8 @@ public class BControllerServlet extends HttpServlet {
 					url = lAction.selectAllList();;
 					}
 		//新規メモ作成画面から個人ページに戻るのもヒストリーバック
+
+		//個人情報編集画面から個人ページに戻る
 
 		//社員用画面に戻る
 				else if(pageId.equals("BL01") && button.equals("to_front")) {

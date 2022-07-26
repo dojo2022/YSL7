@@ -6,12 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title>きもち履歴</title>
-<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+
 <link rel="stylesheet" href="/miemo/css/history_feeling.css">
+<link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 </head>
-<h1>きもち履歴</h1>
+
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
+<h1>きもち履歴</h1>
 <table class="stamps">
 <tr>
 	<!-- テーブルの見出し -->
