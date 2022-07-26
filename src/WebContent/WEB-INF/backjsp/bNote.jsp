@@ -19,7 +19,7 @@
 	<table border="1" id="foo-table" class="table table-bordered table_blue_stripe">
 	<thead>
 		<tr>
-			<td><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=to_regist_user"><input type="button" value="新規作成"></a></td>
+			<td><a href="/miemo/BControllerServlet?page_id = BP01&bt_name=to_regist_note"><input type="button" value="新規作成" class="nRegistButton"></a></td>
 		</tr>
 		<tr class="n-tablehead">
 			<th>日付</th>
