@@ -11,6 +11,7 @@
 </head>
 <body>
 <form action="/miemo/BControllerServlet" method="POST">
+	<div class=a>
 	<table class=profile>
 		<tr>
 			<td rowspan="2" class=name>${profile.name}</td>
@@ -49,6 +50,7 @@
 			</td>
 		</tr>
 	</table>
+	</div>
 </form>
 
 	<div class="tabs">

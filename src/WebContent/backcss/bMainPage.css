@@ -9,12 +9,15 @@ html{
 	border: 2px #F18E3D solid;  枠線
 }
  */
+.a{
+	display: block;
+}
 
 .profile{
-	margin: 0 auto 15px auto;
+	margin: 10px auto 15px auto;
 	border: 2px #F18E3D solid;  /*枠線*/
-	padding: 5px;
-	background-color: #fff;  /* プロフィールの背景 */
+	padding: 10px;
+	/* background-color: #fff;  プロフィールの背景 */
 	height: 50%;				/* 高さ？ */
 	width: 60%;					/* 幅 */
 }
@@ -86,6 +89,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	font-weight: bold;
 	transition: all 0.2s ease;
+	margin: 0 0 0 0;
 }
 
 /* きもちスタンプ */
@@ -103,6 +107,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	font-weight: bold;
 	transition: all 0.2s ease;
+	margin: 0 0 0 0;
 }
 
 /* メッセージ */
@@ -120,6 +125,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	font-weight: bold;
 	transition: all 0.2s ease;
+	margin: 0 0 0 0;
 }
 
 /* メモ */
@@ -137,6 +143,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	font-weight: bold;
 	transition: all 0.2s ease;
+	margin: 0 0 0 0;
 }
 
 /* 評価 */
@@ -154,6 +161,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	font-weight: bold;
 	transition: all 0.2s ease;
+	margin: 0 0 0 0;
 }
 .tab_item1:hover {
 	opacity: 0.75;
@@ -185,6 +193,8 @@ input[name="tab_item"] {
 	padding: 40px 40px 0;
 	clear: both;
 	overflow: hidden;
+	background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+	background-color: #fff3df;
 }
 
 /*選択されているタブのコンテンツのみを表示*/
