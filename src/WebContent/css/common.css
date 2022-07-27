@@ -41,7 +41,7 @@ margin-right: 50;
 	position: fixed;
 	top: 0;
 	right: 100vw; /* ここが左空く原因?*/
-	width: 250px;
+	width: 238px;
 	height: 100%;
 	cursor: pointer;
 	-webkit-transition: 0.53s transform;

@@ -19,7 +19,9 @@
 		</tr>
 		<tr>
 			<td><input type="text" name="title" class="title"></td>
-			<td><input type="hidden" name="emp_id" value="${empId}"></td>
+			<td><input type="hidden" name="emp_id" value="${empId}">
+				<input type="hidden" name="empId" value="${empId}">
+			</td>
 		</tr>
 		<tr><td class="ErrorMsg">${errMsgTitle}</td></tr>
 		<tr>
