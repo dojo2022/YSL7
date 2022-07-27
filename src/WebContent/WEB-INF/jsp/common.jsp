@@ -11,7 +11,7 @@
 <div class="cp_cont">
 	<div class="cp_offcm01">
 		<input type="checkbox" id="cp_toggle01"><label for="cp_toggle01">
-		<div><p id="menuep">menu</p></div>
+		<div><img src="/miemo/img/sidemenu_icon.png" style="display: block; margin: auto;" width="60px" height="60px"></div>
 		</label>
 		<div class="cp_menu">
 				<ul>
