@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/miemo/css/common.css">
+<link rel="stylesheet" href="/miemo/css/common2.css">
 
 </head>
 <body>

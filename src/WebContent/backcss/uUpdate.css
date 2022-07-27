@@ -3,7 +3,7 @@
 html{
 	background-color: #fff3df;
 	background-image: repeating-linear-gradient(to bottom, #fbf8ef, #fbf8ef 3px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#fbf8ef, #fbf8ef 3px, transparent 0, transparent 64px);
-
+	max-width:1000px;
 }
 
 body {
