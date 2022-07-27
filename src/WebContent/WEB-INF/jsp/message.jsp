@@ -8,6 +8,7 @@
 <title>Message</title>
 <link rel="stylesheet" type="text/css" href="/miemo/css/message.css">
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
 </head>
 <body>
 <div id="body1">

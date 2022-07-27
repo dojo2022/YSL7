@@ -7,8 +7,8 @@
 <title>Miemo|新規メモ登録</title>
 <link rel="stylesheet" href="/miemo/backcss/bStyle.css">
 <link rel="stylesheet" href="/miemo/backcss/bRegistNote.css">
-<script type="text/javascript" src="/miemo/js/bRegistNote.js"></script>
-<script type="text/javascript" src="/miemo/js/backCommon.js"></script>
+<script type="text/javascript" src="/miemo/backjs/bRegistNote.js"></script>
+<script type="text/javascript" src="/miemo/backjs/backCommon.js"></script>
 </head>
 <body>
 <h2>${user.name}さんの新規メモ</h2>
@@ -18,7 +18,7 @@
 			<th>タイトル</th>
 		</tr>
 		<tr>
-			<td><input type="text" name="title" class="title" value="${pram.title}"></td>
+			<td><input type="text" name="title" class="title"></td>
 			<td><input type="hidden" name="empId" value="${empId}"></td>
 		</tr>
 		<tr><td class="ErrorMsg">${errMsgTitle}</td></tr>
@@ -26,7 +26,7 @@
 			<th>内容</th>
 		</tr>
 		<tr>
-			<td><textarea name="content" value="${pram.content}"></textarea></td>
+			<td><textarea name="content" rows="4" cols="60"></textarea></td>
 			<td><input type="hidden" name="page_id" value="BN01">
 				<input type="hidden" name="uId" value="${user.userId}">
 			</td>

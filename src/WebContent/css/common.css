@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
-main {
-    margin: 0px auto;
-    text-align: center;
-    max-width: 1000px;
-}
+
 
  html{
  margin: 0 0 0 0;
@@ -16,25 +12,14 @@ main {
 body{
 	margin: 0px;
 	padding: 0px;
+	background-color: transparent;
 }
 
-span{  /* ハンバーガーの書体 */
+div .span{  /* ハンバーガーの書体 */
 	font-family: Arial Black;
 }
 
-hr{
-	font-size: 5;
-}
 
-#span1{ /* メニューの文字 */
-position: absolute;
-left: 0;
-height: 2px;
-width: 28px;
-border-radius: 2px;
-
-
-}
 /* ハンバーガーメニュー*/
 .cp_menu ol, ul {
 	list-style: none;
@@ -113,7 +98,7 @@ margin-right: 50;
 	-webkit-transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
 	transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
 	text-align: center;
-	color: #333333;
+	color: #ffff;
 	background-image: url(../img/sidemenu_icon.png);
 	background-repeat: no-repeat;
 	width: 55px;

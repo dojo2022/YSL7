@@ -7,6 +7,10 @@
 
  <link rel = "stylesheet" href = "/miemo/css/evaluation.css">
  <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
+
+
+
 
 <meta charset="UTF-8">
 <title>評価シート画面</title>
@@ -38,21 +42,22 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
+<h1>評価シート</h1>
 <main>
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FE02">
 
-	<h1>評価シート</h1>
+
 
 	<!-- 評価先選択画面に戻るボタン -->
 	<div class="button_area">
 		<a href="/miemo/FrontControllerServlet?page_id=FE02&bt_name=evaluation">評価相手選択画面に戻る</a>
-	</div>
+	</div><br>
 	<!-- 評価相手の名前を表示 -->
 		<input type="hidden" name="evaluate_name" value="${param.user_id }">
-		<p>To:${param.evaluate_name}</p>
+		<p>To:${param.evaluate_name}</p><br>
 
 	<!-- ★評価 -->
 	<div class="stars">
