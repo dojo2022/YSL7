@@ -5,7 +5,7 @@
 <html>
 		<head>
 	<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>ホーム</title>
 		<link rel="stylesheet" href="/miemo/css/common.css">
 		<link rel = "stylesheet" href = "/miemo/css/home.css">
 		 <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
