@@ -33,7 +33,12 @@
 				<tr class="n-tabledata">
 					<td>${e.date}</td>
 					<td>${e.name}</td>
-					<td>${e.title}<input type="hidden" name="noteId" value="${e.noteId}"><input type="hidden" name="page_id" value="BP01"><input type="hidden" name="emp_id" value="${empId}"></td>
+					<td>${e.title}
+
+						<input type="text" name="noteId" value="${e.noteId}">
+						<input type="hidden" name="page_id" value="BP01">
+						<input type="text" name="emp_id" value="${empId}">
+					</td>
 					<td class="tw">
 							<div class="content-wrap animated">
 							  <div class="content-txt">

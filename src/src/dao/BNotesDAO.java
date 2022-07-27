@@ -49,6 +49,7 @@ public class BNotesDAO {
 			notes.setTitle(rs.getString("title"));
 			notes.setContent(rs.getString("content"));
 			notes.setNoteId(rs.getInt("note_id"));
+
 			noteList.add(notes);
 		}
 

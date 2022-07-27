@@ -30,7 +30,7 @@
 <body>
 <%@ include file="common.jsp" %>
 <div  id="main_theme">
-<h1>評価シート</h1>
+<h1 id="midashi">評価シート</h1>
 	<table border="1" id="foo-table" class="table table-bordered">
 		<thead>
 			<tr>

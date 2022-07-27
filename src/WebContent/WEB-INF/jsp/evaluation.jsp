@@ -149,7 +149,7 @@
 	<br>
 	<!-- 登録ボタン -->
 	<div>
-		<input type="submit" name="bt_name" value="登録" class = regist_btn >
+		<input type="submit" name="bt_name" value="登録" class = regist_btn  onclick="return confirm('この評価でよろしいですか')">
 	</div><br>
 
 </form>

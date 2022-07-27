@@ -22,6 +22,10 @@ public class BNotesService  {
 
 			//daoのinsertNotesメソッドを呼び出す（引数に上記でもらったuId,empId,title,contentを渡す）
 			ans=udao.insertNotes(uId,empId, title, content);
+			System.out.println(ans+"あああああんす");
+			if(ans==0) {
+				throw new SQLException("登録できませんでした");
+			}
 
 		}
 
