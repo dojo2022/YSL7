@@ -184,23 +184,17 @@ public class BUserAction {
 
 
 	//uDelete
-		public String uDelete() throws UnsupportedEncodingException  {
+		public int uDelete() throws UnsupportedEncodingException  {
 			request.setCharacterEncoding("UTF-8");
 			int empId=Integer.parseInt(request.getParameter("empId"));
+			System.out.println(empId);
 			int ans=0;
 
 			//入力値に問題が無ければ指定のserviceを呼び出す
 			BUserService BUserService = new BUserService();
 			ans = BUserService.uDelete(empId);
-			//戻ってきた値が0だったら
-			if(ans == 0) {
-				request.setAttribute("errMsg", "削除できませんでした");
-				return "/WEB-INF/backjsp/bUUpdate.jsp";
-			//ちゃんと入っていたら
-			}else {
-				//servletに次のＪＳＰのパスを送る
-				return "/WEB-INF/backjsp/bList.jsp";
-			}
+			System.out.println(ans);
+			return ans;
 		}
 
 
