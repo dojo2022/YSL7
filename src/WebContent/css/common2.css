@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+
+ html{
+ margin: 0 0 0 0;
+ padding:0 0 0 0;
+ background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px),
+ repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+  }
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+}
+
+
+/* ハンバーガーメニュー*/
+.cp_menu ol, ul {
+	list-style: none;
+}
+
+.cp_cont {
+	height: 65vh;
+	position: absolute;
+	z-index: 10;
+}
+
+
+/* ハンバーガーメニューの見た目反映 */
+.cp_offcm01 {
+	position: fixed;
+	display: inline-block;
+}
+
+
+/* menu */
+.cp_offcm01 .cp_menu { /* ハンバーガー背景 */
+margin-right: -15px;
+	position: fixed;
+	top: -19px;
+	right: 100vw; /* ここが左空く原因?*/
+	width: 246px;
+	height: 100%;
+	cursor: pointer;
+	-webkit-transition: 0.53s transform;
+	transition: 0.53s transform;
+	-webkit-transition-timing-function: cubic-bezier(.38, .52, .23, .99);
+	transition-timing-function: cubic-bezier(.38, .52, .23, .99);
+	background-color: #7DB6BB;
+}
+
+.cp_offcm01 .cp_menu ul {
+	margin: 50;
+	padding: 0;
+}
+
+.cp_offcm01 .cp_menu li {
+	list-style: none;
+}
+
+.cp_offcm01 .cp_menu li a { /* ハンバーガー文字 */
+	display: block;
+	margin-left:40px;
+	padding: 20px; /* 項目の縦幅 */
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 20px;
+	border-bottom: 2px solid #ffffff;
+}
+
+
+.cp_offcm01 #cp_toggle01 { /* チェックボックスをハンバーガーメニューにする */
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+.cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
+	-webkit-transform: translateX(18vw);
+	transform: translateX(13vw); 									/* /////////////////////動く幅 */
+}
+/* menu toggle */
+.cp_offcm01 #cp_toggle01 ~ label {
+	display: block;
+	padding: 0.5em;
+	cursor: pointer;
+	-webkit-transition: 0.5s transform;
+	transition: 0.5s transform;
+	-webkit-transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
+	transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
+	text-align: center;
+	color: #ffff;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	background-position: -2px 8px;
+	background-color: #EFCF24;
+	background-size: 109%;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+	margin-top: 20px
+
+}
+
+.cp_offcm01 #cp_toggle01:checked ~ label {
+	-webkit-transform: translateX(250px);
+	transform: translateX(250px);
+}
+
+#logout{
+	background-color: #7DB6BB;
+}
+
+
+
