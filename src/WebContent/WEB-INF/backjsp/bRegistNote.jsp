@@ -12,7 +12,7 @@
 </head>
 <body>
 <h2>${user.name}さんの新規メモ　　</h2>
-<form method="POST" action="/miemo/BControllerServlet"  onsubmit="check()">
+<form method="POST" action="/miemo/BControllerServlet"  onsubmit="return check()">
 	<table class="registNote">
 		<tr>
 			<th>タイトル</th>
