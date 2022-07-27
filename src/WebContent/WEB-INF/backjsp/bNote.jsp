@@ -36,7 +36,7 @@
 					<td>${e.name}</td>
 					<td>${e.title}
 
-						<input type="text" name="noteId" value="${e.noteId}">
+						<input type="hidden" name="noteId" value="${e.noteId}">
 						<input type="hidden" name="page_id" value="BP01">
 						<input type="hidden" name="emp_id" value="${empId}">
 					</td>
