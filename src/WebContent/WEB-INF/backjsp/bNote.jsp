@@ -15,9 +15,9 @@
 	<title>Miemo|</title>
 </head>
 <body>
-<a href="/miemo/BControllerServlet?page_id=BP01&bt_name=to_regist_note" ><input type=button value="新規作成" class="nRegistButton"></a>
+<a href="/miemo/BControllerServlet?page_id=BP01&bt_name=to_regist_note&emp_id=${empId}" ><input type=button value="新規作成" class="nRegistButton"></a>
 	<c:if test="${notesList.size()!=0}">
-		<form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
+
 		<table border="1" id="foo-table" class="table table-bordered table_blue_stripe">
 		<thead>
 			<tr class="n-tablehead">
@@ -29,15 +29,16 @@
 			</tr>
 			</thead>
 			<tbody>
-			<c:forEach var="e" items="${notesList}" varStatus="status">
+				<c:forEach var="e" items="${notesList}" varStatus="status">
 				<tr class="n-tabledata">
+				<form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
 					<td>${e.date}</td>
 					<td>${e.name}</td>
 					<td>${e.title}
 
 						<input type="text" name="noteId" value="${e.noteId}">
 						<input type="hidden" name="page_id" value="BP01">
-						<input type="text" name="emp_id" value="${empId}">
+						<input type="hidden" name="emp_id" value="${empId}">
 					</td>
 					<td class="tw">
 							<div class="content-wrap animated">
@@ -49,11 +50,12 @@
 							</div>
 					</td>
 					<td><input type="submit" name="bt_name" value="削除" class="nDelete"></td>
+				</form>
 				</tr>
 			</c:forEach>
 			</tbody>
 		</table>
-		</form>
+
 	</c:if>
 	<c:if test="${notesList.size()==0}">
 		<h3>まだメモがありません。メモを登録してみましょう！</h3>
