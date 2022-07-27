@@ -54,6 +54,12 @@ public class BNotesService  {
 			//daoのdeleteメソッドを呼び出す（引数に上記でもらったnoteIdを渡す）
 			ans=ndao.deleteNotes(noteId);
 
+			if(ans == 0) {
+				throw new SQLException("削除できませんでした");
+			}
+
+
+
 		}
 		catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
