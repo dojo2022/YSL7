@@ -5,36 +5,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/miemo/backcss/bMainPage.css">
-</head>
-<link rel="stylesheet" href="/miemo/backcss/bStyle.css">
+<title>社員情報変更</title>
 <link rel="stylesheet" href="/miemo/backcss/uUpdate.css">
 <script type="text/javascript" src="/miemo/backjs/uUpdate.js"></script>
-<script type="text/javascript" src="/miemo/js/backCommon.js"></script>
+</head>
 <body>
 
  <% session.setAttribute("profile",session.getAttribute("profile")); %>
 
-	<h1>新規社員登録</h1>
+	<h1>社員情報編集</h1>
 
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
 	<form method="POST" action="/miemo/TestServlet">
 	<input type="hidden" name="page_id" value="BR02">
+	<input type="hidden" name="empId" value="${empId}">
+	<input type="submit" name="bt_name" value="退職" class="retire">
 		<table>
 			<tr>
 				<td>社員番号</td>
-				<td><input type="text" name="number" value="${profile.number}"><br> <span id="error_number"></span></td>
+				<td><input type="text" name="number" value="${profile.number}" class="inText"><br> <span id="error_number"></span></td>
 
 			</tr>
 			<tr>
 				<td>氏名</td>
-				<td><input type="text" name="name" value="${profile.name}"><br> <span id="error_name"></span></td>
+				<td><input type="text" name="name" value="${profile.name}" class="inText"><br> <span id="error_name"></span></td>
 			</tr>
 			<tr>
 				<td>性別</td>
 				<td>
-					<select name="gender">
+					<select name="gender"  class="inText">
 						<option value="" id="uUpdateGender">性別を選択${profile.gender}</option>
 					    <option value="0" <c:if test='${profile.gender==0}'> selected </c:if> >男性</option>
 					    <option value="1" <c:if test='${profile.gender==1}'> selected </c:if> >女性</option>
@@ -45,7 +44,7 @@
 			<tr>
 				<td>事業部</td>
 				<td>
-					<select name="dep_id">
+					<select name="dep_id" class="inText">
 						<option value="">事業部を選択</option>
 						<c:forEach var="e" items="${one}" varStatus="status">
 							<option value="${e}">${e}</option>
@@ -64,7 +63,7 @@
 			<tr>
 				<td>役職1</td>
 				<td>
-					<select name="post1">
+					<select name="post1" class="inText">
 						<option value="">役職1を選択</option>
 					    <option value="1"><c:if test="${profile.postId==1}selected"></c:if>契約社員</option>
 					    <option value="2"><c:if test="${profile.postId==2}selected"></c:if>新人</option>
@@ -83,7 +82,7 @@
 			<tr>
 				<td>役職2</td>
 				<td>
-					<select name="post2">
+					<select name="post2" class="inText">
 						<option value="">役職2を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -95,14 +94,14 @@
 					    <option value="9">顧問・嘱託</option>
 					    <option value="10">執行役員</option>
 					    <option value="11">取締役</option>
-					  </select><br>
+					 </select><br>
 					  <span id="error_post2"></span>
 				<td><!-- プルダウン -->
 			</tr>
 			<tr>
 				<td>役職3</td>
 				<td>
-					<select name="post3">
+					<select name="post3" class="inText">
 						<option value="">役職3を選択</option>
 					    <option value="1">契約社員</option>
 					    <option value="2">新人</option>
@@ -121,7 +120,7 @@
 			<tr>
 				<td>入社年度</td>
 				<td>
-					<select name="year">
+					<select name="year" class="inText">
 						<option value="${profile.year}">${profile.year}</option>
 					    <option value="1991"><c:if test="${profile.postId==1991}selected"></c:if>1991</option>
 					    <option value="1992"><c:if test="${profile.postId==1992}selected"></c:if>1992</option>
@@ -159,9 +158,12 @@
 					<span id="error_year"></span>
 				<td><!-- プルダウン -->
 			</tr>
+			<tr>
+				<td><input type="submit" name="bt_name" value="保存" class="submit"></td>
+			</tr>
 		</table>
 
-		<input type="submit" name="button_id" value="保存">
+
 	</form>
 	<p>${errMsg}</p>
 <!-- 		<a href="/miemo/servlet/BControllerServlet/?page_id=BR02&bt_name=戻る">戻る</a> -->
