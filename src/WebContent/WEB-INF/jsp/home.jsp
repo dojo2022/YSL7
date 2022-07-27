@@ -21,26 +21,26 @@
 	<table class = home_table >
 		<tr>
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=regist_feeling" class="btn1"><i class="fas fa-star"></i> きもち記録 </a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=regist_feeling" class="btn1"><i class="fas fa-star"></i>きもち記録</a>
 			</td>
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=history_feeling" class="btn2"><i class="fas fa-star"></i>  きもち履歴   </a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=history_feeling" class="btn2"><i class="fas fa-star"></i>きもち履歴</a>
 			</td>
 
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=graph_feeling" class="btn3"><i class="fas fa-star"></i> きもちグラフ</a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=graph_feeling" class="btn3"><i class="fas fa-star"></i>きもちグラフ</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=evaluation" class="btn4"><i class="fas fa-star"></i>  評価シート  </a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=evaluation" class="btn4"><i class="fas fa-star"></i>評価シート</a>
 			</td>
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=profile" class="btn5"><i class="fas fa-star"></i> プロフィール</a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=profile" class="btn5"><i class="fas fa-star"></i>プロフィール</a>
 			</td>
 			<td class="home_td">
-				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=message" class="btn6"><i class="fas fa-star"></i>  メッセージ </a>
+				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=message" class="btn6"><i class="fas fa-star"></i>メッセージ</a>
 			</td>
 		</tr>
 

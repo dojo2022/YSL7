@@ -8,6 +8,7 @@
   	font-size:  50px;
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
+ 	 font-weight: bold;
 }
 
 #err_m {
@@ -16,7 +17,7 @@
 	background: transparent;
 }
 
-#home_tb {
+#home_tb { /* ボタンをそろえる */
 	margin-right : 100px;
 }
 
@@ -42,7 +43,7 @@ html {
   font-size:20px;
   box-shadow:0px 0px 0px 5px #FFD3A8;
   border: dashed 1px #FFF;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 70px 50px 50px;
 }
 .btn2{
   background: #EC8AB6;
@@ -51,7 +52,7 @@ html {
   font-size:20px;
   box-shadow:0px 0px 0px 5px #EC8AB6;
   border: dashed 1px #FFF;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 70px 50px 50px;
 }
 .btn3 {
   background: #F7EE9D;
@@ -69,7 +70,7 @@ html {
   font-size:20px;
   box-shadow:0px 0px 0px 5px #F1C1AF;
   border: dashed 1px #FFF;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 70px 50px 50px;
 }
 .btn5{
   background: #AECED0;
@@ -87,7 +88,7 @@ html {
   font-size:20px;
   box-shadow:0px 0px 0px 5px #B8B8DC;
   border: dashed 1px #FFF;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 70px 50px 50px;
 }
 .btn1:hover {
   background: #FFAB57;
