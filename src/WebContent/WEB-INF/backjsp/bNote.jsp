@@ -15,13 +15,11 @@
 	<title>Miemo|</title>
 </head>
 <body>
+<a href="/miemo/BControllerServlet?page_id=BP01&bt_name=to_regist_note" ><input type=button value="新規作成" class="nRegistButton"></a>
 	<c:if test="${notesList.size()!=0}">
 		<form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
 		<table border="1" id="foo-table" class="table table-bordered table_blue_stripe">
 		<thead>
-			<tr>
-				<td><a href="/miemo/BControllerServlet?page_id=BP01&bt_name=to_regist_note" ><input type=button value="新規作成" class="nRegistButton"></a></td>
-			</tr>
 			<tr class="n-tablehead">
 				<th>日付</th>
 				<th>作成者</th>
