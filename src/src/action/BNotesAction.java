@@ -18,7 +18,7 @@ public class BNotesAction {
 			request.setCharacterEncoding("UTF-8");
 
 			int uId = Integer.parseInt(request.getParameter("uId"));
-			int empId = Integer.parseInt(request.getParameter("empId"));
+			int empId = Integer.parseInt(request.getParameter("emp_id"));
 			String title=request.getParameter("title");
 			String content=request.getParameter("content");
 			int ans = 0;

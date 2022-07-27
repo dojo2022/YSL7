@@ -15,7 +15,7 @@
 	<!-- Servletへ遷移させる(PassWord変更) -->
 
 	<form method="POST" action="/miemo/FrontControllerServlet">
-		<h1>プロフィール</h1>
+		<h1 id="profiletitle">プロフィール</h1>
 		<input type="hidden" name="page_id" value="FP01">
 		<input type="hidden" name="user_id" value="${user.userId }">
 		<div>

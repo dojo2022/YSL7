@@ -67,7 +67,7 @@ public class RegistFeelingAction {
 			request.setAttribute("errMsg", "※きもち登録に失敗しました");
 			return "WEB-INF/jsp/regist_feeling.jsp";
 		}else {
-			request.setAttribute("errMsg", "※きもちを登録しました");
+			request.setAttribute("errMsg", "きもちを登録しました");
 			return "WEB-INF/jsp/home.jsp";
 		}
 	}
