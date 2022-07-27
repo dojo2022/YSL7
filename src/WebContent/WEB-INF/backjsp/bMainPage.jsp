@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>個人ページ | miemo</title>
 <link rel="stylesheet" href="/miemo/backcss/bMainPage.css">
 
 </head>

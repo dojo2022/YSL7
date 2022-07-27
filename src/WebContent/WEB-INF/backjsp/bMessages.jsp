@@ -14,10 +14,10 @@
 </head>
 <body>
 <c:if test="${messageList.size()!=0}">
-<table border="1" class="table_blue_stripe" >
+<table class="messageTable" >
 	<thead>
 			<tr>
-				<th>日付</th>
+				<th class="date">日付</th>
 				<th>内容</th>
 			</tr>
 	</thead>
