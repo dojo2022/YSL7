@@ -40,7 +40,7 @@
 </table>
 </c:if>
 <c:if test="${messageList.size()==0}">
-	<h3>評価はまだされていないようです。</h3>
+	<h3>メッセージはまだ届いていないようです。</h3>
 </c:if>
 </body>
 </html>
