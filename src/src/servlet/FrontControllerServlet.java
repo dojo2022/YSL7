@@ -97,6 +97,8 @@ public class FrontControllerServlet extends HttpServlet {
 			}
 		}else {
 			//単にlogin画面に遷移させるだけのメソッド
+			//セッションがあった場合はセッションを破棄する
+			session.invalidate();
 			path="/WEB-INF/jsp/login.jsp";
 		}
 

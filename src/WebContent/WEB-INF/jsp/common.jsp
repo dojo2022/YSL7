@@ -11,7 +11,7 @@
 <div class="cp_cont">
 	<div class="cp_offcm01">
 		<input type="checkbox" id="cp_toggle01"><label for="cp_toggle01">
-		<div><p id="menuep">menue</p></div>
+		<div><p id="menuep">menu</p></div>
 		</label>
 		<div class="cp_menu">
 				<ul>
@@ -32,7 +32,7 @@
 					<li><a
 						href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=message">メッセージ</a></li>
 					<li id="logout"><a
-						href="http://localhost:8080/miemo/FrontControllerServlet">ログアウト</a></li>
+						href="http://localhost:8080/miemo/FrontControllerServlet" onclick="return confirm('ログアウトしてもよろしいですか')">ログアウト</a></li>
 					<li class="sidemenu_calendar_item"></li>
 				</ul>
 			</div>

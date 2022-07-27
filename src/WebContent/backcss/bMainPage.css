@@ -67,9 +67,8 @@ a:link, a:visited, a:hover, a:active {
 /*タブ切り替え全体のスタイル*/
 .tabs {
 	margin-top: 50px;
-	padding-bottom: 40px;
-	background-color: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	/*background-color: #fff;*/
+ 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	margin: 0 auto;
 }
 
@@ -79,11 +78,11 @@ a:link, a:visited, a:hover, a:active {
 	width: calc(100%/ 5);
 	height: 50px;
 	border-bottom: 3px solid #5674B5;
-	background-color: #fff8ea;
+	background-color: #fffacd;
 	line-height: 50px;
 	font-size: 16px;
 	text-align: center;
-	color: #565656;
+	color: #8D2828;
 	display: block;
 	float: left;
 	text-align: center;
@@ -97,11 +96,11 @@ a:link, a:visited, a:hover, a:active {
 	width: calc(100%/ 5);
 	height: 50px;
 	border-bottom: 3px solid #92C9FE;
-	background-color: #fff8ea;
+	background-color: #fffacd;
 	line-height: 50px;
 	font-size: 16px;
 	text-align: center;
-	color: #565656;
+	color: #8D2828;;
 	display: block;
 	float: left;
 	text-align: center;
@@ -115,11 +114,11 @@ a:link, a:visited, a:hover, a:active {
 	width: calc(100%/ 5);
 	height: 50px;
 	border-bottom: 3px solid #C8EA69;
-	background-color: #fff8ea;
+	background-color: #fffacd;
 	line-height: 50px;
 	font-size: 16px;
 	text-align: center;
-	color: #565656;
+	color: #8D2828;;
 	display: block;
 	float: left;
 	text-align: center;
@@ -133,11 +132,11 @@ a:link, a:visited, a:hover, a:active {
 	width: calc(100%/ 5);
 	height: 50px;
 	border-bottom: 3px solid #FFC14A;
-	background-color: #fff8ea;
+	background-color: #fffacd;
 	line-height: 50px;
 	font-size: 16px;
 	text-align: center;
-	color: #565656;
+	color: #8D2828;;
 	display: block;
 	float: left;
 	text-align: center;
@@ -151,11 +150,11 @@ a:link, a:visited, a:hover, a:active {
 	width: calc(100%/ 5);
 	height: 50px;
 	border-bottom: 3px solid #FF944D;
-	background-color: #fff8ea;
+	background-color: #fffacd;
 	line-height: 50px;
 	font-size: 16px;
 	text-align: center;
-	color: #565656;
+	color: #8D2828;;
 	display: block;
 	float: left;
 	text-align: center;
@@ -190,12 +189,15 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
 	display: none;
-	padding: 40px 40px 0;
+	padding: 40px 40px 40px;
 	clear: both;
 	overflow: hidden;
+	background-image: url("/miemo/img/white_bg.jpg");
+	background-size: cover;
+/* 	background-color: rgba(255, 255, 255,0.8);
 	background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
 	background-color: #fff3df;
-}
+ */}
 
 /*選択されているタブのコンテンツのみを表示*/
 #all:checked ~ #all_content, #aaa:checked ~ #aaa_content,
