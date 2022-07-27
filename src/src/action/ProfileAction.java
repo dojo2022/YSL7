@@ -75,7 +75,7 @@ public class ProfileAction {
 
 		}else {
 			request.setAttribute("errMsg", "確認用とパスワードが異なります");
-			return "/WEB-INF/jsp/home.jsp";
+			return "/WEB-INF/jsp/profile.jsp";
 		}
 
 		if(result==false) {
