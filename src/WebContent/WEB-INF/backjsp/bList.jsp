@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
  <link rel="stylesheet" href="/dataTableSample/backcss/list.css" />
  <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+ <link rel="stylesheet" href="/miemo/backcss/bStyle.css">
+ <link rel="stylesheet" href="/miemo/backcss/bList.css">
  <script>
     jQuery(function($){
     	 // デフォルトの設定を変更（日本語化）--------------------
@@ -28,19 +30,20 @@
 <body>
 <h1>YSL 社員一覧</h1>
 
-<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_regist_user" >新規社員登録</a>
-<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_front" >社員用画面に戻る</a>
+<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_front" class=back_button >社員用画面へ</a>
+<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=to_regist_user" class=regist_button >新規社員登録</a>
 
 
+	<div class=b_list>
 	<table border="1" id="foo-table" class="table table-bordered">
 		<thead>
 			<tr>
-				<th>社員番号</th>
-				<th>名前</th>
-				<th>部署</th>
-				<th>役職</th>
-				<th>入社年度</th>
-				<th>button</th>
+				<th class="list_header">社員番号</th>
+				<th class="list_header">名前</th>
+				<th class="list_header">部署</th>
+				<th class="list_header">役職</th>
+				<th class="list_header">入社年度</th>
+				<th class="list_header">button</th>
 			</tr>
 		</thead>
 
@@ -54,7 +57,7 @@
 						<td class="sh_d">${list.post}</td>
 						<td class="sh_d">${list.year}</td>
 
-						<td><input type="submit" name="button"  value="表示">
+						<td class="p_display"><input type="submit" name="button"  value="表示">
 						<input type="hidden" name="page_id" value="BL01">
 						<input type="hidden" name="emp_id" value="${list.empId}" >
 						<input type="hidden" name="bt_name" value="to_profile">
@@ -70,7 +73,7 @@
 			</tr> --%>
 		</c:forEach>
 	</table>
-
+	</div>
 
 </body>
 </html>
