@@ -42,7 +42,7 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
-<h1>評価シート</h1>
+<h1 id="midashi">評価シート</h1>
 <main>
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
@@ -57,22 +57,22 @@
 	</div><br>
 	<!-- 評価相手の名前を表示 -->
 		<input type="hidden" name="evaluate_name" value="${param.user_id }">
-		<p>To:${param.evaluate_name}</p><br>
+		<p id="toname">To:${param.evaluate_name}</p><br>
 
 	<!-- ★評価 -->
 	<div class="stars">
 		<span>
 			<table border="1" id="stars_table">
 				<tr>
-					<td>質問1：職場内の人間関係にストレスを感じていない</td>
+					<th>質問1：職場内の人間関係にストレスを感じていない</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
 							    <span>
-							      <input id="1review01" type="radio" name="evaluate1" value="5"><label for="1review01">★</label>
-							      <input id="1review02" type="radio" name="evaluate1" value="4"><label for="1review02">★</label>
-							      <input id="1review03" type="radio" name="evaluate1" value="3"><label for="1review03">★</label>
-							      <input id="1review04" type="radio" name="evaluate1" value="2"><label for="1review04">★</label>
+							      <input id="1review01" type="radio" name="evaluate1" value="5"><label for="1review01">　★</label>
+							      <input id="1review02" type="radio" name="evaluate1" value="4"><label for="1review02">　★</label>
+							      <input id="1review03" type="radio" name="evaluate1" value="3"><label for="1review03">　★</label>
+							      <input id="1review04" type="radio" name="evaluate1" value="2"><label for="1review04">　★</label>
 							      <input id="1review05" type="radio" name="evaluate1" value="1"><label for="1review05">★</label>
 							    </span>
 					 		 </div>
@@ -80,15 +80,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td>質問2:業務に意欲的に取り組んでいる</td>
+					<th>質問2:業務に意欲的に取り組んでいる</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
 							    <span>
-							      <input id="2review01" type="radio" name="evaluate2" value="5"><label for="2review01">★</label>
-							      <input id="2review02" type="radio" name="evaluate2" value="4"><label for="2review02">★</label>
-							      <input id="2review03" type="radio" name="evaluate2" value="3"><label for="2review03">★</label>
-							      <input id="2review04" type="radio" name="evaluate2" value="2"><label for="2review04">★</label>
+							      <input id="2review01" type="radio" name="evaluate2" value="5"><label for="2review01">　★</label>
+							      <input id="2review02" type="radio" name="evaluate2" value="4"><label for="2review02">　★</label>
+							      <input id="2review03" type="radio" name="evaluate2" value="3"><label for="2review03">　★</label>
+							      <input id="2review04" type="radio" name="evaluate2" value="2"><label for="2review04">　★</label>
 							      <input id="2review05" type="radio" name="evaluate2" value="1"><label for="2review05">★</label>
 							    </span>
 					 		 </div>
@@ -96,15 +96,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td>質問3:報告・連絡・相談が適切にできている</td>
+					<th>質問3:報告・連絡・相談が適切にできている</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
 							    <span>
-							      <input id="3review01" type="radio" name="evaluate3" value="5"><label for="3review01">★</label>
-							      <input id="3review02" type="radio" name="evaluate3" value="4"><label for="3review02">★</label>
-							      <input id="3review03" type="radio" name="evaluate3" value="3"><label for="3review03">★</label>
-							      <input id="3review04" type="radio" name="evaluate3" value="2"><label for="3review04">★</label>
+							      <input id="3review01" type="radio" name="evaluate3" value="5"><label for="3review01">　★</label>
+							      <input id="3review02" type="radio" name="evaluate3" value="4"><label for="3review02">　★</label>
+							      <input id="3review03" type="radio" name="evaluate3" value="3"><label for="3review03">　★</label>
+							      <input id="3review04" type="radio" name="evaluate3" value="2"><label for="3review04">　★</label>
 							      <input id="3review05" type="radio" name="evaluate3" value="1"><label for="3review05">★</label>
 							    </span>
 					 		 </div>
@@ -112,15 +112,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td>質問4:業務に必要な技術や知識を発揮できている</td>
+					<th>質問4:業務に必要な技術や知識を発揮できている</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
 							    <span>
-							      <input id="4review01" type="radio" name="evaluate4" value="5"><label for="4review01">★</label>
-							      <input id="4review02" type="radio" name="evaluate4" value="4"><label for="4review02">★</label>
-							      <input id="4review03" type="radio" name="evaluate4" value="3"><label for="4review03">★</label>
-							      <input id="4review04" type="radio" name="evaluate4" value="2"><label for="4review04">★</label>
+							      <input id="4review01" type="radio" name="evaluate4" value="5"><label for="4review01">　★</label>
+							      <input id="4review02" type="radio" name="evaluate4" value="4"><label for="4review02">　★</label>
+							      <input id="4review03" type="radio" name="evaluate4" value="3"><label for="4review03">　★</label>
+							      <input id="4review04" type="radio" name="evaluate4" value="2"><label for="4review04">　★</label>
 							      <input id="4review05" type="radio" name="evaluate4" value="1"><label for="4review05">★</label>
 							    </span>
 					 		 </div>
@@ -128,15 +128,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td>質問5:タスク量と期限は適切である</td>
+					<th>質問5:タスク量と期限は適切である</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
 							    <span>
-							      <input id="5review01" type="radio" name="evaluate5" value="5"><label for="5review01">★</label>
-							      <input id="5review02" type="radio" name="evaluate5" value="4"><label for="5review02">★</label>
-							      <input id="5review03" type="radio" name="evaluate5" value="3"><label for="5review03">★</label>
-							      <input id="5review04" type="radio" name="evaluate5" value="2"><label for="5review04">★</label>
+							      <input id="5review01" type="radio" name="evaluate5" value="5"><label for="5review01">　★</label>
+							      <input id="5review02" type="radio" name="evaluate5" value="4"><label for="5review02">　★</label>
+							      <input id="5review03" type="radio" name="evaluate5" value="3"><label for="5review03">　★</label>
+							      <input id="5review04" type="radio" name="evaluate5" value="2"><label for="5review04">　★</label>
 							      <input id="5review05" type="radio" name="evaluate5" value="1"><label for="5review05">★</label>
 							    </span>
 					 		 </div>
@@ -150,7 +150,7 @@
 	<!-- 登録ボタン -->
 	<div>
 		<input type="submit" name="bt_name" value="登録" class = regist_btn >
-	</div>
+	</div><br>
 
 </form>
 </main>
