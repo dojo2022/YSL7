@@ -37,7 +37,7 @@ public class BEvaluationsDAO {
 		//結果をArrayListに入れる
 		while (rs.next()) {
 			BEvaluationsBeans evaluation = new BEvaluationsBeans();
-			evaluation.setEmpId(rs.getInt(empId));
+			evaluation.setEmpId(empId);
 			evaluation.setEva1(rs.getInt("evaluation1"));
 			evaluation.setEva2(rs.getInt("evaluation2"));
 			evaluation.setEva3(rs.getInt("evaluation3"));
@@ -71,7 +71,7 @@ public class BEvaluationsDAO {
 		//結果をArrayListに入れる
 		while (rs.next()) {
 			BEvaluationsBeans evaluations = new BEvaluationsBeans();
-			evaluations.setEmpId(rs.getInt(empId));
+			evaluations.setEmpId(empId);
 			evaluations.setEva1(rs.getInt("evaluation1"));
 			evaluations.setEva2(rs.getInt("evaluation2"));
 			evaluations.setEva3(rs.getInt("evaluation3"));
