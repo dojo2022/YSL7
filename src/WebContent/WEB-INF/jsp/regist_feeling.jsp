@@ -12,7 +12,7 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
-<h1>きもち記録</h1>
+<h1 id="h1title">きもち記録</h1>
 	<div class="regist_fe_tb">
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FF01">
