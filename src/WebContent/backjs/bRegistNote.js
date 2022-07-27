@@ -2,7 +2,12 @@
  *
  */
 function check(){
-	window.confirm("以下の内容でメモを登録しますか？");
+	if(window.confirm("以下の内容でメモを登録しますか？")){
+		return true;
+	}else{
+		return false;
+	}
+
 }
 
 document.getElementById("noteReturn").addEventListener('click',()=>{

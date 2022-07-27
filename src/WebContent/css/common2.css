@@ -37,11 +37,11 @@ body{
 
 /* menu */
 .cp_offcm01 .cp_menu { /* ハンバーガー背景 */
-margin-right: 50;
+margin-right: -15px;
 	position: fixed;
-	top: 0;
+	top: -19px;
 	right: 100vw; /* ここが左空く原因?*/
-	width: 250px;
+	width: 246px;
 	height: 100%;
 	cursor: pointer;
 	-webkit-transition: 0.53s transform;
@@ -96,8 +96,8 @@ margin-right: 50;
 	text-align: center;
 	color: #ffff;
 	background-repeat: no-repeat;
-	width: 5vw;
-	height: 5vw;
+	width: 60px;
+	height: 60px;
 	background-position: -2px 8px;
 	background-color: #EFCF24;
 	background-size: 109%;
@@ -115,9 +115,6 @@ margin-right: 50;
 #logout{
 	background-color: #7DB6BB;
 }
-
-
-
 
 
 

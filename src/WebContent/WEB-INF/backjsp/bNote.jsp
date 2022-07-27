@@ -31,7 +31,7 @@
 			<tbody>
 				<c:forEach var="e" items="${notesList}" varStatus="status">
 				<tr class="n-tabledata">
-				<form method="POST" action="/miemo/BControllerServlet" onsubmit="check()">
+				<form method="POST" action="/miemo/BControllerServlet" onsubmit=" return check()">
 					<td>${e.date}</td>
 					<td>${e.name}</td>
 					<td>${e.title}

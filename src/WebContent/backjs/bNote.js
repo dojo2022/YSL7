@@ -26,5 +26,9 @@ $(function(){
 	});
 
 function check(){
-	window.confirm("メモを削除してもよろしいでしょうか");
+	if(window.confirm("メモを削除してもよろしいでしょうか")){
+		return true;
+	}else{
+		return false;
+	}
 }
