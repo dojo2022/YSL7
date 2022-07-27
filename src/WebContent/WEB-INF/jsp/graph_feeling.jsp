@@ -29,7 +29,7 @@
 		</div>
 		<div class="asTable">
 			<p class="titles">スタンプが押された回数</p>
-				<table class="stamp_table">
+				<table class="stamp_table" id="stamp_table">
 					<tr>
 					<!-- 見出し -->
 						<th><img alt="とても不満" src="/miemo/img/stamp1.png" class="stamp">とても不満</th>
