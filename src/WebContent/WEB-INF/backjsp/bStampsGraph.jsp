@@ -14,43 +14,67 @@
 
 </head>
 <body>
+	<h2 class=empName>${profile.name}さんのきもちグラフ</h2>
 	<!-- スタンプの個数を表示する部分 -->
-	<table class="stamp_table">
-		<tr>
-		<!-- 見出し -->
-			<th><img alt="とても不満" src="/miemo/img/stamp1.png" class="stamp">とても不満</th>
-			<th><img alt="不満" src="/miemo/img/stamp2.png" class="stamp">不満</th>
-			<th><img alt="普通" src="/miemo/img/stamp3.png" class="stamp">普通</th>
-			<th><img alt="満足" src="/miemo/img/stamp4.png" class="stamp">満足</th>
-			<th><img alt="とても満足" src="/miemo/img/stamp5.png" class="stamp">とても満足</th>
-		</tr>
-		<tr>
-			<td>${sCount.countS1}</td>
-			<td>${sCount.countS2}</td>
-			<td>${sCount.countS3}</td>
-			<td>${sCount.countS4}</td>
-			<td>${sCount.countS5}</td>
-		</tr>
-	</table>
-	<!--押したスタンプのドーナツチャート -->
-	<canvas id="allStamps" width="600" height="500"></canvas>
+	<div class="allStamps">
+		<div class="asGraph">
+			<!--押したスタンプのドーナツチャート -->
+			<canvas id="allStamps" width="300" height="200"></canvas>
+		</div>
+		<div class="asTable">
+			<p class="titles">スタンプが押された回数</p>
+				<table class="stamp_table">
+					<tr>
+					<!-- 見出し -->
+						<th><img alt="とても不満" src="/miemo/img/stamp1.png" class="stamp">とても不満</th>
+						<th><img alt="不満" src="/miemo/img/stamp2.png" class="stamp">不満</th>
+						<th><img alt="普通" src="/miemo/img/stamp3.png" class="stamp">普通</th>
+						<th><img alt="満足" src="/miemo/img/stamp4.png" class="stamp">満足</th>
+						<th><img alt="とても満足" src="/miemo/img/stamp5.png" class="stamp">とても満足</th>
+					</tr>
+					<tr>
+						<td>${sCount.countS1}回</td>
+						<td>${sCount.countS2}回</td>
+						<td>${sCount.countS3}回</td>
+						<td>${sCount.countS4}回</td>
+						<td>${sCount.countS5}回</td>
+					</tr>
+				</table>
+		</div>
+
+	</div>
 
 	<!-- stamp1~stamp5までの円グラフ -->
-	とても不満のきもちグラフ
- 		<canvas id="stamp1" width="250" height="250"></canvas>
- 		<div id ="s1ErrMsg"></div>
-	不満のきもちグラフ
-		<canvas id="stamp2" width="250" height="250"></canvas>
-		<div id="s2ErrMsg"></div>
-	普通のきもちグラフ
-		<canvas id="stamp3" width="250" height="250"></canvas>
-		<div id="s3ErrMsg"></div>
-	満足のきもちグラフ
-		<canvas id="stamp4" width="250" height="250"></canvas>
-		<div id="s4ErrMsg"></div>
-	とても満足のきもちグラフ
-		<canvas id="stamp5" width="250" height="250"></canvas>
-		<div id="s5ErrMsg"></div>
+	<div class="upper">
+		<div>
+			<span class="titles">とても不満のきもちグラフ</span>
+			<div id ="s1ErrMsg"></div>
+	 		<canvas id="stamp1" width="250" height="250"></canvas>
+	 	</div>
+	 	<div>
+			<span class="titles">不満のきもちグラフ</span>
+			<div id="s2ErrMsg"></div>
+			<canvas id="stamp2" width="250" height="250"></canvas>
+		</div>
+		<div>
+			<span class="titles">普通のきもちグラフ</span>
+			<div id="s3ErrMsg"></div>
+			<canvas id="stamp3" width="250" height="250"></canvas>
+		</div>
+	</div>
+	<div class="lower">
+		<div>
+			<span class="titles">満足のきもちグラフ</span>
+			<div id="s4ErrMsg"></div>
+			<canvas id="stamp4" width="250" height="250"></canvas>
+		</div>
+		<div>
+			<span class="titles">とても満足のきもちグラフ</span>
+			<div id="s5ErrMsg"></div>
+			<canvas id="stamp5" width="250" height="250"></canvas>
+
+		</div>
+	</div>
 
 		<script>
 
@@ -93,7 +117,7 @@
 			  }
 			});
 		}else{
-			document.querySelector("#s1ErrMsg").innerText ="表示できるデータがありません。";
+			document.querySelector("#s1ErrMsg").innerText ="このスタンプは押されていません。";
 		}
 
 
@@ -118,7 +142,7 @@
 			  }
 			});
 		}else{
-			document.querySelector("#s2ErrMsg").innerText ="表示できるデータがありません。";
+			document.querySelector("#s2ErrMsg").innerText ="このスタンプは押されていません。";
 		}
 
 
@@ -143,7 +167,7 @@
 			  }
 			});
 		}else{
-			document.querySelector("#s3ErrMsg").innerText ="表示できるデータがありません。";
+			document.querySelector("#s3ErrMsg").innerText ="このスタンプは押されていません。";
 		}
 
 		//stamp4の円グラフ
@@ -167,7 +191,7 @@
 			  }
 			});
 		}else{
-			document.querySelector("#s4ErrMsg").innerText ="表示できるデータがありません。";
+			document.querySelector("#s4ErrMsg").innerText ="このスタンプは押されていません。";
 		}
 
 		//stampp5の円グラフ
@@ -191,7 +215,7 @@
 			  }
 			});
 		}else{
-			document.querySelector("#s5ErrMsg").innerText ="表示できるデータがありません。";
+			document.querySelector("#s5ErrMsg").innerText ="このスタンプは押されていません。";
 		}
 
 

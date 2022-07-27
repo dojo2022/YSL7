@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
-h1{
+#midashi {
 	/*text-align: center;*/
 	margin-left: 280px;
 	padding: 0.25em 0.5em;/*上下 左右の余白*/
@@ -9,6 +9,17 @@ h1{
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
 }
+
+#err_m {
+	margin-left: 280px;
+	font-size:  30px;
+	background: transparent;
+}
+
+#home_tb {
+	margin-right : 100px;
+}
+
 *,
 *:before,
 *:after {

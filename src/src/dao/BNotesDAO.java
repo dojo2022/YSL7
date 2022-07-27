@@ -27,7 +27,7 @@ public class BNotesDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "SELECT Notes.date AS date, f.name AS from_name, Notes.title AS title, Notes.content AS content"
+		String sql = "SELECT Notes.date AS date, f.name AS from_name, Notes.title AS title, Notes.content AS content, Notes.Note_id AS Note_id"
 				+ " FROM Notes"
 				+ " LEFT JOIN Users AS f ON f.u_id = Notes.from_u_id"
 				+ " LEFT JOIN Users AS a ON a.u_id = Notes.about_u_id"
@@ -48,6 +48,7 @@ public class BNotesDAO {
 			notes.setName(rs.getString("from_name"));
 			notes.setTitle(rs.getString("title"));
 			notes.setContent(rs.getString("content"));
+			notes.setNoteId(rs.getInt("note_id"));
 			noteList.add(notes);
 		}
 

@@ -15,10 +15,6 @@ body{
 	background-color: transparent;
 }
 
-div .span{  /* ハンバーガーの書体 */
-	font-family: Arial Black;
-}
-
 
 /* ハンバーガーメニュー*/
 .cp_menu ol, ul {
@@ -99,15 +95,16 @@ margin-right: 50;
 	transition-timing-function: cubic-bezier(.61, -0.38, .37, 1.27);
 	text-align: center;
 	color: #ffff;
-	background-image: url(../img/sidemenu_icon.png);
 	background-repeat: no-repeat;
-	width: 55px;
-	height: 55px;
+	width: 80px;
+	height: 40px;
 	background-position: -2px 8px;
 	background-color: #EFCF24;
 	background-size: 109%;
 	border-radius: 10px;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+	margin-top: 20px
+
 }
 
 .cp_offcm01 #cp_toggle01:checked ~ label {
@@ -115,14 +112,18 @@ margin-right: 50;
 	transform: translateX(250px);
 }
 
-
-
-
 #logout{
-	background-color: #7d91ba;
+	background-color: #7DB6BB;
 }
 
-
+p{
+	font-size: 10;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0px 0px 0px 5px #EFCF24;
+	border: dashed 2px #ffff;
+	border-radius: 10px;
+}
 
 
 
