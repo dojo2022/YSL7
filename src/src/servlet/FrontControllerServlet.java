@@ -180,6 +180,9 @@ public class FrontControllerServlet extends HttpServlet {
 		if(pageId.equals("FE02") && button.equals("登録")) {
 			EvaluationAction action = new EvaluationAction(request);
 			path = action.registEval();
+			if(path.equals("WEB-INF/jsp/evaluation.jsp")) {
+
+			}
 
 		}
 
