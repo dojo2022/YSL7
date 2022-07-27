@@ -106,7 +106,7 @@ public class BUserDAO {
 		Class.forName("org.h2.Driver");
 
 		// SQL文を準備する
-		String sql = "UPDATE Users SET retireflag=0 WHERE u_id=?";
+		String sql = "UPDATE Users SET retireflag=1 WHERE u_id=?";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		// SQL文を完成させる
