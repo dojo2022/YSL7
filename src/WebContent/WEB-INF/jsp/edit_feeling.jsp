@@ -15,7 +15,6 @@
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
 <h1 id="midashi">きもち編集</h1>
-	${errMsg}<br>
 	<div class="regist_fe_tb">
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FF03">
@@ -268,6 +267,7 @@
 		<input type="submit"  name="bt_name" value="更新" class="regist_bts">
 	</form>
 	</div>
+	<div class = "alert" id="errMsg">${errMsg}</div><br>
 </body>
 <script>
 $(function(){
