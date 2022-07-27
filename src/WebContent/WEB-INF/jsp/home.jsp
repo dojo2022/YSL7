@@ -13,10 +13,11 @@
 	<body>
 	<%@ include file="/WEB-INF/jsp/common.jsp" %>
 
-	<h1>ホーム</h1>
+	<h1 id="midashi">ホーム</h1>
 
-	${errMsg}
+	<div id="err_m">${errMsg}</div>
 
+	<div id="home_tb">
 	<table class = home_table >
 		<tr>
 			<td class="home_td">
@@ -54,6 +55,6 @@
 	       </td>
 	    </tr>
 	</table>
-
+	</div>
 </body>
 </html>
