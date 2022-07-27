@@ -12,14 +12,18 @@
 <body>
 
  <% session.setAttribute("profile",session.getAttribute("profile")); %>
-
+ <form method="POST" action="/miemo/BControllerServlet">
+ 	<input type="hidden" name="page_id" value="BP02">
+ 	<input type="hidden" name="empId" value="${empId}">
+	<div align="right">
+		<input type="submit" name="bt_name" value="退職" class="retire" onclick="check()">
+	</div>
+</form>
 	<h1>社員情報編集</h1>
 
 	<!-- <form method="POST" action="/miemo/servlet/BControllerServlet"> -->
-	<form method="POST" action="/miemo/TestServlet">
+	<form method="POST" action="/miemo/BControllerServlet">
 	<input type="hidden" name="page_id" value="BR02">
-	<input type="hidden" name="empId" value="${empId}">
-	<input type="submit" name="bt_name" value="退職" class="retire">
 		<table>
 			<tr>
 				<td>社員番号</td>
