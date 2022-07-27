@@ -18,20 +18,20 @@ body{
 	padding: 0px;
 }
 
-span{  /* ハンバーガーの書体 */
+div .span{  /* ハンバーガーの書体 */
 	font-family: Arial Black;
 }
 
-hr{
-	font-size: 5;
+.hr_border{/* ハンバーガーメニューの三本線 */
+	color: red;
 }
 
-#span1{ /* メニューの文字 */
-position: absolute;
+.cp_cont .cp_offcm01 .cp_toggle01 .span1{ /* メニューの文字 */
+color: reed;
 left: 0;
 height: 2px;
 width: 28px;
-border-radius: 2px;
+border-radius: 50px;
 
 
 }
