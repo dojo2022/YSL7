@@ -33,6 +33,27 @@ main {
 	margin-left: 180px;
 }*/
 
+.button_area{
+  width: 155px;
+  height: 30px;
+  border-radius: 5%;
+  text-align: center;
+/*  color: #fff;
+  background-color: #ffebcd;
+  border-bottom: 5px solid #b84c00;*/
+}
+/*
+.button_area:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: orange;
+  border-bottom: 2px solid #b84c00;
+}
+*/
+
+
+
+
 #toname {
   margin:0 auto;
   padding: 1rem 2rem;
