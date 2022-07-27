@@ -11,9 +11,8 @@
 <div class="cp_cont">
 	<div class="cp_offcm01">
 		<input type="checkbox" id="cp_toggle01"><label for="cp_toggle01">
-		<div class="span1">menue</div>
-		<br>
-		<span class="hr_border"><hr></span>
+		<div>menue</div>
+		<span id ="border"><hr></span>
 		<span><hr></span>
 		<span><hr></span>
 		</label>
