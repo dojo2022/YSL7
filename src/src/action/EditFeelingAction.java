@@ -51,9 +51,18 @@ public class EditFeelingAction {
 		int categoryId = Integer.parseInt(request.getParameter("category_id"));
 		String comment = request.getParameter("comment");
 
-		EditFeelingService service = new EditFeelingService();
+		boolean result = false;
 
-		boolean result = service.editFeeling(stampId, categoryId, stamp1, stamp2, stamp3, stamp4, stamp5, comment);
+
+		//チェックが外れていないかの判断
+		if(sStamp1 != null || sStamp2 != null || sStamp3 != null || sStamp4 != null || sStamp5 != null) {
+
+			EditFeelingService service = new EditFeelingService();
+			result = service.editFeeling(stampId, categoryId, stamp1, stamp2, stamp3, stamp4, stamp5, comment);
+		}else {
+			request.setAttribute("errMsg", "※きもちを選択してください");
+			return "/WEB-INF/jsp/edit_feeling.jsp";
+		}
 
 
 		//戻ってきた値にデータが入っていなければ(nullであれば)

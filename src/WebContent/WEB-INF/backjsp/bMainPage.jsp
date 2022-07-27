@@ -50,6 +50,7 @@
 			</td>
 		</tr>
 	</table>
+	<input type="hidden" id ="reFlg" value="${param.note_flg}">
 	</div>
 </form>
 
@@ -93,8 +94,9 @@
 			</div>
 	</div>
 	<script>
-
-		if(${note_flg.length()!=0}){
+		//ノートの削除や、登録から戻ってきたときにメモタグにフォーカスをあてる
+		let flg = document.getElementById("reFlg").value;
+		if(flg.length!=0){
 			document.getElementById("note_tab").click();
 		}
 	</script>
