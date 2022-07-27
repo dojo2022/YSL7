@@ -20,7 +20,7 @@
 		<input type="hidden" name="page_id" value="FM01">
 		<!--  <input type="text" name="message" value="${param.message}"><br>-->
 		<textarea name="message"></textarea><br>
-			<input type="submit" name="bt_name" value="送信"  class="button">
+			<input type="submit" name="bt_name" value="送信"  class="button" onclick="return confirm('このメッセージを送信しますか')">
 	</form>
 	<!-- エラーメッセージの表示欄 -->
 	<br><div class = "alert" id="errMsg">${errMsg}</div>
