@@ -18,13 +18,15 @@ body{
 	padding: 0px;
 }
 
-span{
+span{  /* ハンバーガーの書体 */
 	font-family: Arial Black;
-	color: #ffff;
-
 }
 
-#span1{
+hr{
+	font-size: 5;
+}
+
+#span1{ /* メニューの文字 */
 position: absolute;
 left: 0;
 height: 2px;
