@@ -14,7 +14,7 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
-<h1 id="h1title">きもち編集</h1>
+<h1 id="midashi">きもち編集</h1>
 	${errMsg}<br>
 	<div class="regist_fe_tb">
 	<form method="POST" action="/miemo/FrontControllerServlet">

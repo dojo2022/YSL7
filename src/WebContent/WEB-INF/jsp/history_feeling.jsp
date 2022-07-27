@@ -14,7 +14,7 @@
 
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
-<h1 id="h1title">きもち履歴</h1>
+<h1 id="midashi">きもち履歴</h1>
 <table class="stamps">
 <tr>
 	<!-- テーブルの見出し -->

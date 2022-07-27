@@ -8,14 +8,15 @@ background-image:repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, tran
  repeating-linear-gradient:(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
  */
 
-#h1title{
-	border-left:  solid 5px #EBD61A;
-	text-align: left;
+#midashi{
+	/*text-align: center;*/
+	margin-left: 280px;
 	padding: 0.25em 0.5em;/*上下 左右の余白*/
   	color: #F19E6F;/*文字色*/
   	font-size:  50px;
-  	margin-left: 145px;
-
+  	background: transparent;/*背景透明に*/
+ 	border-left: solid 5px #EBD61A;/*左線*/
+ 	font-weight: bold;
 }
 
 
