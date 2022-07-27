@@ -11,8 +11,11 @@
 	</head>
 	<body>
 	<%@ include file="/WEB-INF/jsp/common.jsp" %>
-	<main>
+
 	<h1>ホーム</h1>
+
+	${errMsg}
+
 	<table class = home_table >
 		<tr>
 			<td class="home_td">
@@ -38,6 +41,10 @@
 				<a href="/miemo/FrontControllerServlet?page_id=FH01&bt_name=message" class="btn6"><i class="fas fa-star"></i>メッセージ</a>
 			</td>
 		</tr>
+
+		<tr></tr>
+		<tr></tr>
+
 		<tr>
 		  <td class = "btn7_td">
 			<c:if test="${user.number.equals('L10003') || user.number.equals('L10004') }">
@@ -46,6 +53,6 @@
 	       </td>
 	    </tr>
 	</table>
-	</main>
+
 </body>
 </html>
