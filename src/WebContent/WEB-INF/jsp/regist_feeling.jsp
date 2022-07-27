@@ -54,7 +54,7 @@
 		</tr>
 		<tr>
 		<br>
-			<td><div class="font">項目</div><br>
+			<td><div class="font">カテゴリ</div><br>
 				<input type="radio"  name="category_id" value="1" id="c_1" class="radio_bt">
 				<label for="c_1">
 					<span class="c_span">人間関係</span>

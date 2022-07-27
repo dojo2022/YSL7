@@ -19,9 +19,9 @@
 <tr>
 	<!-- テーブルの見出し -->
 	<th class="items">日付</th>
-	<th class="items">スタンプ</th>
+	<th class="items">きもち</th>
 	<th class="items">カテゴリ</th>
-	<th class="items_content">内容</th>
+	<th class="items_content">コメント</th>
 	<th class="items">編集</th>
 </tr>
 <c:forEach var="e" items="${historyList }">
@@ -60,7 +60,9 @@
 </tr>
 </c:forEach>
 </table>
-
+<c:if test="${historyList.size()== 0}">
+	<div id="no_data">きもちを記録しましょう</div>
+</c:if>
 
 </body>
 
