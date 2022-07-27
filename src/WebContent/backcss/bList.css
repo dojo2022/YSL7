@@ -1,5 +1,64 @@
 @charset "UTF-8";
 
+	body{
+	background-image: repeating-linear-gradient(to bottom, #FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px), repeating-linear-gradient(to right,#FBF8EF, #FBF8EF 3px, transparent 0, transparent 64px);
+	background-color: #fff3df;
+	}
+
+	h1{
+	text-align: center;
+	margin-top: 30px;
+	color: #565656;
+	font-weight: bold;
+	}
+
+	/* 新規社員登録ボタン */
+	.regist_button{
+	display       : inline-block;
+	border-radius : 5%;          /* 角丸       */
+	font-size     : 18pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 12px 27px;   /* 余白       */
+	background    : #F19E6F;     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 1em;         /* 1行の高さ  */
+	transition    : .3s;         /* なめらか変化 */
+	box-shadow    : 1px 1px 2px #666666;  /* 影の設定 */
+	opacity       : 0.9;         /* 透明度     */
+	text-decoration: none;		/* 下線消す */
+	}
+	.regist_button:hover {
+	box-shadow    : none;        /* カーソル時の影消去 */
+	opacity       : 1;           /* カーソル時透明度 */
+	}
+	a:link, a:visited, a:hover, a:active{
+	color: #ffffff;
+	text-decoration: none;		/* 下線消す */
+	}
+
+	/* 社員画面に戻るボタン */
+	.back_button{
+	margin-left: 5%;
+	margin-right: 59%;
+	display       : inline-block;
+	border-radius : 5%;          /* 角丸       */
+	font-size     : 18pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 12px 27px;   /* 余白       */
+	background    : #947DCD;     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 1em;         /* 1行の高さ  */
+	transition    : .3s;         /* なめらか変化 */
+	box-shadow    : 1px 1px 2px #666666;  /* 影の設定 */
+	opacity       : 0.9;         /* 透明度     */
+	text-decoration: none;		/* 下線消す */
+	}
+	.back_button:hover {
+	box-shadow    : none;        /* カーソル時の影消去 */
+	opacity       : 1;           /* カーソル時透明度 */
+	}
 
 	#foo-table_length{
 		/* background-color: skyblue; */
@@ -18,6 +77,7 @@
 	#foo-table_info{
 		/* background-color: blue; */
 	}
+
 	.col-sm-5{
 		padding:0;
 		margin:0;
@@ -31,22 +91,37 @@
 		margin:0;
 	}
 
+	.list_header{
+	color: #565656;
+	background-color: lemonchiffon;
+	}
+
 	.sh_d {
 
-		background-color:skyblue;
+		background-color:#ffffff;
 	}
 	.sh_h{
 
-		background-color:deepskyblue;
+		background-color:#ffffff;
 	}
 	#sh_head{
-		background-color: yellow;
+		background-color: #ffffff;
 	}
 
 	#sh_data{
-		background-color: lemonchiffon;
+		background-color: #ffffff;
 	}
+
+	.p_display{
+	background-color: #ffffff;
+	}
+
 	.row{
 		margin-left: 50px;
 		margin-right: 50px;
+	}
+
+	.b_list{
+	display: block;
+	margin-top: 20px;
 	}

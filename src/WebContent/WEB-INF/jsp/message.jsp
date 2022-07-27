@@ -13,7 +13,7 @@
 <body>
 <div id="body1">
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
-	<h1>メッセージ</h1>
+	<h1 id="h1title">メッセージ</h1>
 		<h2>メッセージは人事部にのみ送られます</h2>
 	<!-- Servletへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet" class="message">

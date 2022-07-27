@@ -26,5 +26,5 @@ $(function(){
 	});
 
 function check(){
-	window.alert("メモを削除してもよろしいでしょうか");
+	window.confirm("メモを削除してもよろしいでしょうか");
 }
