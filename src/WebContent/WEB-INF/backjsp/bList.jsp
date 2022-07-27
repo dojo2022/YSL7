@@ -57,9 +57,9 @@
 						<td class="sh_d">${list.post}</td>
 						<td class="sh_d">${list.year}</td>
 
-						<td class="p_display"><input type="submit" name="button"  value="表示">
+						<td class="p_display"><input type="submit" name="button"  value="表示" class="dButton">
 						<input type="hidden" name="page_id" value="BL01">
-						<input type="hidden" name="emp_id" value="${list.empId}" >
+						<input type="hidden" name="empId" value="${list.empId}" >
 						<input type="hidden" name="bt_name" value="to_profile">
 						</td>
 					</form>
