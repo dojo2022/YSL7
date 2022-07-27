@@ -138,9 +138,19 @@ public class BControllerServlet extends HttpServlet {
 		if(pageId.equals("BR02") && button.equals("退職")) {
 			//★アクションをインスタンス化
 			BUserAction uAction = new BUserAction(request);
+			BListAction lAction = new BListAction(request);
+			int sAns=uAction.uDelete();
 			//★アクションのsearchメソッドを呼び出す
-			url = uAction.uDelete();
+			if(sAns==1) {
+				url = lAction.selectAllList();
+			}
+			else {
+				//エラーメッセージ格納してjspに戻す
+				request.setAttribute("errMsg", "削除できませんでした");
+				url= "/WEB-INF/backjsp/bList.jsp";
+			}
 		}
+
 
 
 		//個人ページから個人情報編集画面
