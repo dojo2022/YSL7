@@ -24,7 +24,7 @@ public class BTabAction {
 
 		//empIdを取ってくる
 		request.setCharacterEncoding("UTF-8");
-		int empId = Integer.parseInt(request.getParameter("emp_id"));
+		int empId = Integer.parseInt(request.getParameter("empId"));
 		//Serviceをインスタンス化（tabServiceという名前をつけたから、あわせてね）
 		BTabService tabService = new BTabService();
 
