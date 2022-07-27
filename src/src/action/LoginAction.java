@@ -44,6 +44,7 @@ public class LoginAction {
 		if (user == null) {
 			//5. home.jspにフォワードするpassをサーブレットに返す。
 			request.setAttribute("errMsg", "※社員番号とパスワードの入力は必須です");
+			System.out.println("エラーに入ったよ");
 			return "WEB-INF/jsp/login.jsp";
 		}else {
 			HttpSession session = request.getSession();

@@ -134,13 +134,14 @@ public class FrontControllerServlet extends HttpServlet {
 		}
 
 		//セッションが切れていたらリダイレクト
-		if (session.getAttribute("user") == null) {
-			response.sendRedirect("/miemo/FrontControllerServlet");
-			return;
-		}
+
 
 		//パスワード変更のdoPost
 		if(pageId.equals("FP01") && button.equals("変更")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			ProfileAction action = new ProfileAction(request);
 			path = action.updatePw();
 			if(path.equals("/WEB-INF/jsp/profile.jsp")) {
@@ -150,34 +151,58 @@ public class FrontControllerServlet extends HttpServlet {
 
 		//メッセージ送信のdoPost
 		if(pageId.equals("FM01") && button.equals("送信")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			MessageAction action = new MessageAction(request);
 			path = action.sendMessage();
 		}
 
 		//きもち記録のdoPost
 		if(pageId.equals("FF01") && button.equals("登録")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			RegistFeelingAction action = new RegistFeelingAction(request);
 			path = action.registFeeling();
 		}
 
 		//きもち履歴からきもち編集へ
 		if(pageId.equals("FF02") && button.equals("編集画面へ")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			path = "/WEB-INF/jsp/edit_feeling.jsp";
 		}
 
 		//きもち編集のdoPost
 		if(pageId.equals("FF03") && button.equals("更新")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			EditFeelingAction action = new EditFeelingAction(request);
 			path = action.editFeeling();
 		}
 
 		//評価相手検索画面から評価画面へ
 		if(pageId.equals("FE01") && button.equals("評価する")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			path = "WEB-INF/jsp/evaluation.jsp";
 		}
 
 		//評価のdoPost
 		if(pageId.equals("FE02") && button.equals("登録")) {
+			if (session.getAttribute("user") == null) {
+				response.sendRedirect("/miemo/FrontControllerServlet");
+				return;
+			}
 			EvaluationAction action = new EvaluationAction(request);
 			path = action.registEval();
 
