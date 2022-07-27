@@ -65,7 +65,7 @@
 			<label class="tab_item3" for="bbb">メッセージ</label>
 			<input id="ccc" type="radio"	name="tab_item">
 
-			<label class="tab_item4" for="ccc">メモ</label>
+			<label class="tab_item4" for="ccc" id="note_tab">メモ</label>
 			<input id="ddd" type="radio"	name="tab_item">
 
 			<label class="tab_item5" for="ddd">評価</label>
@@ -92,5 +92,11 @@
 			<jsp:include page="bEvaluations.jsp" />
 			</div>
 	</div>
+	<script>
+
+		if(${note_flg.length()!=0}){
+			document.getElementById("note_tab").click();
+		}
+	</script>
 </body>
 </html>
