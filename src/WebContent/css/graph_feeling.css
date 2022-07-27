@@ -1,1 +1,13 @@
 @charset "UTF-8";
+#midashi {
+	border-left:  solid 5px #EBD61A;
+	text-align: left;
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+  	color: #F19E6F;/*文字色*/
+  	font-size:  50px;
+  	margin-left: 145px;
+}
+
+#gf_chart {
+	margin-left: 145px;
+}
