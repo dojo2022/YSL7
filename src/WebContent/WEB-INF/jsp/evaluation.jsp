@@ -43,6 +43,7 @@
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
 <h1 id="midashi">評価シート</h1>
+<br>
 <main>
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
