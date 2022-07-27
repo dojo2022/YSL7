@@ -116,7 +116,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><div class="font">項目</div><br>
+				<td><div class="font">カテゴリ</div><br>
 					<c:choose>
 						<c:when test="${param.category_id == 1 }">
 							<input type="radio"  name="category_id" value="1" checked id="c_1" class="radio_bt">
