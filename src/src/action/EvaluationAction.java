@@ -20,9 +20,22 @@ public class EvaluationAction {
 	public String registEval() throws UnsupportedEncodingException {
 		request.setCharacterEncoding("UTF-8");//日本語だよ。
 		HttpSession session = request.getSession();
-		int toUserId = Integer.parseInt(request.getParameter("evaluate_name"));
 		Users user = (Users) session.getAttribute("user");
 		int fromUserId = user.getUserId();
+
+		//評価相手のUserIDの取得
+		int toUserId;
+		String sToUserId = request.getParameter("user_id");
+		toUserId = Integer.parseInt(sToUserId);
+
+//		if (sToUserId != null) {
+//			toUserId = Integer.parseInt(sToUserId);
+//		}else {
+//			String sToUserId2 = request.getParameter("evaluate_name2");
+//			toUserId = Integer.parseInt(sToUserId2);
+//		}
+
+
 
 		//評価の値を取得します
 		int evaluation1 = 0;
@@ -64,7 +77,12 @@ public class EvaluationAction {
 			}
 
 		}else {
-			request.setAttribute("errMsg", "評価項目はすべて登録してください");
+			request.setAttribute("errMsg", "※評価項目はすべて登録してください");
+//			String name = (String)request.getAttribute("param.evaluate_name");
+//			Users u = new Users();
+//			u.setUserId(toUserId);
+//			u.setName(name);
+//			request.setAttribute("u", u );
 			return "/WEB-INF/jsp/evaluation.jsp";
 		}
 	}

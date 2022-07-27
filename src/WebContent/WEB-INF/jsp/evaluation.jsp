@@ -56,8 +56,13 @@
 		<a href="/miemo/FrontControllerServlet?page_id=FE02&bt_name=evaluation">評価相手選択画面に戻る</a>
 	</div><br>
 	<!-- 評価相手の名前を表示 -->
-		<input type="hidden" name="evaluate_name" value="${param.user_id }">
-		<p id="toname">To:${param.evaluate_name}</p><br>
+			<input type="hidden" name="user_id" value="${param.user_id }">
+			<input type="hidden" name="evaluate_name" value="${param.evaluate_name}">
+			<p id="toname">To:${param.evaluate_name}</p><br>
+		<%-- <c:if test="${param.evaluate_name == null }">
+			<input type="text" name="evaluate_name2" value="${u.userId }">
+			<p id="toname">To:${u.name}</p><br>
+		</c:if> --%>
 
 	<!-- ★評価 -->
 	<div class="stars">
@@ -151,6 +156,8 @@
 	<div>
 		<input type="submit" name="bt_name" value="登録" class = regist_btn  onclick="return confirm('この評価でよろしいですか')">
 	</div><br>
+
+	<div class = "alert" id="errMsg">${errMsg}</div><br>
 
 </form>
 </main>
