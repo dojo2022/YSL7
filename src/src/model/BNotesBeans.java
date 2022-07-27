@@ -10,6 +10,7 @@ public class BNotesBeans implements Serializable  {
 	private String title;
 	private String content;
 	private Date date;
+	private int noteId;
 
 
 
@@ -37,6 +38,13 @@ public class BNotesBeans implements Serializable  {
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public int getNoteId() {
+		return noteId;
+	}
+
+	public void setNoteId(int noteId) {
+		this.noteId = noteId;
 	}
 
 

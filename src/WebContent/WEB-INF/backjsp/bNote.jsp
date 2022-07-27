@@ -33,7 +33,7 @@
 				<tr class="n-tabledata">
 					<td>${e.date}</td>
 					<td>${e.name}</td>
-					<td>${e.title}</td>
+					<td>${e.title}<input type="hidden" name="noteId" value="${e.noteId}"><input type="hidden" name="page_id" value="BP01"></td>
 					<td class="tw">
 							<div class="content-wrap animated">
 							  <div class="content-txt">
@@ -43,7 +43,7 @@
 							  </div>
 							</div>
 					</td>
-					<td><input type="submit" name="nDelete" value="削除" class="nDelete"></td>
+					<td><input type="submit" name="bt_name" value="削除" class="nDelete"></td>
 				</tr>
 			</c:forEach>
 			</tbody>
