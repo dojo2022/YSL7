@@ -38,21 +38,22 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
+<h1>評価シート</h1>
 <main>
 <link rel="stylesheet" type="text/css" href="/miemo/css/common.css">
 	<!-- サーブレットへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet">
 		<input type="hidden" name="page_id" value="FE02">
 
-	<h1>評価シート</h1>
+
 
 	<!-- 評価先選択画面に戻るボタン -->
 	<div class="button_area">
 		<a href="/miemo/FrontControllerServlet?page_id=FE02&bt_name=evaluation">評価相手選択画面に戻る</a>
-	</div>
+	</div><br>
 	<!-- 評価相手の名前を表示 -->
 		<input type="hidden" name="evaluate_name" value="${param.user_id }">
-		<p>To:${param.evaluate_name}</p>
+		<p>To:${param.evaluate_name}</p><br>
 
 	<!-- ★評価 -->
 	<div class="stars">
