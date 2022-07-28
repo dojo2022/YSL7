@@ -144,7 +144,7 @@ public class UsersDao {
 				+ " LEFT JOIN Divisions ON Sections.div_id = Divisions.div_id\r\n"
 				+ " LEFT JOIN Departments ON Divisions.dep_id = Departments.dep_id\r\n"
 				+ " LEFT JOIN UP ON US.u_id = UP.u_id\r\n"
-				+ " LEFT JOIN Posts ON UP.post_id = Posts.post_id;	";
+				+ " LEFT JOIN Posts ON UP.post_id = Posts.post_id WHERE Users.retireFlag = 0	";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		//SQL文を実行し、結果を取得する。
