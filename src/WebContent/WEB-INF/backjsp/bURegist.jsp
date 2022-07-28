@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>新規社員登録</title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" href="/miemo/backcss/uRegist.css">
 <script type="text/javascript" src="/miemo/backjs/uRegist.js"></script>
 </head>
@@ -42,21 +43,39 @@
 			<tr>
 				<td>事業部</td>
 				<td>
-					<select name="dep_id" class="inText" id="dep_id">
-						<option value="">事業部を選択</option>
-						<c:forEach var="e" items="${one}" varStatus="status">
-							<option value="${e}">${e}</option>
-						</c:forEach>
+					<select class="parent" name="foo">
+					  <option value="" selected="selected">事業部を選択</option>
+					  <c:forEach var="e" items="${role1}" varStatus="status">
+						  <option value="${e.depId}">${e.department}</option>
+					  </c:forEach>
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td>部</td>
-				<td><select name="div_id" class="inText" id="div_id">  	</select><br><span id="error_div_id">${divIdErrMsg}</span></td>
+				<td>
+					<select class="children" name="bar" disabled>
+					  <option value="" selected="selected">部を選択</option>
+					   <c:forEach var="e" items="${role2}" varStatus="status">
+							<option value="${e.divId }" data-val="${e.depId}">${e.division }</option>
+					   </c:forEach>
+					</select>
+				  	<br><span id="error_div_id">${divIdErrMsg}</span>
+				</td>
 			</tr>
 			<tr>
 				<td>課</td>
-				<td><select name="sec_id" class="inText" id="sec_id" >  	</select><br><span id="error_sec_id">${secIdErrMsg}</span></td>
+				<td>
+
+				<select class="grandchild" name="moo" disabled>
+				  <option value="" selected="selected">課を選択</option>
+				  <c:forEach var="e" items="${role3}" varStatus="status">
+				  	<option value="${e.secId }" data-val="${e.divId }">${e.section }</option>
+				  </c:forEach>
+
+				</select>
+
+				<br><span id="error_sec_id">${secIdErrMsg}</span></td>
 			</tr>
 			<tr>
 				<td>役職1</td>
@@ -173,9 +192,70 @@
 	<a href="/miemo/BControllerServlet?page_id=BL01&bt_name=戻る"  class="back" onclick ="return back()">一覧に戻る</a>
 </body>
 
-<script>
 
-	//リクエストスコープから値を取得して、変数に格納
+<script>
+	var $children = $('.children'); //事業部の要素を変数に入れます。
+	var original = $children.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
+	var $grandchild = $('.grandchild'); //部の要素を変数に入れます。
+	var original2 = $grandchild.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
+
+	//--------------------------------------------------------------
+	//事業部側のselect要素が変更になるとイベントが発生
+	$('.parent').change(function() {
+
+	//選択された事業部のvalueを取得し変数に入れる
+	var val1 = $(this).val();
+
+
+	//削除された要素をもとに戻すため.html(original)を入れておく
+	$children.html(original).find('option').each(function() {
+	var val2 = $(this).data('val'); //data-valの値を取得
+
+	//valueと異なるdata-valを持つ要素を削除
+	if (val1 != val2) {
+	  $(this).not(':first-child').remove();
+	}
+
+	});
+
+	//事業部側のselect要素が未選択の場合、事業部をdisabledにする
+	if ($(this).val() == "") {
+	$children.attr('disabled', 'disabled');
+	} else {
+	$children.removeAttr('disabled');
+	}
+
+	});
+
+	//--------------------------------------------------------------
+	$('.children').change(function() {
+
+	  //選択された課のvalueを取得し変数に入れる
+	  var val1 = $(this).val();
+
+
+	  //削除された要素をもとに戻すため.html(original)を入れておく
+	  $grandchild.html(original2).find('option').each(function() {
+	    var val2 = $(this).data('val'); //data-valの値を取得
+
+	    //valueと異なるdata-valを持つ要素を削除
+	    if (val1 != val2) {
+	      $(this).not(':first-child').remove();
+	    }
+
+	  });
+
+	  //課側のselect要素が未選択の場合、課をdisabledにする
+	  if ($(this).val() == "") {
+	    $grandchild.attr('disabled', 'disabled');
+	  } else {
+	    $grandchild.removeAttr('disabled');
+	  }
+
+	});
+
+
+/* 	//リクエストスコープから値を取得して、変数に格納
 	//文字列を使用しているので、関数を通して配列として格納
 	let one = createArray("${one}");
 	let two = createArray("${two}");
@@ -213,7 +293,7 @@
 
 	} */
 
-	//ここから関数-----------------------------------------------------------------
+	/*　//ここから関数-----------------------------------------------------------------
 	//ひとつめの配列の値が変更されたときに動く関数
 	document.getElementsByName('dep_id')[0].onchange = function () {
 		let os = this.value;
@@ -265,6 +345,7 @@
 
 	function colorReset(argObj){
 	    argObj.style.backgroundColor = "";
-	}
+	} */
+
 </script>
 </html>
