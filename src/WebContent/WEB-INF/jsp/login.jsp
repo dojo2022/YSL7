@@ -20,7 +20,7 @@
 <input type="hidden" name="page_id" value="FL01">
 	<table class ="login_center">
 	<tr>
-		<td id = "size_test" >【社員番号】</td>
+		<td class="button_area" id = "size_test" ><div id="login_text">社員番号</div></td>
 		<td>
 			<div class="field">
 				<input class= "text" type = "text" name = "number" value = "${param.number}">
@@ -28,7 +28,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td id = "size_test2">【パスワード】</td>
+		<td class="button_area" id = "size_test2"><div id="login_text">パスワード</div></td>
 		<td>
 			<div class="field">
 				<input type="password" name="password"  class="text" id="textPassword">
