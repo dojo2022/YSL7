@@ -58,7 +58,7 @@ public class BEvaluationsDAO {
 		Class.forName("org.h2.Driver");
 
 		//SQL文用意
-		String sql = "SELECT * FROM Evaluations WHERE from_u_id!=? AND to_u_id=?";
+		String sql = "SELECT * FROM Evaluations WHERE from_u_id<>? AND to_u_id=?";
 		PreparedStatement pStmt = con.prepareStatement(sql);
 
 		//SQL完成させる
