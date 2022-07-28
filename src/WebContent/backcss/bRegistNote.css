@@ -25,7 +25,8 @@ h2{
   font-size     : 30px;                /* 入力文字サイズ */
   color         : #333333;             /* 入力文字の色   */
   font-weight   : bold;                /* 入力文字の太字 */
-  letter-spacing: .1em;                /* 入力文字の間隔 */
+  letter-spacing: .1em;
+  text-align:center;                /* 入力文字の間隔 */
 }
  /* --- 入力フィールドにフォーカスか来たら ----------------*/
 .title:focus {

@@ -12,11 +12,16 @@ public class BGraphCalc {
 		double s1 = sCount.getCountS1();
 		double s2 = sCount.getCountS2();
 		double s3 = sCount.getCountS3();
-		double s4 = sCount.getCountS3();
+		double s4 = sCount.getCountS4();
 		double s5 = sCount.getCountS5();
-
+		System.out.println("s1:"+ s1);
+		System.out.println("s2:"+ s2);
+		System.out.println("s3:"+ s3);
+		System.out.println("s4:"+ s4);
+		System.out.println("s5:"+ s5);
 		//全スタンプの回数の合計を求める
 		double sumStamps = (s1 + s2 + s3 + s4 + s5);
+		System.out.println("スタンプ合計"+ sumStamps);
 
 		//各スタンプのパーセントを求める
 		double p1 = ((double)s1 / sumStamps) * 100;
@@ -38,7 +43,6 @@ public class BGraphCalc {
 		ArrayList<Double> s1Percent = new ArrayList<>();
 		//stamp1の行数で押された回数を調べる
 		int s1Count = stamp1.size();
-		System.out.println(s1Count+"かうんとだよ");
 		if(s1Count!=0) {
 		int[] s1Category = new int[11];
 			//各カテゴリ何回スタンプが押されたを数え、配列に入れる

@@ -27,14 +27,15 @@ public class BUserAction {
 			String number = request.getParameter("number");
 			String name = request.getParameter("name");
 			String gender = request.getParameter("gender");
-			String depId = request.getParameter("dep_id");
-			String divId = request.getParameter("div_id");
-			String secId = request.getParameter("sec_id");
+			String depId = request.getParameter("foo");
+			String divId = request.getParameter("bar");
+			int secId = Integer.parseInt(request.getParameter("moo"));
 			String post1 = request.getParameter("post1");
 			String post2 = request.getParameter("post2");
 			String post3 = request.getParameter("post3");
 			String year = request.getParameter("year");
 
+			System.out.println(depId);
 			System.out.println(divId);
 			System.out.println(secId);
 
@@ -50,24 +51,24 @@ public class BUserAction {
 				return "/WEB-INF/backjsp/bURegist.jsp";
 
 			}
-			if(gender.strip().length()==0){
-				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
-				request.setAttribute("genderErrMsg", "※性別を入力してください");
-				return "/WEB-INF/backjsp/bURegist.jsp";
-
-			}
-			if(divId.strip().length()==0){
-				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
-				request.setAttribute("divIdErrMsg", "※部を入力してください");
-				return "/WEB-INF/backjsp/bURegist.jsp";
-
-			}
-			if(secId.strip().length()==0){
-				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
-				request.setAttribute("secIdErrMsg", "※課を入力してください");
-				return "/WEB-INF/backjsp/bURegist.jsp";
-
-			}
+//			if(gender.strip().length()==0){
+//				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+//				request.setAttribute("genderErrMsg", "※性別を入力してください");
+//				return "/WEB-INF/backjsp/bURegist.jsp";
+//
+//			}
+//			if(divId.strip().length()==0){
+//				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+//				request.setAttribute("divIdErrMsg", "※部を入力してください");
+//				return "/WEB-INF/backjsp/bURegist.jsp";
+//
+//			}
+//			if(secId.strip().length()==0){
+//				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
+//				request.setAttribute("secIdErrMsg", "※課を入力してください");
+//				return "/WEB-INF/backjsp/bURegist.jsp";
+//
+//			}
 			if(post1.strip().length()==0){
 				//リクエストスコープにerrMsgという名前でエラーメッセージを保存
 				request.setAttribute("post1ErrMsg", "※役職１を入力してください");
@@ -88,21 +89,21 @@ public class BUserAction {
 //				return "/WEB-INF/jsp/login.jsp";
 //			}
 
-			int intSecId = 0;
-			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("1課")) {
-				intSecId = 1;
-			}
-			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("2課")) {
-				intSecId = 2;
-			}
-			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("1課")) {
-				intSecId = 3;
-			}
-			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("2課")) {
-				intSecId = 4;
-			}
+//			int intSecId = 0;
+//			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("1課")) {
+//				intSecId = 1;
+//			}
+//			if (divId.strip().equals("金融・保険サービス1部") && secId.strip().equals("2課")) {
+//				intSecId = 2;
+//			}
+//			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("1課")) {
+//				intSecId = 3;
+//			}
+//			if (divId.strip().equals("金融・保険サービス2部") && secId.strip().equals("2課")) {
+//				intSecId = 4;
+//			}
 
-			System.out.println("intSecId = " + intSecId);
+//			System.out.println("intSecId = " + intSecId);
 
 			//これはあとで消すこと！
 			//intSecId = 1;
@@ -110,7 +111,7 @@ public class BUserAction {
 
 
 			BUserService uService = new BUserService();
-			ans = uService.uRegist(number, name, year, gender, intSecId, post1, post2, post3);
+			ans = uService.uRegist(number, name, year, gender, secId, post1, post2, post3);
 
 			//戻ってきた値がnullだったら
 			if(ans == 0) {

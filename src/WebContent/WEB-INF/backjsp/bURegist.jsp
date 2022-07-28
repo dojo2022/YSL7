@@ -46,7 +46,7 @@
 					<select class="parent" name="foo">
 					  <option value="" selected="selected">事業部を選択</option>
 					  <c:forEach var="e" items="${role1}" varStatus="status">
-						  <option value="${e.depId}">${e.department}</option>
+						  <option value="${e.depId}" >${e.department}</option>
 					  </c:forEach>
 					</select>
 				</td>
@@ -57,7 +57,7 @@
 					<select class="children" name="bar" disabled>
 					  <option value="" selected="selected">部を選択</option>
 					   <c:forEach var="e" items="${role2}" varStatus="status">
-							<option value="${e.divId }" data-val="${e.depId}">${e.division }</option>
+							<option value="${e.divId }" data-val="${e.depId}" >${e.division }${e.divId }</option>
 					   </c:forEach>
 					</select>
 				  	<br><span id="error_div_id">${divIdErrMsg}</span>
@@ -70,7 +70,7 @@
 				<select class="grandchild" name="moo" disabled>
 				  <option value="" selected="selected">課を選択</option>
 				  <c:forEach var="e" items="${role3}" varStatus="status">
-				  	<option value="${e.secId }" data-val="${e.divId }">${e.section }</option>
+				  	<option value="${e.secId }" data-val="${e.divId }" >${e.section }</option>
 				  </c:forEach>
 
 				</select>

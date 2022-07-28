@@ -28,7 +28,7 @@
 			<th>内容</th>
 		</tr>
 		<tr>
-			<td><textarea name="content" rows="4" cols="60"></textarea></td>
+			<td><textarea name="content" rows="9" cols="100"></textarea></td>
 			<td><input type="hidden" name="page_id" value="BN01">
 				<input type="hidden" name="uId" value="${user.userId}">
 				<input type="hidden" name="note_flg" value="フラグだよ">
