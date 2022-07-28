@@ -35,11 +35,11 @@
 			<td class="year">　${profile.year}年</td>
 		</tr>
 		<tr>
-			<td class="division">　${profile.division}部</td>
+			<td class="division">　${profile.division}</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="section">　${profile.section}課</td>
+			<td class="section">　${profile.section}</td>
 		</tr>
 		<tr>
 			<td class="back_button"><a href="/miemo/BControllerServlet?page_id=BP01&bt_name=back_list" class=back>一覧に戻る</a></td>
