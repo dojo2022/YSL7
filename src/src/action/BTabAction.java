@@ -23,6 +23,7 @@ public class BTabAction {
 	public String showMainPage() throws UnsupportedEncodingException{
 
 		//empIdを取ってくる
+		//ここがおかしくなるよみこまない
 		request.setCharacterEncoding("UTF-8");
 		int empId = Integer.parseInt(request.getParameter("empId"));
 		//Serviceをインスタンス化（tabServiceという名前をつけたから、あわせてね）
