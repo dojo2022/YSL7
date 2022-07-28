@@ -30,15 +30,15 @@ public class BEvaluationCalc {
 
 		//それぞれの項目の複数人からの評価の平均を求める
 		double e1Avg = e1 / s;
-		eAvgList.add(e1Avg);
+		eAvgList.add((Math.floor(e1Avg * 10)) / 10);
 		double e2Avg = e2 / s;
-		eAvgList.add(e2Avg);
+		eAvgList.add((Math.floor(e2Avg * 10)) / 10);
 		double e3Avg = e3 / s;
-		eAvgList.add(e3Avg);
+		eAvgList.add((Math.floor(e3Avg * 10)) / 10);
 		double e4Avg = e4 / s;
-		eAvgList.add(e4Avg);
+		eAvgList.add((Math.floor(e4Avg * 10)) / 10);
 		double e5Avg = e5 / s;
-		eAvgList.add(e5Avg);
+		eAvgList.add((Math.floor(e5Avg * 10)) / 10);
 
 		/*		//複数人からの評価の平均を求める
 				double eAvg = (e1 + e2 + e3 + e4 + e5) /  s;*/
