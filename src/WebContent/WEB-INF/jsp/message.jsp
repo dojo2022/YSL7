@@ -14,7 +14,7 @@
 <div id="body1">
 <%@ include file="/WEB-INF/jsp/common.jsp" %>
 	<h1 id="midashi">メッセージ</h1>
-		<h2>メッセージは人事部にのみ送られます</h2>
+		<h2>メッセージは人事部にのみ送られます(最大400字)</h2>
 	<!-- Servletへ遷移させる -->
 	<form method="POST" action="/miemo/FrontControllerServlet" class="message">
 		<input type="hidden" name="page_id" value="FM01">
