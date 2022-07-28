@@ -16,8 +16,9 @@
 </head>
 <body>
 <a href="/miemo/BControllerServlet?page_id=BP01&bt_name=to_regist_note&emp_id=${empId}" ><input type=button value="新規作成" class="nRegistButton"></a>
-	<c:if test="${notesList.size()!=0}">
 
+	<p class="errMsg">${errMsg}</p>
+	<c:if test="${notesList.size()!=0}">
 		<table border="1" id="foo-table" class="table table-bordered table_blue_stripe">
 		<thead>
 			<tr class="n-tablehead">
