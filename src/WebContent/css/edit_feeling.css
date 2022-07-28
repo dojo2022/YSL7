@@ -134,11 +134,27 @@ td {
     border-radius: 40px;
     margin-right: 20px;
 }
-/* コメント系のCSS */
+/* コメント系のCSS
 .textarea {
 	width: 660px;
     height: 60px;
+}*/
+.textarea{
+	text-align:left;
+	font-size:  15px;
+	width:100%;
+	height:60px;
+    padding: 1em 1em;
+    background-color: #FFF3DF;
+    border: solid 3px #FFB55B; /* 線の色 */
+    resize: none;
 }
+.textarea:focus{
+	outline: solid 3px #F19E6F;
+}
+
+
+
 
 /* 登録ボタンのCSS */
 .regist_bts  {
