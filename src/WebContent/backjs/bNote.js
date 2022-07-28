@@ -15,15 +15,22 @@ jQuery(function($){
 /*もっと見る用のjQuery---------------------------------------------*/
 $(function(){
 	  $('.more-btn').on('click', function() {
+
+		//もしオープンボタンが押されたら
 	    if( $(this).children().is('.open') ) {
-	      $(this).html('<img src="/miemo/img/minusBtn.png" class="close">').addClass('close-btn');
+
+
 	      $(this).parent().removeClass('slide-up').addClass('slide-down');
+	      /*$(this).html('<img src="/miemo/img/minusBtn.png" class="close">').addClass('close-btn');*/
 	    } else {
-	      $(this).html('<img src="/miemo/img/plusBtnRed.png" class="open">').removeClass('close-btn');
-	      $(this).parent().removeClass('slide-down').addClass('slide-up');
+
+	    /*  $(this).html('<img src="/miemo/img/plusBtnRed.png" class="open">').removeClass('close-btn');
+
+	      $(this).parent().removeClass('slide-down').addClass('slide-up');*/
 	    }
 	  });
 	});
+
 
 function check(){
 	if(window.confirm("メモを削除してもよろしいでしょうか")){
