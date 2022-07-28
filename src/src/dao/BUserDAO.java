@@ -7,12 +7,81 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.BProfileAllBeans;
+import model.RoleBeans;
 
 public class BUserDAO {
 	Connection con=null;
 
 	public BUserDAO(Connection con) {
 		this.con=con;
+	}
+
+	//事業部のデータを取得する
+	public ArrayList<RoleBeans> getRole1() throws SQLException, ClassNotFoundException {
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		ArrayList<RoleBeans> role = new ArrayList<RoleBeans>();
+		// SQL文を準備する
+		String sql = "SELECT * FROM DEPARTMENTS";
+		PreparedStatement pStmt = con.prepareStatement(sql);
+		ResultSet rs = pStmt.executeQuery();
+
+		while (rs.next()) {
+			RoleBeans r = new RoleBeans();
+			r.setDepId(rs.getInt("dep_id"));
+			r.setDepartment(rs.getString("department"));
+			role.add(r);
+		}
+
+		return role;
+	}
+
+	//事業部と部をJOINした情報を取得
+	public ArrayList<RoleBeans> getRole2() throws SQLException, ClassNotFoundException {
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		ArrayList<RoleBeans> role = new ArrayList<RoleBeans>();
+		// SQL文を準備する
+		String sql = "SELECT DEPARTMENTS.DEP_ID, DEPARTMENTS.DEPARTMENT, DIVISIONS.DIV_ID ,DIVISIONS.DIVISION FROM DEPARTMENTS LEFT JOIN DIVISIONS ON DEPARTMENTS.DEP_ID = DIVISIONS.DEP_ID";
+
+		PreparedStatement pStmt = con.prepareStatement(sql);
+		ResultSet rs = pStmt.executeQuery();
+
+		while (rs.next()) {
+			RoleBeans r = new RoleBeans();
+			r.setDepId(rs.getInt("dep_id"));
+			r.setDivId(rs.getInt("div_id"));
+			r.setDivision(rs.getString("division"));
+			role.add(r);
+		}
+
+		return role;
+	}
+
+	//部と課をJOINした情報を取得
+	public ArrayList<RoleBeans> getRole3() throws SQLException, ClassNotFoundException {
+		// JDBCドライバを読み込む
+		Class.forName("org.h2.Driver");
+
+		ArrayList<RoleBeans> role = new ArrayList<RoleBeans>();
+		// SQL文を準備する
+		String sql = "SELECT DIVISIONS.DIV_ID ,SECTIONS.SEC_ID , SECTIONS.SECTION FROM DIVISIONS LEFT JOIN SECTIONS ON DIVISIONS.DIV_ID = SECTIONS.DIV_ID ";
+
+		PreparedStatement pStmt = con.prepareStatement(sql);
+		ResultSet rs = pStmt.executeQuery();
+
+		while (rs.next()) {
+			RoleBeans r = new RoleBeans();
+
+			r.setDivId(rs.getInt("div_id"));
+			r.setSecId(rs.getInt("sec_id"));
+			r.setSection(rs.getString("section"));
+			role.add(r);
+		}
+
+		return role;
 	}
 
 	//registUser
