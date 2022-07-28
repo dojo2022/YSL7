@@ -53,11 +53,12 @@
 			<table  class = profile>
 			<tr>
 				<th>新しいパスワード</th>
-				<td><input type="text" name="newpassbox"></td>
+				<td><input type="text" name="newpassbox" maxlength="8"><br>
+				(最大8文字)</td>
 			</tr>
 			<tr>
 				<th>新しいパスワード確認</th>
-				<td><input type="text" name="newpass2box"></td>
+				<td><input type="text" name="newpass2box" maxlength="8"></td>
 			</tr>
 		</table><br>
 		</div>

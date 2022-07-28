@@ -136,6 +136,8 @@ td {
 .textarea:focus{
 	outline: solid 3px #F19E6F;
 }
+
+
 /* 登録ボタンのCSS */
 .regist_bts  {
   margin-left: 330px;

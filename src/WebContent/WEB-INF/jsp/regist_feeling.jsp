@@ -101,6 +101,7 @@
 		<br>
 			<td><div class="font">コメント</div><br>
 				<textarea  name="comment" class="textarea">${param.comment}</textarea>
+			（最大２００字）
 			</td>
 		</tr>
 		</table>

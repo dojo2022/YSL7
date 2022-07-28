@@ -117,7 +117,7 @@
 	}
 	.close-btn p {
 	  background: #aaa;
-	}	
+	}
 	.tw{
 
 		width:400px;
@@ -190,4 +190,7 @@
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #000000;     /* 背景色     */
   background    : #70b8b8;     /* 文字色     */
+}
+.errMsg{
+	color:#ff0000;
 }
