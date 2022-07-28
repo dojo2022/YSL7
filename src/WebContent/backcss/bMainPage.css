@@ -5,11 +5,13 @@ html{
 	color:#8D2828;
 }
 /* プロフィール表示 */
- table{
+ table.profile{
 	/*margin: 0 auto 15px auto;
 	border: 2px #F18E3D solid;  枠線 */
 	color:#8D2828;
+
  }
+
 .a{
 	display: block;
 }
@@ -45,8 +47,11 @@ html{
 	background: #F4AB3F;
 	border: 2px solid #F4AB3F;
 	text-decoration: none;
+	text-align: left;
 }
-
+td back_button{
+	text-align: left;
+}
 a:link, a:visited, a:hover, a:active {
   color: #444444;
 }
