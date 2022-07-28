@@ -17,7 +17,7 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/jsp/common2.jsp" %>
-	<h1 id="midashi">きもちグラフ</h1>
+	<div id="kimoti"><h1 id="midashi">きもちグラフ</h1></div>
 	<div id="gf_chart">
 	<h2 class=empName>${user.name}さんのきもちグラフ</h2>
 	<!-- スタンプの個数を表示する部分 -->
