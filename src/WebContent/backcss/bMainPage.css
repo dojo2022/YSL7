@@ -2,13 +2,14 @@
 /*プロフィールとタブの画面*/
 html{
 	background-color: #fff3df;
+	color:#8D2828;
 }
 /* プロフィール表示 */
-/* table{
-	margin: 0 auto 15px auto;
-	border: 2px #F18E3D solid;  枠線
-}
- */
+ table{
+	/*margin: 0 auto 15px auto;
+	border: 2px #F18E3D solid;  枠線 */
+	color:#8D2828;
+ }
 .a{
 	display: block;
 }
