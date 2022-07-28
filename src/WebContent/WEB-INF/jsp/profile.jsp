@@ -49,7 +49,7 @@
 				<td>${users.year}</td>
 			</tr>
 			</table>
-			<h2>*パスワード変更*</h2>
+			<h2 id="komidashi">*パスワード変更*</h2>
 			<table  class = profile>
 			<tr>
 				<th>新しいパスワード</th>
@@ -61,7 +61,7 @@
 			</tr>
 		</table><br>
 		</div>
-		<input type="submit" name="bt_name" value="変更" class="btn">
+		<input type="submit" name="bt_name" value="変更" class="update_btn">
 	</form>
 
 	<!-- エラーメッセージの表示欄 -->

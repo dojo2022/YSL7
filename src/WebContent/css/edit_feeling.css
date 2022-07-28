@@ -14,6 +14,7 @@ html{
   	background: transparent;/*背景透明に*/
  	border-left: solid 5px #EBD61A;/*左線*/
  	font-weight: bold;
+ 	margin-bottom: 30px;
 }
 
 
@@ -153,7 +154,7 @@ td {
   margin-top: 20px
 }
 
-.regist_bts :hover {
+.regist_bts:hover {
   background: #ffab57;
   box-shadow: 0px 0px 0px 5px #ffab57;
 }

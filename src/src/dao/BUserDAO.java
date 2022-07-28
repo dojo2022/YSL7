@@ -251,6 +251,7 @@ public class BUserDAO {
 			profile.setGender(rs.getInt("gender"));
 			profile.setYear(rs.getString("year"));
 			profile.setDepartment(rs.getString("department"));
+			profile.setDivision(rs.getString("division"));
 			profile.setSection(rs.getString("section"));
 			profile.setPost(rs.getString("post"));
 		}
