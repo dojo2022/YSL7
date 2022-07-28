@@ -105,6 +105,12 @@ public class BControllerServlet extends HttpServlet {
 
 
 		//JSPさんへ処理を依頼する
+		HttpSession session = request.getSession();
+		if (session.getAttribute("user") == null) {
+			response.sendRedirect("/miemo/FrontControllerServlet");
+			return;
+		}
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 
@@ -197,18 +203,23 @@ public class BControllerServlet extends HttpServlet {
 				url = tAction.showMainPage();
 			}else {
 				//エラーメッセージ格納してjspに戻す
-				request.setAttribute("errMsg", "登録できませんでした。");
-				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+				request.setAttribute("errMsg", "削除できませんでした。");
+				url= "/WEB-INF/backjsp/bMainPage.jsp";
 			}
 		}
 
 		//JSPさんへ処理を依頼する
+		HttpSession session = request.getSession();
+		if (session.getAttribute("user") == null) {
+			response.sendRedirect("/miemo/FrontControllerServlet");
+			return;
+		}
+
 		System.out.println("url:"+url+"だよ");
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
-
-
+}
 
 	}
 
-}
+

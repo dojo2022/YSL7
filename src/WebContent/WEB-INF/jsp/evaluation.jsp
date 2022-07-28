@@ -86,7 +86,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>質問2:業務に意欲的に取り組んでいる</th>
+					<th>質問2：業務に意欲的に取り組んでいる</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
@@ -102,7 +102,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>質問3:報告・連絡・相談が適切にできている</th>
+					<th>質問3：報告・連絡・相談が適切にできている</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
@@ -118,7 +118,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>質問4:業務に必要な技術や知識を発揮できている</th>
+					<th>質問4：業務に必要な技術や知識を発揮できている</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">
@@ -134,7 +134,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>質問5:タスク量と期限は適切である</th>
+					<th>質問5：タスク量と期限は適切である</th>
 					<td>
 						<div class="review">
 					  		<div class="stars">

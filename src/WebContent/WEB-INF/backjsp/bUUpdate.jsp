@@ -16,7 +16,7 @@
  	<input type="hidden" name="page_id" value="BR02">
  	<input type="hidden" name="empId" value="${empId}">
 	<div align="right">
-		<input type="submit" name="bt_name" value="退職" class="retire" onclick="check()">
+		<input type="submit" name="bt_name" value="退職" class="retire" onclick="return check()">
 	</div>
 </form>
 	<h1>社員情報編集</h1>
