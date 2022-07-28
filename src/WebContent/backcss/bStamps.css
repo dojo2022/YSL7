@@ -5,12 +5,13 @@
 	margin: auto;
 	border-collapse:  collapse;
 }
-.stamps th{
+/* .stamps th{
 	text-align: center;
 }
-.items,.items_content{
+ */ .items,.items_content{
 	padding: 10px;
 	background-color:#F19E6F;
+	text-align: center;
 }
 
 .data{
@@ -33,9 +34,9 @@ img.stamp{
 	margin-left: 10%;
 	width: 90%;
 }
-.stamp_table th,td{
+/* .stamp_table th,td{
 	text-align: center;
-}
+} */
 .stamp_table th{
 	width: 200px;
 	background-color: #90C8AC;
