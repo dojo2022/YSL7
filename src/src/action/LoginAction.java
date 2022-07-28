@@ -29,7 +29,7 @@ public class LoginAction {
 		//空白で文字も入っていない、どちらか片方でもその状態だったらこの処理を返してねのif文
 		if(number.strip().length()==0|| password.strip().length()==0) {
 			//errMsg",に"※ID/PWの入力は必須ですを入れて返す処理
-			request.setAttribute("errMsg", "※社員番号とパスワードの入力は必須です");
+			request.setAttribute("errMsg", "※社員番号かパスワードが間違っています");
 			return "/WEB-INF/jsp/login.jsp";
 		}
 
@@ -43,7 +43,7 @@ public class LoginAction {
 		//4．戻り値がnullじゃなかったら、sessionスコープに戻り値の値を格納する。
 		if (user == null) {
 			//5. home.jspにフォワードするpassをサーブレットに返す。
-			request.setAttribute("errMsg", "※社員番号とパスワードの入力は必須です");
+			request.setAttribute("errMsg", "※社員番号かパスワードが間違っています");
 			System.out.println("エラーに入ったよ");
 			return "WEB-INF/jsp/login.jsp";
 		}else {
