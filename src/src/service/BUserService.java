@@ -3,13 +3,47 @@ package service;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import dao.BUPUSDAO;
 import dao.BUserDAO;
+import model.RoleBeans;
 
 public class BUserService {
 
 
+
+	public ArrayList<ArrayList<RoleBeans>> getRole(){
+		Connection con = null;
+
+		ArrayList<ArrayList<RoleBeans>> allRole = new ArrayList<>();
+		try {
+			Class.forName("org.h2.Driver");
+			con = DriverManager.getConnection("jdbc:h2:file:C:/ysl7data/miemo", "sa", "");
+			//BUserDAOを実体化する
+			BUserDAO buDao = new BUserDAO(con);
+			//BUserDAOのselectProfileメソッドを呼び出す
+			allRole.add(buDao.getRole1());
+			allRole.add(buDao.getRole2());
+			allRole.add(buDao.getRole3());
+
+		}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			return allRole;
+		}
+		if(con != null) {
+			try {
+				con.close();
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+				return allRole;
+			}
+		}
+
+		return allRole;
+
+	}
 	///intで引数として渡すものは、integer.paeseIntする！！
 
 	//uRegist
