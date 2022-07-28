@@ -203,8 +203,8 @@ public class BControllerServlet extends HttpServlet {
 				url = tAction.showMainPage();
 			}else {
 				//エラーメッセージ格納してjspに戻す
-				request.setAttribute("errMsg", "登録できませんでした。");
-				url= "/WEB-INF/backjsp/bRegistNote.jsp";
+				request.setAttribute("errMsg", "削除できませんでした。");
+				url= "/WEB-INF/backjsp/bMainPage.jsp";
 			}
 		}
 
