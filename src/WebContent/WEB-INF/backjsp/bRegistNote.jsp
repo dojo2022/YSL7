@@ -13,7 +13,7 @@
 <body>
 <h2>${user.name}さんの新規メモ　　</h2>
 <form method="POST" action="/miemo/BControllerServlet"  onsubmit="return check()">
-	<table class="registNote">
+	<table class="registNote" >
 		<tr>
 			<th>タイトル</th>
 		</tr>
@@ -37,9 +37,9 @@
 		<tr><td class="ErrorMsg">${errMsgContent}</td></tr>
 		<tr>
 		<!-- 戻るボタンはjsのhistorybackを使います -->
-			<td><input type="button" value="戻る" id="noteReturn" onclick="history.back()"></td>
-			<td></td>
-			<td><input type="submit" name="bt_name" value="保存" class="cNote"></td>
+			<td colspan="2"><input type="button" value="戻る" id="noteReturn" onclick="history.back()">　
+			　　　　　<input type="submit" name="bt_name" value="保存" class="cNote"></td>
+
 		</tr>
 	</table>
 </form>
