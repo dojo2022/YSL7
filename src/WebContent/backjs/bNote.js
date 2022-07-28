@@ -18,8 +18,6 @@ $(function(){
 
 		//もしオープンボタンが押されたら
 	    if( $(this).children().is('.open') ) {
-
-
 	      $(this).parent().removeClass('slide-up').addClass('slide-down');
 	      /*$(this).html('<img src="/miemo/img/minusBtn.png" class="close">').addClass('close-btn');*/
 	    } else {
