@@ -153,7 +153,7 @@ td {
   margin-top: 20px
 }
 
-.regist_bts :hover {
+.regist_bts:hover {
   background: #ffab57;
   box-shadow: 0px 0px 0px 5px #ffab57;
 }
