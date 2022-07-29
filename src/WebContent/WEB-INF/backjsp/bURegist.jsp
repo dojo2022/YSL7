@@ -19,18 +19,16 @@
 	<form method="POST" action="/miemo/BControllerServlet" id="uRegist">
 	<input type="hidden" name="page_id" value="BR01">
 	<!--  <input type="hidden" name="empId" value="1"> -->
-		<table>
+		<table >
 			<tr>
 				<td>社員番号</td>
 				<td><input type="text" name="number" value="${param.number}" id="number" class="inText"><br> <span id="error_number">${numberErrMsg}</span></td>
 
-			</tr>
-			<tr>
-				<td>氏名</td>
+
+				<td>　氏名：</td>
 				<td><input type="text" name="name" value="${param.name}" id="name" class="inText"><br> <span id="error_name" >${nameErrMsg}</span></td>
-			</tr>
-			<tr>
-				<td>性別</td>
+
+				<td>　性別：</td>
 				<td>
 					<select name="gender" class="inText" id="gender" >
 						<option value="">性別を選択</option>
@@ -40,8 +38,9 @@
 					<span id="error_gender">${genderErrMsg}</span>
 				</td>
 			</tr>
+			<tr><td>　</td></tr>
 			<tr>
-				<td>事業部</td>
+				<td>事業部：</td>
 				<td>
 					<select class="parent" name="foo">
 					  <option value="" selected="selected">事業部を選択</option>
@@ -50,9 +49,8 @@
 					  </c:forEach>
 					</select>
 				</td>
-			</tr>
-			<tr>
-				<td>部</td>
+
+				<td>　部：</td>
 				<td>
 					<select class="children" name="bar" disabled>
 					  <option value="" selected="selected">部を選択</option>
@@ -62,9 +60,8 @@
 					</select>
 				  	<br><span id="error_div_id">${divIdErrMsg}</span>
 				</td>
-			</tr>
-			<tr>
-				<td>課</td>
+
+				<td>　課：</td>
 				<td>
 
 				<select class="grandchild" name="moo" disabled>
@@ -75,10 +72,11 @@
 
 				</select>
 
-				<br><span id="error_sec_id">${secIdErrMsg}</span></td>
+				<%-- <br><span id="error_sec_id">${secIdErrMsg}</span></td> --%>
 			</tr>
+			<tr><td>　</td></tr>
 			<tr>
-				<td>役職1</td>
+				<td>役職1：</td>
 				<td>
 					<select name="post1" class="inText" id="post1">
 						<option value="">役職1を選択</option>
@@ -93,11 +91,10 @@
 					    <option value="9">執行役員</option>
 					    <option value="10">取締役</option>
 					  </select><br>
-					  <span id="error_post1">${post1ErrMsg}</span>
-				<td><!-- プルダウン -->
-			</tr>
-			<tr>
-				<td>役職2</td>
+					<%--   <span id="error_post1">${post1ErrMsg}</span> --%>
+				</td><!-- プルダウン -->
+
+				<td>　役職2：</td>
 				<td>
 					<select name="post2" class="inText">
 						<option value="">役職2を選択</option>
@@ -113,10 +110,9 @@
 					    <option value="10">取締役</option>
 					  </select><br>
 					  <span id="error_post2"></span>
-				<td><!-- プルダウン -->
-			</tr>
-			<tr>
-				<td>役職3</td>
+				</td><!-- プルダウン -->
+
+				<td>　役職3：</td>
 				<td>
 					<select name="post3" class="inText">
 						<option value="">役職2を選択</option>
@@ -134,8 +130,9 @@
 					  <span id="error_post3"></span>
 				<td>
 			</tr>
+			<tr><td>　</td></tr>
 			<tr>
-				<td>入社年度</td>
+				<td>入社年度：</td>
 				<td>
 					<select name="year" class="inText" id="year">
 						<option value="">入社年度を選択</option>
@@ -180,9 +177,8 @@
 				<td> </td>
 			</tr>
 			<tr>
-				<td>
-				</td>
-				<td><input type="submit" name="bt_name" value="登録" class="button" onclick ="return uRegist()"></td>
+
+				<th colspan="6"><input type="submit" name="bt_name" value="登録" class="button" onclick ="return uRegist()"></th>
 			</tr>
 		</table>
 
